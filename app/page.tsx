@@ -1,65 +1,137 @@
-import Image from "next/image";
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Home() {
+  const router = useRouter();
+  const [query, setQuery] = useState("");
+
+  function handleSearch(e: React.FormEvent) {
+    e.preventDefault();
+    const q = query.trim();
+    if (q) router.push(`/search?q=${encodeURIComponent(q)}`);
+  }
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="flex flex-col flex-1 items-center justify-center px-6">
+      <nav className="absolute top-0 right-0 p-5">
+        <a
+          href="/browse"
+          className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+        >
+          <svg
+            className="h-4 w-4"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25a2.25 2.25 0 0 1-2.25-2.25v-2.25Z"
+            />
+          </svg>
+          Browse Sites
+        </a>
+      </nav>
+
+      <main className="flex flex-col items-center w-full max-w-2xl gap-10 py-24">
+        <div className="flex flex-col items-center gap-3 text-center">
+          <h1 className="text-6xl font-bold tracking-tight sm:text-7xl">
+            Page<span className="text-brand">Cow</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="max-w-md text-lg leading-7 text-zinc-500 dark:text-zinc-400">
+            A distraction-free browser for work and study.<br />
+            No social media. No news feeds. No noise. Just focus.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+        <form onSubmit={handleSearch} className="w-full max-w-xl">
+          <div className="flex items-center rounded-full border border-zinc-300 bg-white px-5 py-3 shadow-sm transition-shadow focus-within:shadow-md dark:border-zinc-700 dark:bg-zinc-900">
+            <svg
+              className="mr-3 h-5 w-5 shrink-0 text-zinc-400"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 6.15 6.15a7.5 7.5 0 0 0 10.5 10.5z"
+              />
+            </svg>
+            <input
+              type="text"
+              name="q"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search approved sites..."
+              className="flex-1 bg-transparent text-base outline-none placeholder:text-zinc-400 dark:text-zinc-100"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <button
+              type="submit"
+              className="ml-3 rounded-full bg-brand px-5 py-1.5 text-sm font-medium text-white transition-colors hover:bg-brand-hover"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+
+        <div className="flex flex-col items-center gap-4 pt-4">
+          <p className="text-sm font-medium uppercase tracking-widest text-zinc-400">
+            Download the Desktop App
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-2.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+            >
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489.117.779.442 1.516 1.076 2.085a3.617 3.617 0 0 0 1.272.745c.406.164.86.258 1.378.258.582 0 1.227-.126 1.955-.373.726-.247 1.127-.466 1.483-.657.376-.201.614-.327 1.039-.327.39 0 .621.119.99.315.37.196.84.451 1.595.716.685.24 1.28.358 1.828.358a4.33 4.33 0 0 0 2.296-.66c.94-.6 1.374-1.412 1.574-2.104.193-.665.227-1.264.227-1.537v-.062c-.003-.21-.038-.436-.073-.596-.073-.327-.163-.46-.209-.46l-.072-.037c-.146-.072-.332-.164-.547-.348a3.455 3.455 0 0 1-.852-1.014c-.34-.603-.544-1.363-.544-2.3 0-.944.225-1.694.566-2.276a3.463 3.463 0 0 1 .818-.932c.175-.144.328-.236.426-.287l.044-.022.018-.01c.027-.014.046-.036.046-.036-.002-.002-.246-.298-.746-.746a6.432 6.432 0 0 0-1.934-1.252A5.636 5.636 0 0 0 14.594 4c-.34 0-.684.036-1.032.107a5.1 5.1 0 0 0-1.058.371V0z" />
+                <path d="M14.67 1.576c.31-.584.462-1.204.462-1.576-.612.06-1.328.394-1.766.83-.397.396-.768 1.003-.768 1.612.668.05 1.352-.282 2.072-.866z" />
+              </svg>
+              macOS
+            </a>
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-2.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+            >
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
+              </svg>
+              Windows
+            </a>
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-2.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+            >
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.504 0c-.155 0-.315.008-.48.021C7.657.375 8.4 4.565 8.354 5.727c-.053.758-.2 1.36-.734 2.108C6.88 8.77 5.92 10.12 5.42 11.51c-.193.578-.285 1.172-.2 1.734.082.544.308 1.058.751 1.454.39.35.865.594 1.29.73.283.114.6.18.96.18.406 0 .857-.088 1.365-.26.507-.173.788-.326 1.037-.46.263-.14.43-.228.726-.228.273 0 .434.083.692.22.258.137.587.315 1.114.5.479.167.895.25 1.278.25.539 0 1.046-.133 1.604-.46.657-.42.96-.986 1.1-1.47.135-.464.159-.882.159-1.073v-.044c-.002-.146-.027-.304-.051-.416-.051-.228-.114-.321-.146-.321l-.05-.026a2.965 2.965 0 0 1-.383-.243 2.415 2.415 0 0 1-.595-.708c-.237-.421-.38-.952-.38-1.606 0-.66.157-1.183.395-1.59.238-.406.529-.675.735-.832a2.15 2.15 0 0 1 .297-.2l.031-.016.013-.007s.018-.01.032-.025c-.001-.001-.172-.208-.521-.521a4.502 4.502 0 0 0-1.352-.874A3.94 3.94 0 0 0 14.594 5.6c-.237 0-.478.025-.72.075a3.57 3.57 0 0 0-.74.259V0zM12 10.2c.2 0 .4.006.595.018a10.42 10.42 0 0 0-.595-.018z" />
+                <path d="M12 10.2a6.6 6.6 0 1 0 0 13.2 6.6 6.6 0 0 0 0-13.2zm-1.2 3h2.4v2.4h-1.2v3.6h-1.2v-6z" />
+              </svg>
+              Linux
+            </a>
+          </div>
         </div>
       </main>
+
+      <footer className="pb-8 text-center text-xs text-zinc-400">
+        <p>
+          A{" "}
+          <a
+            href="https://paintpi.com"
+            className="underline hover:text-zinc-600 dark:hover:text-zinc-300"
+          >
+            Paint Pi
+          </a>{" "}
+          product
+        </p>
+      </footer>
     </div>
   );
 }
