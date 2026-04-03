@@ -1,18 +1,18 @@
 {
   "version": 1,
   "categories": [
-    "Writing & Documents",
     "Research & Reference",
-    "Bible & Theology",
-    "Homeschooling",
-    "Study",
-    "Learn Skills",
+    "Writing & Documents",
     "Grammar & Editing",
-    "Publishing",
-    "Productivity",
-    "Finance & Business",
     "Cloud Storage",
+    "Productivity",
+    "Study",
+    "Homeschooling",
+    "Bible & Theology",
+    "Learn Skills",
+    "Publishing",
     "Developer Tools",
+    "Finance & Business",
     "SaaS & Business",
     "Other"
   ],
@@ -1530,6 +1530,13 @@
       "title": "Paint Pi",
       "description": "Linux-based operating system and laptops designed for focused, distraction-free computing.",
       "tags": ["Linux", "laptops", "operating system", "hardware", "Paint Pi", "focus", "computing"]
+    },
+    {
+      "domain": "accountable2you.com",
+      "category": "Other",
+      "title": "Accountable2You",
+      "description": "Accountability software that shares your computer activity with an accountability partner.",
+      "tags": ["accountability", "software", "tracking", "team", "individual", "partner"]
     }
   ]
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { getWhitelist, type WhitelistSite } from "@/lib/whitelist";
@@ -48,10 +49,19 @@ export default function BrowsePage() {
       <header className="sticky top-0 z-10 border-b border-zinc-200 bg-white/90 backdrop-blur-sm px-6 py-4 dark:border-zinc-800 dark:bg-zinc-950/90">
         <div className="mx-auto flex max-w-6xl flex-col gap-4">
           <div className="flex items-center justify-between">
+            {/* Logo */}
             <Link
               href="/"
-              className="text-2xl font-bold tracking-tight shrink-0"
+              className="flex justify-between text-2xl font-bold tracking-tight shrink-0"
             >
+              <Image
+                src="/assets/images/logo.png"
+                alt="PageCow Logo"
+                width={30}
+                height={30}
+                priority
+                className="mr-1"
+              />
               Page<span className="text-brand">Cow</span>
             </Link>
 
@@ -83,7 +93,7 @@ export default function BrowsePage() {
             </div>
           </div>
 
-          <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+          <div className="flex flex-wrap gap-2  pb-1 scrollbar-hide">
             {["All", ...whitelist.categories].map((cat) => (
               <button
                 key={cat}
@@ -117,7 +127,7 @@ export default function BrowsePage() {
                 className="group flex flex-col items-center gap-2 rounded-2xl p-3 transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800/60"
               >
                 <div className="flex h-14 w-14 items-center justify-center rounded-[16px] bg-zinc-100 shadow-sm ring-1 ring-zinc-200/60 transition-shadow group-hover:shadow-md dark:bg-zinc-800 dark:ring-zinc-700/60">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  {/* eslint-disable-next-line @next/next/no-img-element -- external favicon URLs */}
                   <img
                     src={`${FAVICON_URL}${site.domain}`}
                     alt=""
