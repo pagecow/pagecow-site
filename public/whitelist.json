@@ -17,7 +17,6 @@
     "Other"
   ],
   "popularDomains": [
-    "dropbox.com",
     "wikipedia.org",
     "britannica.com",
     "grammarly.com",
@@ -1128,25 +1127,32 @@
       "tags": ["invoicing", "payments", "time tracking", "freelance", "open source", "business"]
     },
     {
-      "domain": "dropbox.com",
-      "category": "Cloud Storage",
-      "title": "Dropbox",
-      "description": "Cloud file storage and sharing service for documents, photos, and collaboration.",
-      "tags": ["cloud storage", "files", "sharing", "sync", "backup", "collaboration"]
-    },
-    {
-      "domain": "icloud.com",
-      "category": "Cloud Storage",
-      "title": "iCloud",
-      "description": "Apple's cloud storage for photos, documents, and device backups.",
-      "tags": ["cloud storage", "apple", "photos", "backup", "sync", "documents"]
-    },
-    {
       "domain": "pcloud.com",
       "category": "Cloud Storage",
       "title": "pCloud",
       "description": "Secure cloud storage with file sharing, backup, and encryption features.",
       "tags": ["cloud storage", "files", "encryption", "backup", "sharing", "secure"]
+    },
+    {
+      "domain": "sync.com",
+      "category": "Cloud Storage",
+      "title": "Sync",
+      "description": "Zero-knowledge encrypted cloud storage and secure file sharing.",
+      "tags": ["cloud storage", "encryption", "privacy", "backup", "files", "sharing", "secure"]
+    },
+    {
+      "domain": "photolog.cloud",
+      "category": "Cloud Storage",
+      "title": "Photolog",
+      "description": "Cloud storage and organization for photos and media.",
+      "tags": ["cloud storage", "photos", "media", "backup", "organization"]
+    },
+    {
+      "domain": "mediafire.com",
+      "category": "Cloud Storage",
+      "title": "MediaFire",
+      "description": "Cloud storage and file hosting for sharing and backing up files.",
+      "tags": ["cloud storage", "file hosting", "sharing", "backup", "files"]
     },
     {
       "domain": "apple.com",
