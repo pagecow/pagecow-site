@@ -17,26 +17,21 @@
     "Other"
   ],
   "popularDomains": [
-    "grammarly.com",
-    "celtx.com",
-    "evernote.com",
-    "dabblewriter.com",
-    "cliffsnotes.com",
-    "britannica.com",
-    "dictionary.com",
-    "gotquestions.org",
-    "enduringword.com",
-    "esv.org",
     "dropbox.com",
-    "merriam-webster.com",
     "wikipedia.org",
-    "blueletterbible.org",
-    "biblegateway.com",
-    "owl.purdue.edu",
-    "reedsy.com",
-    "writerduet.com",
+    "britannica.com",
+    "grammarly.com",
+    "dictionary.com",
+    "thesaurus.com",
+    "cliffsnotes.com",
     "gutenberg.org",
-    "draft2digital.com"
+    "evernote.com",
+    "celtx.com",
+    "dabblewriter.com",
+    "gotquestions.org",
+    "esv.org",
+    "blueletterbible.org",
+    "biblegateway.com"
   ],
   "hiddenDomains": [
     "accounts.google.com",
@@ -291,6 +286,13 @@
       "title": "Enduring Word",
       "description": "Free Bible commentary and study resources by David Guzik covering every chapter.",
       "tags": ["bible", "commentary", "study", "verse by verse", "theology", "exposition"]
+    },
+    {
+      "domain": "enduringwordbible.com",
+      "category": "Bible & Theology",
+      "title": "Enduring Word Bible",
+      "description": "Free Bible commentary and study resources by David Guzik covering every chapter.",
+      "tags": ["bible", "commentary", "study", "verse by verse", "theology", "exposition", "enduring word", "david guzik"]
     },
     {
       "domain": "esv.org",
