@@ -44,6 +44,17 @@ export default function BrowsePage() {
       });
     }
 
+    if (category === "Popular") {
+      const order = new Map(
+        whitelist.popularDomains.map((domain, index) => [domain, index])
+      );
+      sites = [...sites].sort(
+        (a, b) =>
+          (order.get(a.domain) ?? Number.MAX_SAFE_INTEGER) -
+          (order.get(b.domain) ?? Number.MAX_SAFE_INTEGER)
+      );
+    }
+
     return sites;
   }, [visibleSites, search, category, whitelist]);
 

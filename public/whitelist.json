@@ -309,6 +309,13 @@
       "tags": ["bible", "questions", "answers", "theology", "faith", "christian", "apologetics"]
     },
     {
+      "domain": "gotquestions.net",
+      "category": "Bible & Theology",
+      "title": "GotQuestions.net",
+      "description": "Bible-based answers to common spiritual and theological questions.",
+      "tags": ["bible", "questions", "answers", "theology", "faith", "christian", "apologetics"]
+    },
+    {
       "domain": "gty.org",
       "category": "Bible & Theology",
       "title": "Grace to You",
@@ -1049,6 +1056,13 @@
       "title": "Google Calendar",
       "description": "Online calendar for scheduling events, meetings, and reminders.",
       "tags": ["calendar", "scheduling", "events", "meetings", "reminders", "time management"]
+    },
+    {
+      "domain": "myaccount.google.com",
+      "category": "Productivity",
+      "title": "Google Account",
+      "description": "Manage your Google account settings, security, privacy, and personal information.",
+      "tags": ["google", "account", "settings", "security", "privacy", "profile"]
     },
     {
       "domain": "zoom.us",
