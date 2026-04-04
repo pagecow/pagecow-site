@@ -17,9 +17,9 @@
     "Other"
   ],
   "popularDomains": [
+    "mediafire.com",
     "wikipedia.org",
     "britannica.com",
-    "grammarly.com",
     "dictionary.com",
     "thesaurus.com",
     "cliffsnotes.com",
@@ -896,13 +896,6 @@
       "tags": ["classical", "christian", "curriculum", "online courses", "homeschool", "education"]
     },
     {
-      "domain": "grammarly.com",
-      "category": "Grammar & Editing",
-      "title": "Grammarly",
-      "description": "AI-powered writing assistant that checks grammar, spelling, punctuation, and style.",
-      "tags": ["grammar", "spelling", "writing", "proofreading", "editing", "AI", "style"]
-    },
-    {
       "domain": "hemingwayapp.com",
       "category": "Grammar & Editing",
       "title": "Hemingway Editor",
@@ -1384,13 +1377,6 @@
       "title": "Kubernetes",
       "description": "Open-source container orchestration documentation and guides.",
       "tags": ["Kubernetes", "containers", "orchestration", "DevOps", "documentation", "clusters"]
-    },
-    {
-      "domain": "figma.com",
-      "category": "Developer Tools",
-      "title": "Figma",
-      "description": "Collaborative design tool for UI/UX design, prototyping, and developer handoff.",
-      "tags": ["design", "UI", "UX", "prototyping", "collaboration", "wireframes", "mockups"]
     },
     {
       "domain": "hubspot.com",
