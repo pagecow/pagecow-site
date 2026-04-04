@@ -17,12 +17,15 @@ export default function BrowsePage() {
   );
 
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState("Popular");
 
   const filtered = useMemo(() => {
     let sites: WhitelistSite[] = visibleSites;
 
-    if (category !== "All") {
+    if (category === "Popular") {
+      const popularSet = new Set(whitelist.popularDomains);
+      sites = sites.filter((s) => popularSet.has(s.domain));
+    } else if (category !== "All") {
       sites = sites.filter((s) => s.category === category);
     }
 
@@ -42,7 +45,7 @@ export default function BrowsePage() {
     }
 
     return sites;
-  }, [visibleSites, search, category]);
+  }, [visibleSites, search, category, whitelist]);
 
   return (
     <div className="flex flex-col flex-1 min-h-full">
@@ -94,7 +97,7 @@ export default function BrowsePage() {
           </div>
 
           <div className="flex flex-wrap gap-2  pb-1 scrollbar-hide">
-            {["All", ...whitelist.categories].map((cat) => (
+            {["Popular", "All", ...whitelist.categories].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setCategory(cat)}
