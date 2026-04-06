@@ -1323,6 +1323,13 @@
       "tags": ["IDE", "code editor", "prototyping", "web apps", "sandbox", "development"]
     },
     {
+      "domain": "cursor.com",
+      "category": "Developer Tools",
+      "title": "Cursor",
+      "description": "AI-native code editor for building software with integrated assistants and agent workflows.",
+      "tags": ["IDE", "editor", "AI", "coding", "development", "VS Code"]
+    },
+    {
       "domain": "replit.com",
       "category": "Developer Tools",
       "title": "Replit",

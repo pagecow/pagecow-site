@@ -1,14 +1,16 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const router = useRouter();
   const [query, setQuery] = useState("");
-  const [isElectron] = useState(
-    () => typeof navigator !== "undefined" && /Electron/i.test(navigator.userAgent)
-  );
+  const [isElectron, setIsElectron] = useState(false);
+
+  useEffect(() => {
+    setIsElectron(/Electron/i.test(navigator.userAgent));
+  }, []);
 
   function handleSearch(e: React.FormEvent) {
     e.preventDefault();
