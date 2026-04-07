@@ -54,7 +54,7 @@ export default function Home() {
                 height={76}
                 priority
                 className="w-14 h-14 sm:w-20 sm:h-20"
-    sm           />
+            />
             <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
               Page<span className="text-brand">Cow</span>
             </h1>
