@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { searchWhitelist } from "@/lib/whitelist";
 import SearchForm from "./search-form";
+import Image from "next/image";
 
 export default async function SearchPage({
   searchParams,
@@ -16,12 +17,21 @@ export default async function SearchPage({
       <header className="border-b border-zinc-200 bg-white px-6 py-4 dark:border-zinc-800 dark:bg-zinc-950">
         <div className="mx-auto flex max-w-4xl flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
           <div className="flex items-center justify-between">
-            <Link
-              href="/"
-              className="text-2xl font-bold tracking-tight shrink-0"
-            >
-              Page<span className="text-brand">Cow</span>
-            </Link>
+            <div className="flex items-center gap-1">
+              <Image
+                src="/assets/images/logo.png"
+                alt="PageCow Logo"
+                width={30}
+                height={30}
+                priority
+              />
+              <Link
+                href="/"
+                className="text-2xl font-bold tracking-tight shrink-0"
+              >
+                Page<span className="text-brand">Cow</span>
+              </Link>
+            </div>
             <Link
               href="/browse"
               className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors hover:bg-zinc-100 sm:hidden dark:border-zinc-700 dark:hover:bg-zinc-800"

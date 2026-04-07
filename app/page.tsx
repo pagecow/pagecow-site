@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -45,9 +46,19 @@ export default function Home() {
 
       <main className="flex w-full max-w-2xl flex-1 flex-col items-center justify-center gap-8 py-12 sm:gap-10 sm:py-20">
         <div className="flex flex-col items-center gap-3 text-center">
-          <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
-            Page<span className="text-brand">Cow</span>
-          </h1>
+          <div className="flex items-center gap-1">
+            <Image
+                src="/assets/images/logo.png"
+                alt="PageCow Logo"
+                width={76}
+                height={76}
+                priority
+                className="w-14 h-14 sm:w-20 sm:h-20"
+    sm           />
+            <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
+              Page<span className="text-brand">Cow</span>
+            </h1>
+          </div>
           <p className="max-w-md text-base leading-7 text-zinc-500 dark:text-zinc-400 sm:text-lg">
             A distraction-free browser for work and study.
             <span className="hidden sm:inline">
