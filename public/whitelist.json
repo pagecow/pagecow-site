@@ -6,6 +6,7 @@
     "Grammar & Editing",
     "Cloud Storage",
     "Productivity",
+    "AI Assistants",
     "Study",
     "Homeschooling",
     "Bible & Theology",
@@ -18,6 +19,7 @@
   ],
   "popularDomains": [
     "mediafire.com",
+    "dropbox.com",
     "wikipedia.org",
     "britannica.com",
     "dictionary.com",
@@ -25,12 +27,16 @@
     "cliffsnotes.com",
     "gutenberg.org",
     "evernote.com",
+    "notion.so",
     "celtx.com",
     "dabblewriter.com",
     "gotquestions.org",
     "esv.org",
     "blueletterbible.org",
-    "biblegateway.com"
+    "biblegateway.com",
+    "claude.ai",
+    "fingochat.com",
+    "grammarly.com"
   ],
   "hiddenDomains": [
     "accounts.google.com",
@@ -896,6 +902,13 @@
       "tags": ["classical", "christian", "curriculum", "online courses", "homeschool", "education"]
     },
     {
+      "domain": "grammarly.com",
+      "category": "Grammar & Editing",
+      "title": "Grammarly",
+      "description": "Writing assistant for grammar, spelling, clarity, tone, and style with real-time suggestions.",
+      "tags": ["grammar", "spelling", "editing", "writing", "proofreading", "style", "clarity"]
+    },
+    {
       "domain": "hemingwayapp.com",
       "category": "Grammar & Editing",
       "title": "Hemingway Editor",
@@ -971,6 +984,20 @@
       "title": "PublishDrive",
       "description": "Digital book distribution platform reaching hundreds of stores and libraries globally.",
       "tags": ["distribution", "ebook", "publishing", "global", "libraries", "stores"]
+    },
+    {
+      "domain": "claude.ai",
+      "category": "AI Assistants",
+      "title": "Claude",
+      "description": "Anthropic's AI assistant for conversation, analysis, coding, and creative work.",
+      "tags": ["AI", "assistant", "chat", "Anthropic", "writing", "coding"]
+    },
+    {
+      "domain": "fingochat.com",
+      "category": "AI Assistants",
+      "title": "FingoChat",
+      "description": "AI chat assistant for questions, brainstorming, and everyday conversational help.",
+      "tags": ["AI", "assistant", "chat", "conversation"]
     },
     {
       "domain": "trello.com",
@@ -1118,6 +1145,13 @@
       "title": "Invoice Ninja",
       "description": "Free open-source invoicing, payments, and time tracking for freelancers and businesses.",
       "tags": ["invoicing", "payments", "time tracking", "freelance", "open source", "business"]
+    },
+    {
+      "domain": "dropbox.com",
+      "category": "Cloud Storage",
+      "title": "Dropbox",
+      "description": "Cloud storage and file sync for backing up, sharing, and accessing files across devices.",
+      "tags": ["cloud storage", "files", "sync", "backup", "sharing", "collaboration"]
     },
     {
       "domain": "pcloud.com",
