@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PageCow — Distraction-Free Browser for Work & Study",
+  title: "PageCow — Distraction-Free Browser for Study",
   description:
-    "PageCow is a desktop browser that blocks social media, news, and entertainment. Only approved work and study sites are allowed. Download for Mac, Windows, and Linux.",
+    "PageCow is a desktop browser that blocks social media, news, entertainment, and AI-heavy sites. Only approved study-focused sites are allowed. Download for Mac, Windows, and Linux.",
 };
 
 export default function RootLayout({

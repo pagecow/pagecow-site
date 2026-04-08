@@ -5,38 +5,26 @@
     "Writing & Documents",
     "Grammar & Editing",
     "Cloud Storage",
-    "Productivity",
-    "AI Assistants",
     "Study",
     "Homeschooling",
     "Bible & Theology",
     "Learn Skills",
-    "Publishing",
-    "Developer Tools",
-    "Finance & Business",
-    "SaaS & Business",
     "Other"
   ],
   "popularDomains": [
     "mediafire.com",
-    "dropbox.com",
     "wikipedia.org",
     "britannica.com",
     "dictionary.com",
     "thesaurus.com",
     "cliffsnotes.com",
     "gutenberg.org",
-    "evernote.com",
-    "notion.so",
     "celtx.com",
     "dabblewriter.com",
     "gotquestions.org",
     "esv.org",
     "blueletterbible.org",
-    "biblegateway.com",
-    "claude.ai",
-    "fingochat.com",
-    "grammarly.com"
+    "biblegateway.com"
   ],
   "hiddenDomains": [
     "accounts.google.com",
@@ -48,1544 +36,1802 @@
   ],
   "sites": [
     {
-      "domain": "notion.so",
-      "category": "Writing & Documents",
-      "title": "Notion",
-      "description": "All-in-one workspace for notes, documents, wikis, and project management.",
-      "tags": ["notes", "documents", "wiki", "writing", "collaboration", "project management", "workspace"]
-    },
-    {
-      "domain": "evernote.com",
-      "category": "Writing & Documents",
-      "title": "Evernote",
-      "description": "Note-taking app for capturing ideas, organizing research, and managing tasks.",
-      "tags": ["notes", "note-taking", "organization", "tasks", "research", "writing"]
-    },
-    {
       "domain": "dabblewriter.com",
       "category": "Writing & Documents",
       "title": "Dabble Writer",
       "description": "Novel-writing software with plotting tools, goal tracking, and story organization.",
-      "tags": ["novel", "fiction", "writing", "plotting", "story", "manuscript", "creative writing"]
+      "tags": [
+        "novel",
+        "fiction",
+        "writing",
+        "plotting",
+        "story",
+        "manuscript",
+        "creative writing"
+      ]
     },
     {
       "domain": "reedsy.com",
       "category": "Writing & Documents",
       "title": "Reedsy",
       "description": "Free writing and book editing tools with a marketplace for publishing professionals.",
-      "tags": ["writing", "editing", "book", "publishing", "manuscript", "author", "freelance editors"]
+      "tags": [
+        "writing",
+        "editing",
+        "book",
+        "publishing",
+        "manuscript",
+        "author",
+        "freelance editors"
+      ]
     },
     {
       "domain": "writerduet.com",
       "category": "Writing & Documents",
       "title": "WriterDuet",
       "description": "Professional screenwriting software with real-time collaboration.",
-      "tags": ["screenwriting", "screenplay", "script", "writing", "collaboration", "film"]
+      "tags": [
+        "screenwriting",
+        "screenplay",
+        "script",
+        "writing",
+        "collaboration",
+        "film"
+      ]
     },
     {
       "domain": "celtx.com",
       "category": "Writing & Documents",
       "title": "Celtx",
       "description": "All-in-one pre-production suite for screenwriting, storyboarding, and production planning.",
-      "tags": ["screenwriting", "storyboard", "production", "script", "film", "writing", "pre-production"]
+      "tags": [
+        "screenwriting",
+        "storyboard",
+        "production",
+        "script",
+        "film",
+        "writing",
+        "pre-production"
+      ]
     },
     {
       "domain": "livingwriter.com",
       "category": "Writing & Documents",
       "title": "LivingWriter",
       "description": "Cloud-based book writing software with story elements, manuscript organization, and outlining tools.",
-      "tags": ["book writing", "novel", "manuscript", "outlining", "story elements", "cloud", "writing"]
+      "tags": [
+        "book writing",
+        "novel",
+        "manuscript",
+        "outlining",
+        "story elements",
+        "cloud",
+        "writing"
+      ]
     },
     {
       "domain": "atticus.io",
       "category": "Writing & Documents",
       "title": "Atticus",
       "description": "All-in-one book writing, formatting, and export tool designed for indie authors.",
-      "tags": ["book writing", "formatting", "ebook", "print", "author", "publishing", "writing"]
+      "tags": [
+        "book writing",
+        "formatting",
+        "ebook",
+        "print",
+        "author",
+        "publishing",
+        "writing"
+      ]
     },
     {
       "domain": "novlr.org",
       "category": "Writing & Documents",
       "title": "Novlr",
       "description": "Distraction-free online novel writing app with goal tracking and progress stats.",
-      "tags": ["novel", "writing", "distraction-free", "goals", "progress", "creative writing"]
+      "tags": [
+        "novel",
+        "writing",
+        "distraction-free",
+        "goals",
+        "progress",
+        "creative writing"
+      ]
     },
     {
       "domain": "campfirewriting.com",
       "category": "Writing & Documents",
       "title": "Campfire Writing",
       "description": "Story development platform for building characters, timelines, magic systems, and world-building.",
-      "tags": ["story planning", "world-building", "characters", "timelines", "novel", "writing", "outlining"]
+      "tags": [
+        "story planning",
+        "world-building",
+        "characters",
+        "timelines",
+        "novel",
+        "writing",
+        "outlining"
+      ]
     },
     {
       "domain": "plottr.com",
       "category": "Writing & Documents",
       "title": "Plottr",
       "description": "Visual book outlining and plotting tool for organizing story structure, characters, and timelines.",
-      "tags": ["plotting", "outlining", "story structure", "characters", "timelines", "book writing", "planning"]
+      "tags": [
+        "plotting",
+        "outlining",
+        "story structure",
+        "characters",
+        "timelines",
+        "book writing",
+        "planning"
+      ]
     },
     {
       "domain": "wikipedia.org",
       "category": "Research & Reference",
       "title": "Wikipedia",
       "description": "Free online encyclopedia with millions of articles on virtually every topic.",
-      "tags": ["encyclopedia", "reference", "research", "articles", "knowledge", "wiki", "information"]
+      "tags": [
+        "encyclopedia",
+        "reference",
+        "research",
+        "articles",
+        "knowledge",
+        "wiki",
+        "information"
+      ]
     },
     {
       "domain": "britannica.com",
       "category": "Research & Reference",
       "title": "Encyclopaedia Britannica",
       "description": "Trusted encyclopedia with expert-written articles and educational resources.",
-      "tags": ["encyclopedia", "reference", "research", "education", "articles", "knowledge"]
+      "tags": [
+        "encyclopedia",
+        "reference",
+        "research",
+        "education",
+        "articles",
+        "knowledge"
+      ]
     },
     {
       "domain": "dictionary.com",
       "category": "Research & Reference",
       "title": "Dictionary.com",
       "description": "Online dictionary with definitions, synonyms, word origins, and example sentences.",
-      "tags": ["dictionary", "definitions", "words", "vocabulary", "synonyms", "language"]
+      "tags": [
+        "dictionary",
+        "definitions",
+        "words",
+        "vocabulary",
+        "synonyms",
+        "language"
+      ]
     },
     {
       "domain": "merriam-webster.com",
       "category": "Research & Reference",
       "title": "Merriam-Webster",
       "description": "America's most trusted dictionary and thesaurus with word games and daily vocabulary.",
-      "tags": ["dictionary", "thesaurus", "definitions", "vocabulary", "words", "language", "grammar"]
+      "tags": [
+        "dictionary",
+        "thesaurus",
+        "definitions",
+        "vocabulary",
+        "words",
+        "language",
+        "grammar"
+      ]
     },
     {
       "domain": "thesaurus.com",
       "category": "Research & Reference",
       "title": "Thesaurus.com",
       "description": "Online thesaurus with synonyms, antonyms, and related words for better writing.",
-      "tags": ["thesaurus", "synonyms", "antonyms", "words", "writing", "vocabulary"]
+      "tags": [
+        "thesaurus",
+        "synonyms",
+        "antonyms",
+        "words",
+        "writing",
+        "vocabulary"
+      ]
     },
     {
       "domain": "etymonline.com",
       "category": "Research & Reference",
       "title": "Online Etymology Dictionary",
       "description": "Comprehensive resource for the history and origins of English words.",
-      "tags": ["etymology", "word origins", "language history", "words", "dictionary", "linguistics"]
+      "tags": [
+        "etymology",
+        "word origins",
+        "language history",
+        "words",
+        "dictionary",
+        "linguistics"
+      ]
     },
     {
       "domain": "onelook.com",
       "category": "Research & Reference",
       "title": "OneLook",
       "description": "Search engine that indexes multiple dictionaries and provides reverse dictionary lookups.",
-      "tags": ["dictionary", "search", "definitions", "reverse dictionary", "words", "reference"]
+      "tags": [
+        "dictionary",
+        "search",
+        "definitions",
+        "reverse dictionary",
+        "words",
+        "reference"
+      ]
     },
     {
       "domain": "wordnik.com",
       "category": "Research & Reference",
       "title": "Wordnik",
       "description": "Comprehensive word resource with definitions, examples, pronunciations, and related words.",
-      "tags": ["dictionary", "words", "definitions", "examples", "pronunciation", "vocabulary"]
+      "tags": [
+        "dictionary",
+        "words",
+        "definitions",
+        "examples",
+        "pronunciation",
+        "vocabulary"
+      ]
     },
     {
       "domain": "rhymezone.com",
       "category": "Research & Reference",
       "title": "RhymeZone",
       "description": "Rhyming dictionary and word-finding tool for poets, songwriters, and writers.",
-      "tags": ["rhymes", "poetry", "songwriting", "words", "writing", "rhyming dictionary"]
+      "tags": [
+        "rhymes",
+        "poetry",
+        "songwriting",
+        "words",
+        "writing",
+        "rhyming dictionary"
+      ]
     },
     {
       "domain": "powerthesaurus.org",
       "category": "Research & Reference",
       "title": "Power Thesaurus",
       "description": "Crowdsourced thesaurus with synonyms, antonyms, definitions, and related words.",
-      "tags": ["thesaurus", "synonyms", "antonyms", "words", "vocabulary", "writing"]
+      "tags": [
+        "thesaurus",
+        "synonyms",
+        "antonyms",
+        "words",
+        "vocabulary",
+        "writing"
+      ]
     },
     {
       "domain": "wordhippo.com",
       "category": "Research & Reference",
       "title": "WordHippo",
       "description": "Word tool for finding synonyms, antonyms, rhymes, translations, and definitions.",
-      "tags": ["words", "synonyms", "antonyms", "translations", "rhymes", "definitions"]
+      "tags": [
+        "words",
+        "synonyms",
+        "antonyms",
+        "translations",
+        "rhymes",
+        "definitions"
+      ]
     },
     {
       "domain": "jstor.org",
       "category": "Research & Reference",
       "title": "JSTOR",
       "description": "Digital library of academic journals, books, and primary sources for scholarly research.",
-      "tags": ["academic", "journals", "research", "scholarly", "library", "papers", "articles"]
+      "tags": [
+        "academic",
+        "journals",
+        "research",
+        "scholarly",
+        "library",
+        "papers",
+        "articles"
+      ]
     },
     {
       "domain": "pubmed.ncbi.nlm.nih.gov",
       "category": "Research & Reference",
       "title": "PubMed",
       "description": "Free database of biomedical and life sciences literature from the National Library of Medicine.",
-      "tags": ["medical", "research", "science", "biology", "health", "academic", "journals", "papers"]
+      "tags": [
+        "medical",
+        "research",
+        "science",
+        "biology",
+        "health",
+        "academic",
+        "journals",
+        "papers"
+      ]
     },
     {
       "domain": "gutenberg.org",
       "category": "Research & Reference",
       "title": "Project Gutenberg",
       "description": "Free library of over 70,000 public domain eBooks including classic literature.",
-      "tags": ["books", "ebooks", "literature", "classics", "free books", "reading", "public domain"]
+      "tags": [
+        "books",
+        "ebooks",
+        "literature",
+        "classics",
+        "free books",
+        "reading",
+        "public domain"
+      ]
     },
     {
       "domain": "worldcat.org",
       "category": "Research & Reference",
       "title": "WorldCat",
       "description": "Global catalog connecting you to library collections and resources worldwide.",
-      "tags": ["library", "catalog", "books", "research", "libraries", "academic"]
+      "tags": [
+        "library",
+        "catalog",
+        "books",
+        "research",
+        "libraries",
+        "academic"
+      ]
     },
     {
       "domain": "loc.gov",
       "category": "Research & Reference",
       "title": "Library of Congress",
       "description": "The largest library in the world with millions of books, recordings, and manuscripts.",
-      "tags": ["library", "government", "history", "research", "archives", "manuscripts", "books"]
+      "tags": [
+        "library",
+        "government",
+        "history",
+        "research",
+        "archives",
+        "manuscripts",
+        "books"
+      ]
     },
     {
       "domain": "plato.stanford.edu",
       "category": "Research & Reference",
       "title": "Stanford Encyclopedia of Philosophy",
       "description": "Peer-reviewed academic encyclopedia of philosophy maintained by Stanford University.",
-      "tags": ["philosophy", "encyclopedia", "academic", "research", "ethics", "logic", "metaphysics"]
+      "tags": [
+        "philosophy",
+        "encyclopedia",
+        "academic",
+        "research",
+        "ethics",
+        "logic",
+        "metaphysics"
+      ]
     },
     {
       "domain": "iep.utm.edu",
       "category": "Research & Reference",
       "title": "Internet Encyclopedia of Philosophy",
       "description": "Peer-reviewed academic resource covering major philosophers and philosophical topics.",
-      "tags": ["philosophy", "encyclopedia", "academic", "ethics", "logic", "thinkers"]
+      "tags": [
+        "philosophy",
+        "encyclopedia",
+        "academic",
+        "ethics",
+        "logic",
+        "thinkers"
+      ]
     },
     {
       "domain": "bible.com",
       "category": "Bible & Theology",
       "title": "Bible.com (YouVersion)",
       "description": "Free Bible app with multiple translations, reading plans, and devotionals.",
-      "tags": ["bible", "scripture", "reading plans", "devotionals", "translations", "faith"]
+      "tags": [
+        "bible",
+        "scripture",
+        "reading plans",
+        "devotionals",
+        "translations",
+        "faith"
+      ]
     },
     {
       "domain": "biblegateway.com",
       "category": "Bible & Theology",
       "title": "Bible Gateway",
       "description": "Searchable online Bible in over 200 versions and 70 languages with commentaries.",
-      "tags": ["bible", "scripture", "search", "translations", "commentary", "study"]
+      "tags": [
+        "bible",
+        "scripture",
+        "search",
+        "translations",
+        "commentary",
+        "study"
+      ]
     },
     {
       "domain": "blueletterbible.org",
       "category": "Bible & Theology",
       "title": "Blue Letter Bible",
       "description": "In-depth Bible study tools with interlinear, concordance, and original language resources.",
-      "tags": ["bible", "study", "greek", "hebrew", "concordance", "interlinear", "theology"]
+      "tags": [
+        "bible",
+        "study",
+        "greek",
+        "hebrew",
+        "concordance",
+        "interlinear",
+        "theology"
+      ]
     },
     {
       "domain": "crossway.org",
       "category": "Bible & Theology",
       "title": "Crossway",
       "description": "Christian publisher of the ESV Bible, books, and theological resources.",
-      "tags": ["bible", "esv", "publishing", "theology", "books", "christian"]
+      "tags": [
+        "bible",
+        "esv",
+        "publishing",
+        "theology",
+        "books",
+        "christian"
+      ]
     },
     {
       "domain": "desiringgod.org",
       "category": "Bible & Theology",
       "title": "Desiring God",
       "description": "Theological resources from John Piper including sermons, articles, and devotionals.",
-      "tags": ["theology", "sermons", "articles", "devotionals", "reformed", "christian"]
+      "tags": [
+        "theology",
+        "sermons",
+        "articles",
+        "devotionals",
+        "reformed",
+        "christian"
+      ]
     },
     {
       "domain": "enduringword.com",
       "category": "Bible & Theology",
       "title": "Enduring Word",
       "description": "Free Bible commentary and study resources by David Guzik covering every chapter.",
-      "tags": ["bible", "commentary", "study", "verse by verse", "theology", "exposition"]
+      "tags": [
+        "bible",
+        "commentary",
+        "study",
+        "verse by verse",
+        "theology",
+        "exposition"
+      ]
     },
     {
       "domain": "enduringwordbible.com",
       "category": "Bible & Theology",
       "title": "Enduring Word Bible",
       "description": "Free Bible commentary and study resources by David Guzik covering every chapter.",
-      "tags": ["bible", "commentary", "study", "verse by verse", "theology", "exposition", "enduring word", "david guzik"]
+      "tags": [
+        "bible",
+        "commentary",
+        "study",
+        "verse by verse",
+        "theology",
+        "exposition",
+        "enduring word",
+        "david guzik"
+      ]
     },
     {
       "domain": "esv.org",
       "category": "Bible & Theology",
       "title": "ESV Bible Online",
       "description": "Read and search the English Standard Version Bible online with study notes.",
-      "tags": ["bible", "esv", "scripture", "reading", "study", "translation"]
+      "tags": [
+        "bible",
+        "esv",
+        "scripture",
+        "reading",
+        "study",
+        "translation"
+      ]
     },
     {
       "domain": "gotquestions.org",
       "category": "Bible & Theology",
       "title": "GotQuestions.org",
       "description": "Bible-based answers to common spiritual and theological questions.",
-      "tags": ["bible", "questions", "answers", "theology", "faith", "christian", "apologetics"]
+      "tags": [
+        "bible",
+        "questions",
+        "answers",
+        "theology",
+        "faith",
+        "christian",
+        "apologetics"
+      ]
     },
     {
       "domain": "gotquestions.net",
       "category": "Bible & Theology",
       "title": "GotQuestions.net",
       "description": "Bible-based answers to common spiritual and theological questions.",
-      "tags": ["bible", "questions", "answers", "theology", "faith", "christian", "apologetics"]
+      "tags": [
+        "bible",
+        "questions",
+        "answers",
+        "theology",
+        "faith",
+        "christian",
+        "apologetics"
+      ]
     },
     {
       "domain": "gty.org",
       "category": "Bible & Theology",
       "title": "Grace to You",
       "description": "Bible teaching ministry of John MacArthur with sermons, articles, and study guides.",
-      "tags": ["bible", "teaching", "sermons", "theology", "reformed", "expository"]
+      "tags": [
+        "bible",
+        "teaching",
+        "sermons",
+        "theology",
+        "reformed",
+        "expository"
+      ]
     },
     {
       "domain": "ligonier.org",
       "category": "Bible & Theology",
       "title": "Ligonier Ministries",
       "description": "Reformed theological teaching from R.C. Sproul with articles, courses, and devotionals.",
-      "tags": ["theology", "reformed", "teaching", "devotionals", "articles", "courses"]
+      "tags": [
+        "theology",
+        "reformed",
+        "teaching",
+        "devotionals",
+        "articles",
+        "courses"
+      ]
     },
     {
       "domain": "9marks.org",
       "category": "Bible & Theology",
       "title": "9Marks",
       "description": "Resources for building healthy churches through biblical leadership and doctrine.",
-      "tags": ["church", "leadership", "doctrine", "pastoral", "theology", "ecclesiology"]
+      "tags": [
+        "church",
+        "leadership",
+        "doctrine",
+        "pastoral",
+        "theology",
+        "ecclesiology"
+      ]
     },
     {
       "domain": "biblestudytools.com",
       "category": "Bible & Theology",
       "title": "Bible Study Tools",
       "description": "Bible study resources including concordances, commentaries, dictionaries, and reading plans.",
-      "tags": ["bible", "study", "concordance", "commentary", "dictionary", "devotional"]
+      "tags": [
+        "bible",
+        "study",
+        "concordance",
+        "commentary",
+        "dictionary",
+        "devotional"
+      ]
     },
     {
       "domain": "ccel.org",
       "category": "Bible & Theology",
       "title": "Christian Classics Ethereal Library",
       "description": "Free digital library of classic Christian books and theological writings.",
-      "tags": ["classics", "theology", "books", "church history", "christian literature", "library"]
+      "tags": [
+        "classics",
+        "theology",
+        "books",
+        "church history",
+        "christian literature",
+        "library"
+      ]
     },
     {
       "domain": "corechristianity.com",
       "category": "Bible & Theology",
       "title": "Core Christianity",
       "description": "Accessible answers to tough questions about the Christian faith and the Bible.",
-      "tags": ["christianity", "questions", "faith", "bible", "theology", "answers"]
-    },
-    {
-      "domain": "logos.com",
-      "category": "Bible & Theology",
-      "title": "Logos Bible Software",
-      "description": "Advanced Bible study software with a massive digital theological library.",
-      "tags": ["bible", "software", "study", "theology", "library", "commentaries", "greek", "hebrew"]
+      "tags": [
+        "christianity",
+        "questions",
+        "faith",
+        "bible",
+        "theology",
+        "answers"
+      ]
     },
     {
       "domain": "monergism.com",
       "category": "Bible & Theology",
       "title": "Monergism",
       "description": "Curated collection of reformed theological articles, eBooks, and audio resources.",
-      "tags": ["reformed", "theology", "articles", "ebooks", "calvinism", "doctrine"]
+      "tags": [
+        "reformed",
+        "theology",
+        "articles",
+        "ebooks",
+        "calvinism",
+        "doctrine"
+      ]
     },
     {
       "domain": "olivetree.com",
       "category": "Bible & Theology",
       "title": "Olive Tree Bible Software",
       "description": "Bible reading app with study tools, commentaries, and multiple translations.",
-      "tags": ["bible", "app", "study", "commentaries", "translations", "reading"]
+      "tags": [
+        "bible",
+        "app",
+        "study",
+        "commentaries",
+        "translations",
+        "reading"
+      ]
     },
     {
       "domain": "studylight.org",
       "category": "Bible & Theology",
       "title": "StudyLight.org",
       "description": "Free Bible study tools including commentaries, lexicons, and encyclopedias.",
-      "tags": ["bible", "study", "commentaries", "lexicons", "encyclopedias", "theology"]
+      "tags": [
+        "bible",
+        "study",
+        "commentaries",
+        "lexicons",
+        "encyclopedias",
+        "theology"
+      ]
     },
     {
       "domain": "thegospelcoalition.org",
       "category": "Bible & Theology",
       "title": "The Gospel Coalition",
       "description": "Gospel-centered articles, reviews, podcasts, and theological resources.",
-      "tags": ["gospel", "theology", "articles", "reviews", "christian", "culture"]
+      "tags": [
+        "gospel",
+        "theology",
+        "articles",
+        "reviews",
+        "christian",
+        "culture"
+      ]
     },
     {
       "domain": "truthforlife.org",
       "category": "Bible & Theology",
       "title": "Truth For Life",
       "description": "Bible teaching ministry of Alistair Begg with sermons and devotionals.",
-      "tags": ["bible", "teaching", "sermons", "devotionals", "theology", "preaching"]
-    },
-    {
-      "domain": "khanacademy.org",
-      "category": "Study",
-      "title": "Khan Academy",
-      "description": "Free online courses and lessons in math, science, computing, history, and more.",
-      "tags": ["education", "math", "science", "courses", "learning", "free", "tutorials", "school"]
-    },
-    {
-      "domain": "edx.org",
-      "category": "Study",
-      "title": "edX",
-      "description": "Online courses from top universities and institutions worldwide.",
-      "tags": ["courses", "university", "education", "learning", "online classes", "certificates"]
-    },
-    {
-      "domain": "coursera.org",
-      "category": "Study",
-      "title": "Coursera",
-      "description": "Online learning platform with courses, certificates, and degrees from leading universities.",
-      "tags": ["courses", "university", "education", "certificates", "degrees", "learning"]
-    },
-    {
-      "domain": "brilliant.org",
-      "category": "Study",
-      "title": "Brilliant",
-      "description": "Interactive learning platform for math, science, and computer science through problem solving.",
-      "tags": ["math", "science", "computer science", "interactive", "problem solving", "learning"]
+      "tags": [
+        "bible",
+        "teaching",
+        "sermons",
+        "devotionals",
+        "theology",
+        "preaching"
+      ]
     },
     {
       "domain": "sparknotes.com",
       "category": "Study",
       "title": "SparkNotes",
       "description": "Study guides and literature summaries for students covering books, poetry, and plays.",
-      "tags": ["study guides", "literature", "summaries", "books", "english", "school"]
+      "tags": [
+        "study guides",
+        "literature",
+        "summaries",
+        "books",
+        "english",
+        "school"
+      ]
     },
     {
       "domain": "cliffsnotes.com",
       "category": "Study",
       "title": "CliffsNotes",
       "description": "Study guides, test prep, and homework help across literature, math, and science.",
-      "tags": ["study guides", "test prep", "homework", "literature", "math", "science"]
-    },
-    {
-      "domain": "wolframalpha.com",
-      "category": "Study",
-      "title": "Wolfram Alpha",
-      "description": "Computational knowledge engine that answers factual queries and solves math problems.",
-      "tags": ["math", "computation", "calculator", "science", "answers", "data", "knowledge"]
-    },
-    {
-      "domain": "mathway.com",
-      "category": "Study",
-      "title": "Mathway",
-      "description": "Math problem solver for algebra, calculus, statistics, and more with step-by-step solutions.",
-      "tags": ["math", "algebra", "calculus", "solver", "homework", "step-by-step"]
-    },
-    {
-      "domain": "symbolab.com",
-      "category": "Study",
-      "title": "Symbolab",
-      "description": "Advanced math solver with step-by-step solutions for algebra, calculus, and trigonometry.",
-      "tags": ["math", "solver", "algebra", "calculus", "trigonometry", "step-by-step"]
+      "tags": [
+        "study guides",
+        "test prep",
+        "homework",
+        "literature",
+        "math",
+        "science"
+      ]
     },
     {
       "domain": "desmos.com",
       "category": "Study",
       "title": "Desmos",
       "description": "Free online graphing calculator and interactive math tools for students and teachers.",
-      "tags": ["graphing", "calculator", "math", "interactive", "geometry", "functions"]
-    },
-    {
-      "domain": "photomath.com",
-      "category": "Study",
-      "title": "Photomath",
-      "description": "Math learning app that scans problems and provides step-by-step explanations.",
-      "tags": ["math", "solver", "step-by-step", "learning", "homework", "camera"]
+      "tags": [
+        "graphing",
+        "calculator",
+        "math",
+        "interactive",
+        "geometry",
+        "functions"
+      ]
     },
     {
       "domain": "mathisfun.com",
       "category": "Study",
       "title": "Math Is Fun",
       "description": "Easy-to-understand math lessons, games, and puzzles for all ages.",
-      "tags": ["math", "lessons", "games", "puzzles", "learning", "kids", "tutorials"]
+      "tags": [
+        "math",
+        "lessons",
+        "games",
+        "puzzles",
+        "learning",
+        "kids",
+        "tutorials"
+      ]
     },
     {
       "domain": "coolmath.com",
       "category": "Study",
       "title": "Coolmath",
       "description": "Math lessons and practice activities designed to make math enjoyable for students.",
-      "tags": ["math", "lessons", "practice", "students", "learning", "fun"]
+      "tags": [
+        "math",
+        "lessons",
+        "practice",
+        "students",
+        "learning",
+        "fun"
+      ]
     },
     {
       "domain": "commonlit.org",
       "category": "Study",
       "title": "CommonLit",
       "description": "Free reading passages and literacy resources for students and teachers.",
-      "tags": ["reading", "literacy", "passages", "english", "education", "teachers"]
+      "tags": [
+        "reading",
+        "literacy",
+        "passages",
+        "english",
+        "education",
+        "teachers"
+      ]
     },
     {
       "domain": "readworks.org",
       "category": "Study",
       "title": "ReadWorks",
       "description": "Free reading comprehension resources with articles, passages, and assessments.",
-      "tags": ["reading", "comprehension", "articles", "assessments", "education", "literacy"]
+      "tags": [
+        "reading",
+        "comprehension",
+        "articles",
+        "assessments",
+        "education",
+        "literacy"
+      ]
     },
     {
       "domain": "newsela.com",
       "category": "Study",
       "title": "Newsela",
       "description": "Educational content platform with leveled reading materials across subjects.",
-      "tags": ["reading", "education", "leveled text", "current events", "literacy", "classroom"]
+      "tags": [
+        "reading",
+        "education",
+        "leveled text",
+        "current events",
+        "literacy",
+        "classroom"
+      ]
     },
     {
       "domain": "kidshealth.org",
       "category": "Study",
       "title": "KidsHealth",
       "description": "Doctor-reviewed health information for parents, kids, and teens.",
-      "tags": ["health", "kids", "teens", "medical", "wellness", "education", "body"]
+      "tags": [
+        "health",
+        "kids",
+        "teens",
+        "medical",
+        "wellness",
+        "education",
+        "body"
+      ]
     },
     {
       "domain": "nasa.gov",
       "category": "Study",
       "title": "NASA",
       "description": "Space exploration, science, and technology resources from the U.S. space agency.",
-      "tags": ["space", "science", "astronomy", "technology", "exploration", "education", "STEM"]
+      "tags": [
+        "space",
+        "science",
+        "astronomy",
+        "technology",
+        "exploration",
+        "education",
+        "STEM"
+      ]
     },
     {
       "domain": "nationalgeographic.com",
       "category": "Study",
       "title": "National Geographic",
       "description": "Science, geography, history, and nature educational content and explorations.",
-      "tags": ["geography", "science", "nature", "history", "exploration", "animals", "education"]
+      "tags": [
+        "geography",
+        "science",
+        "nature",
+        "history",
+        "exploration",
+        "animals",
+        "education"
+      ]
     },
     {
       "domain": "pbs.org",
       "category": "Study",
       "title": "PBS",
       "description": "Public broadcasting educational resources, documentaries, and learning materials.",
-      "tags": ["education", "documentaries", "science", "history", "learning", "public media"]
+      "tags": [
+        "education",
+        "documentaries",
+        "science",
+        "history",
+        "learning",
+        "public media"
+      ]
     },
     {
       "domain": "pbslearningmedia.org",
       "category": "Study",
       "title": "PBS LearningMedia",
       "description": "Free, curriculum-aligned digital resources for PreK-12 classrooms.",
-      "tags": ["education", "curriculum", "teachers", "classroom", "resources", "K-12", "lessons"]
+      "tags": [
+        "education",
+        "curriculum",
+        "teachers",
+        "classroom",
+        "resources",
+        "K-12",
+        "lessons"
+      ]
     },
     {
       "domain": "ck12.org",
       "category": "Study",
       "title": "CK-12",
       "description": "Free online textbooks, flashcards, and adaptive practice for STEM subjects.",
-      "tags": ["textbooks", "STEM", "science", "math", "flashcards", "practice", "education"]
+      "tags": [
+        "textbooks",
+        "STEM",
+        "science",
+        "math",
+        "flashcards",
+        "practice",
+        "education"
+      ]
     },
     {
       "domain": "owl.purdue.edu",
       "category": "Study",
       "title": "Purdue OWL",
       "description": "Writing resources and instructional material from Purdue University's Online Writing Lab.",
-      "tags": ["writing", "citation", "MLA", "APA", "grammar", "research papers", "academic writing"]
+      "tags": [
+        "writing",
+        "citation",
+        "MLA",
+        "APA",
+        "grammar",
+        "research papers",
+        "academic writing"
+      ]
     },
     {
       "domain": "easybib.com",
       "category": "Study",
       "title": "EasyBib",
       "description": "Automatic citation generator for MLA, APA, and Chicago style bibliographies.",
-      "tags": ["citations", "bibliography", "MLA", "APA", "Chicago", "research", "references"]
+      "tags": [
+        "citations",
+        "bibliography",
+        "MLA",
+        "APA",
+        "Chicago",
+        "research",
+        "references"
+      ]
     },
     {
       "domain": "citationmachine.net",
       "category": "Study",
       "title": "Citation Machine",
       "description": "Free citation generator and writing tools for research papers and essays.",
-      "tags": ["citations", "bibliography", "MLA", "APA", "research", "writing", "references"]
+      "tags": [
+        "citations",
+        "bibliography",
+        "MLA",
+        "APA",
+        "research",
+        "writing",
+        "references"
+      ]
     },
     {
       "domain": "hippocampus.org",
       "category": "Study",
       "title": "HippoCampus",
       "description": "Free academic resources and multimedia content for middle school through college.",
-      "tags": ["education", "multimedia", "courses", "math", "science", "history", "english"]
+      "tags": [
+        "education",
+        "multimedia",
+        "courses",
+        "math",
+        "science",
+        "history",
+        "english"
+      ]
     },
     {
       "domain": "k12.com",
       "category": "Study",
       "title": "K12",
       "description": "Online public school and curriculum for students in kindergarten through 12th grade.",
-      "tags": ["online school", "K-12", "curriculum", "virtual school", "education", "homeschool"]
+      "tags": [
+        "online school",
+        "K-12",
+        "curriculum",
+        "virtual school",
+        "education",
+        "homeschool"
+      ]
     },
     {
       "domain": "canvas.instructure.com",
       "category": "Study",
       "title": "Canvas LMS",
       "description": "Learning management system used by schools and universities for courses and assignments.",
-      "tags": ["LMS", "courses", "assignments", "school", "university", "classroom", "grades"]
+      "tags": [
+        "LMS",
+        "courses",
+        "assignments",
+        "school",
+        "university",
+        "classroom",
+        "grades"
+      ]
     },
     {
       "domain": "blackboard.com",
       "category": "Study",
       "title": "Blackboard",
       "description": "Learning management platform for education with courses, grades, and collaboration tools.",
-      "tags": ["LMS", "courses", "grades", "education", "university", "classroom"]
+      "tags": [
+        "LMS",
+        "courses",
+        "grades",
+        "education",
+        "university",
+        "classroom"
+      ]
     },
     {
       "domain": "schoology.com",
       "category": "Study",
       "title": "Schoology",
       "description": "Learning management system connecting students, teachers, and content in one platform.",
-      "tags": ["LMS", "school", "courses", "grades", "education", "classroom"]
+      "tags": [
+        "LMS",
+        "school",
+        "courses",
+        "grades",
+        "education",
+        "classroom"
+      ]
     },
     {
       "domain": "powerschool.com",
       "category": "Study",
       "title": "PowerSchool",
       "description": "Student information system for grades, attendance, and school administration.",
-      "tags": ["grades", "attendance", "school", "administration", "education", "student portal"]
+      "tags": [
+        "grades",
+        "attendance",
+        "school",
+        "administration",
+        "education",
+        "student portal"
+      ]
     },
     {
       "domain": "remind.com",
       "category": "Study",
       "title": "Remind",
       "description": "Communication platform for schools connecting teachers, students, and parents.",
-      "tags": ["communication", "school", "teachers", "parents", "messaging", "education"]
-    },
-    {
-      "domain": "duolingo.com",
-      "category": "Learn Skills",
-      "title": "Duolingo",
-      "description": "Free language learning app with bite-sized lessons in over 40 languages.",
-      "tags": ["language", "learning", "spanish", "french", "languages", "practice", "vocabulary"]
+      "tags": [
+        "communication",
+        "school",
+        "teachers",
+        "parents",
+        "messaging",
+        "education"
+      ]
     },
     {
       "domain": "funbrain.com",
       "category": "Learn Skills",
       "title": "Funbrain",
       "description": "Educational games, books, and activities for kids in reading and math.",
-      "tags": ["games", "kids", "reading", "math", "education", "learning", "activities"]
+      "tags": [
+        "games",
+        "kids",
+        "reading",
+        "math",
+        "education",
+        "learning",
+        "activities"
+      ]
     },
     {
       "domain": "typing.com",
       "category": "Learn Skills",
       "title": "Typing.com",
       "description": "Free typing tutor with lessons, tests, and games to improve typing speed and accuracy.",
-      "tags": ["typing", "keyboard", "lessons", "practice", "speed", "accuracy"]
+      "tags": [
+        "typing",
+        "keyboard",
+        "lessons",
+        "practice",
+        "speed",
+        "accuracy"
+      ]
     },
     {
       "domain": "typingclub.com",
       "category": "Learn Skills",
       "title": "TypingClub",
       "description": "Interactive typing curriculum for schools and individuals with guided lessons.",
-      "tags": ["typing", "keyboard", "lessons", "school", "practice", "curriculum"]
+      "tags": [
+        "typing",
+        "keyboard",
+        "lessons",
+        "school",
+        "practice",
+        "curriculum"
+      ]
     },
     {
       "domain": "code.org",
       "category": "Learn Skills",
       "title": "Code.org",
       "description": "Free coding courses and activities designed to teach computer science to all students.",
-      "tags": ["coding", "computer science", "programming", "education", "kids", "courses"]
+      "tags": [
+        "coding",
+        "computer science",
+        "programming",
+        "education",
+        "kids",
+        "courses"
+      ]
     },
     {
       "domain": "scratch.mit.edu",
       "category": "Learn Skills",
       "title": "Scratch",
       "description": "Visual programming language from MIT for kids to create stories, games, and animations.",
-      "tags": ["coding", "kids", "programming", "games", "animation", "visual programming"]
+      "tags": [
+        "coding",
+        "kids",
+        "programming",
+        "games",
+        "animation",
+        "visual programming"
+      ]
     },
     {
       "domain": "abcya.com",
       "category": "Learn Skills",
       "title": "ABCya",
       "description": "Educational games and activities for elementary students across multiple subjects.",
-      "tags": ["games", "kids", "elementary", "math", "reading", "education", "activities"]
+      "tags": [
+        "games",
+        "kids",
+        "elementary",
+        "math",
+        "reading",
+        "education",
+        "activities"
+      ]
     },
     {
       "domain": "blockly.games",
       "category": "Learn Skills",
       "title": "Blockly Games",
       "description": "Free educational games that teach programming concepts using visual block-based coding.",
-      "tags": ["coding", "games", "programming", "blocks", "kids", "education"]
+      "tags": [
+        "coding",
+        "games",
+        "programming",
+        "blocks",
+        "kids",
+        "education"
+      ]
     },
     {
       "domain": "kodable.com",
       "category": "Learn Skills",
       "title": "Kodable",
       "description": "Programming curriculum for kids from kindergarten through fifth grade.",
-      "tags": ["coding", "kids", "programming", "curriculum", "elementary", "education"]
+      "tags": [
+        "coding",
+        "kids",
+        "programming",
+        "curriculum",
+        "elementary",
+        "education"
+      ]
     },
     {
       "domain": "nitrotype.com",
       "category": "Learn Skills",
       "title": "Nitro Type",
       "description": "Competitive typing game where you race others by typing accurately and quickly.",
-      "tags": ["typing", "racing", "game", "speed", "practice", "competition"]
+      "tags": [
+        "typing",
+        "racing",
+        "game",
+        "speed",
+        "practice",
+        "competition"
+      ]
     },
     {
       "domain": "pbskids.org",
       "category": "Learn Skills",
       "title": "PBS Kids",
       "description": "Free educational games and activities for children based on PBS programs.",
-      "tags": ["kids", "games", "education", "learning", "activities", "preschool"]
+      "tags": [
+        "kids",
+        "games",
+        "education",
+        "learning",
+        "activities",
+        "preschool"
+      ]
     },
     {
       "domain": "splashlearn.com",
       "category": "Learn Skills",
       "title": "SplashLearn",
       "description": "Game-based math and reading program for kids from pre-K through grade 5.",
-      "tags": ["math", "reading", "games", "kids", "education", "practice", "elementary"]
+      "tags": [
+        "math",
+        "reading",
+        "games",
+        "kids",
+        "education",
+        "practice",
+        "elementary"
+      ]
     },
     {
       "domain": "starfall.com",
       "category": "Learn Skills",
       "title": "Starfall",
       "description": "Free educational website teaching reading, phonics, and math for young children.",
-      "tags": ["reading", "phonics", "math", "kids", "preschool", "education", "early learning"]
+      "tags": [
+        "reading",
+        "phonics",
+        "math",
+        "kids",
+        "preschool",
+        "education",
+        "early learning"
+      ]
     },
     {
       "domain": "teachyourmonstertoread.org",
       "category": "Learn Skills",
       "title": "Teach Your Monster to Read",
       "description": "Free phonics and reading game for children in early stages of learning to read.",
-      "tags": ["reading", "phonics", "game", "kids", "education", "early learning"]
+      "tags": [
+        "reading",
+        "phonics",
+        "game",
+        "kids",
+        "education",
+        "early learning"
+      ]
     },
     {
       "domain": "tynker.com",
       "category": "Learn Skills",
       "title": "Tynker",
       "description": "Coding platform for kids to learn programming through games, courses, and projects.",
-      "tags": ["coding", "kids", "programming", "games", "courses", "STEM", "projects"]
+      "tags": [
+        "coding",
+        "kids",
+        "programming",
+        "games",
+        "courses",
+        "STEM",
+        "projects"
+      ]
     },
     {
       "domain": "answersresearchjournal.org",
       "category": "Homeschooling",
       "title": "Answers Research Journal",
       "description": "Peer-reviewed creation science research journal from Answers in Genesis.",
-      "tags": ["creation science", "research", "journal", "homeschool", "science", "apologetics"]
+      "tags": [
+        "creation science",
+        "research",
+        "journal",
+        "homeschool",
+        "science",
+        "apologetics"
+      ]
     },
     {
       "domain": "creationmoments.com",
       "category": "Homeschooling",
       "title": "Creation Moments",
       "description": "Short creation science resources and devotionals for families and educators.",
-      "tags": ["creation", "science", "devotionals", "education", "homeschool", "family"]
+      "tags": [
+        "creation",
+        "science",
+        "devotionals",
+        "education",
+        "homeschool",
+        "family"
+      ]
     },
     {
       "domain": "kidsanswers.org",
       "category": "Homeschooling",
       "title": "Kids Answers",
       "description": "Kid-friendly creation science content and activities from Answers in Genesis.",
-      "tags": ["kids", "creation", "science", "activities", "education", "homeschool"]
+      "tags": [
+        "kids",
+        "creation",
+        "science",
+        "activities",
+        "education",
+        "homeschool"
+      ]
     },
     {
       "domain": "abeka.com",
       "category": "Homeschooling",
       "title": "Abeka",
       "description": "Christian curriculum publisher offering textbooks, video lessons, and homeschool programs.",
-      "tags": ["curriculum", "homeschool", "christian", "textbooks", "lessons", "K-12"]
+      "tags": [
+        "curriculum",
+        "homeschool",
+        "christian",
+        "textbooks",
+        "lessons",
+        "K-12"
+      ]
     },
     {
       "domain": "apologia.com",
       "category": "Homeschooling",
       "title": "Apologia",
       "description": "Christian homeschool science and worldview curriculum for all grade levels.",
-      "tags": ["science", "homeschool", "christian", "curriculum", "worldview", "education"]
+      "tags": [
+        "science",
+        "homeschool",
+        "christian",
+        "curriculum",
+        "worldview",
+        "education"
+      ]
     },
     {
       "domain": "bjukpress.com",
       "category": "Homeschooling",
       "title": "BJU Press",
       "description": "Christian educational materials and curriculum from Bob Jones University.",
-      "tags": ["curriculum", "homeschool", "christian", "textbooks", "education", "K-12"]
+      "tags": [
+        "curriculum",
+        "homeschool",
+        "christian",
+        "textbooks",
+        "education",
+        "K-12"
+      ]
     },
     {
       "domain": "focusonthefamily.com",
       "category": "Homeschooling",
       "title": "Focus on the Family",
       "description": "Christian family resources including parenting advice, marriage help, and faith-building tools.",
-      "tags": ["family", "parenting", "christian", "marriage", "faith", "resources"]
+      "tags": [
+        "family",
+        "parenting",
+        "christian",
+        "marriage",
+        "faith",
+        "resources"
+      ]
     },
     {
       "domain": "hslda.org",
       "category": "Homeschooling",
       "title": "HSLDA",
       "description": "Home School Legal Defense Association providing legal support and homeschool advocacy.",
-      "tags": ["homeschool", "legal", "advocacy", "rights", "support", "education"]
+      "tags": [
+        "homeschool",
+        "legal",
+        "advocacy",
+        "rights",
+        "support",
+        "education"
+      ]
     },
     {
       "domain": "icr.org",
       "category": "Homeschooling",
       "title": "Institute for Creation Research",
       "description": "Scientific research and educational resources from a creation science perspective.",
-      "tags": ["creation", "science", "research", "education", "homeschool", "apologetics"]
+      "tags": [
+        "creation",
+        "science",
+        "research",
+        "education",
+        "homeschool",
+        "apologetics"
+      ]
     },
     {
       "domain": "masterbooks.com",
       "category": "Homeschooling",
       "title": "Master Books",
       "description": "Faith-based curriculum and educational books for homeschool families.",
-      "tags": ["curriculum", "homeschool", "books", "christian", "education", "textbooks"]
+      "tags": [
+        "curriculum",
+        "homeschool",
+        "books",
+        "christian",
+        "education",
+        "textbooks"
+      ]
     },
     {
       "domain": "sonlight.com",
       "category": "Homeschooling",
       "title": "Sonlight",
       "description": "Literature-based Christian homeschool curriculum with complete programs for all ages.",
-      "tags": ["curriculum", "homeschool", "literature", "christian", "reading", "program"]
+      "tags": [
+        "curriculum",
+        "homeschool",
+        "literature",
+        "christian",
+        "reading",
+        "program"
+      ]
     },
     {
       "domain": "allinonehomeschool.com",
       "category": "Homeschooling",
       "title": "Easy Peasy All-in-One Homeschool",
       "description": "Free, complete online homeschool curriculum for all grades.",
-      "tags": ["homeschool", "free", "curriculum", "online", "all grades", "education"]
+      "tags": [
+        "homeschool",
+        "free",
+        "curriculum",
+        "online",
+        "all grades",
+        "education"
+      ]
     },
     {
       "domain": "amblesideonline.org",
       "category": "Homeschooling",
       "title": "AmblesideOnline",
       "description": "Free Charlotte Mason-inspired homeschool curriculum using living books.",
-      "tags": ["homeschool", "Charlotte Mason", "curriculum", "living books", "education", "free"]
+      "tags": [
+        "homeschool",
+        "Charlotte Mason",
+        "curriculum",
+        "living books",
+        "education",
+        "free"
+      ]
     },
     {
       "domain": "christianbook.com",
       "category": "Homeschooling",
       "title": "Christianbook",
       "description": "Online retailer of Christian books, Bibles, homeschool curriculum, and gifts.",
-      "tags": ["books", "christian", "homeschool", "curriculum", "bibles", "shopping"]
+      "tags": [
+        "books",
+        "christian",
+        "homeschool",
+        "curriculum",
+        "bibles",
+        "shopping"
+      ]
     },
     {
       "domain": "iew.com",
       "category": "Homeschooling",
       "title": "Institute for Excellence in Writing",
       "description": "Writing and grammar curriculum for homeschool and classroom instruction.",
-      "tags": ["writing", "grammar", "curriculum", "homeschool", "composition", "education"]
+      "tags": [
+        "writing",
+        "grammar",
+        "curriculum",
+        "homeschool",
+        "composition",
+        "education"
+      ]
     },
     {
       "domain": "mathusee.com",
       "category": "Homeschooling",
       "title": "Math-U-See",
       "description": "Mastery-based math curriculum using manipulatives and video instruction.",
-      "tags": ["math", "curriculum", "homeschool", "manipulatives", "mastery", "education"]
+      "tags": [
+        "math",
+        "curriculum",
+        "homeschool",
+        "manipulatives",
+        "mastery",
+        "education"
+      ]
     },
     {
       "domain": "memoriapress.com",
       "category": "Homeschooling",
       "title": "Memoria Press",
       "description": "Classical Christian education curriculum with Latin, logic, and liberal arts.",
-      "tags": ["classical", "curriculum", "latin", "logic", "homeschool", "christian", "liberal arts"]
+      "tags": [
+        "classical",
+        "curriculum",
+        "latin",
+        "logic",
+        "homeschool",
+        "christian",
+        "liberal arts"
+      ]
     },
     {
       "domain": "myfathersworld.com",
       "category": "Homeschooling",
       "title": "My Father's World",
       "description": "Christian homeschool curriculum combining Charlotte Mason, classical, and unit studies.",
-      "tags": ["curriculum", "homeschool", "christian", "Charlotte Mason", "classical", "education"]
+      "tags": [
+        "curriculum",
+        "homeschool",
+        "christian",
+        "Charlotte Mason",
+        "classical",
+        "education"
+      ]
     },
     {
       "domain": "rainbowresource.com",
       "category": "Homeschooling",
       "title": "Rainbow Resource Center",
       "description": "Large homeschool supplier with thousands of curriculum options and educational materials.",
-      "tags": ["homeschool", "curriculum", "supplies", "materials", "education", "shopping"]
+      "tags": [
+        "homeschool",
+        "curriculum",
+        "supplies",
+        "materials",
+        "education",
+        "shopping"
+      ]
     },
     {
       "domain": "setonhome.org",
       "category": "Homeschooling",
       "title": "Seton Home Study School",
       "description": "Catholic homeschool program providing complete K-12 curriculum and support.",
-      "tags": ["homeschool", "catholic", "curriculum", "K-12", "education", "program"]
+      "tags": [
+        "homeschool",
+        "catholic",
+        "curriculum",
+        "K-12",
+        "education",
+        "program"
+      ]
     },
     {
       "domain": "simplycharlottemason.com",
       "category": "Homeschooling",
       "title": "Simply Charlotte Mason",
       "description": "Charlotte Mason homeschooling resources, curriculum guides, and methods.",
-      "tags": ["homeschool", "Charlotte Mason", "curriculum", "methods", "living books", "education"]
+      "tags": [
+        "homeschool",
+        "Charlotte Mason",
+        "curriculum",
+        "methods",
+        "living books",
+        "education"
+      ]
     },
     {
       "domain": "teachingtextbooks.com",
       "category": "Homeschooling",
       "title": "Teaching Textbooks",
       "description": "Self-paced math curriculum with automated grading designed for homeschoolers.",
-      "tags": ["math", "curriculum", "homeschool", "self-paced", "grading", "education"]
+      "tags": [
+        "math",
+        "curriculum",
+        "homeschool",
+        "self-paced",
+        "grading",
+        "education"
+      ]
     },
     {
       "domain": "thegoodandthebeautiful.com",
       "category": "Homeschooling",
       "title": "The Good and the Beautiful",
       "description": "Homeschool curriculum emphasizing wholesome content across language arts, math, and history.",
-      "tags": ["curriculum", "homeschool", "language arts", "math", "history", "wholesome"]
+      "tags": [
+        "curriculum",
+        "homeschool",
+        "language arts",
+        "math",
+        "history",
+        "wholesome"
+      ]
     },
     {
       "domain": "veritaspress.com",
       "category": "Homeschooling",
       "title": "Veritas Press",
       "description": "Classical Christian curriculum with self-paced online courses and textbooks.",
-      "tags": ["classical", "christian", "curriculum", "online courses", "homeschool", "education"]
+      "tags": [
+        "classical",
+        "christian",
+        "curriculum",
+        "online courses",
+        "homeschool",
+        "education"
+      ]
     },
     {
-      "domain": "grammarly.com",
+      "domain": "brians.wsu.edu",
       "category": "Grammar & Editing",
-      "title": "Grammarly",
-      "description": "Writing assistant for grammar, spelling, clarity, tone, and style with real-time suggestions.",
-      "tags": ["grammar", "spelling", "editing", "writing", "proofreading", "style", "clarity"]
+      "title": "Common Errors in English Usage",
+      "description": "Reference guide from Washington State University explaining frequent mistakes in English grammar and word choice.",
+      "tags": [
+        "grammar",
+        "usage",
+        "errors",
+        "reference",
+        "writing",
+        "editing"
+      ]
     },
     {
-      "domain": "hemingwayapp.com",
+      "domain": "capitalizemytitle.com",
       "category": "Grammar & Editing",
-      "title": "Hemingway Editor",
-      "description": "Writing tool that highlights complex sentences, passive voice, and readability issues.",
-      "tags": ["writing", "readability", "editing", "clarity", "style", "prose"]
+      "title": "Capitalize My Title",
+      "description": "Applies title-capitalization rules so headings and titles follow standard style guides.",
+      "tags": [
+        "capitalization",
+        "titles",
+        "style",
+        "headings",
+        "writing",
+        "editing"
+      ]
     },
     {
-      "domain": "prowritingaid.com",
+      "domain": "englishgrammar101.com",
       "category": "Grammar & Editing",
-      "title": "ProWritingAid",
-      "description": "Grammar checker and style editor with in-depth writing reports and suggestions.",
-      "tags": ["grammar", "editing", "writing", "style", "reports", "proofreading"]
+      "title": "English Grammar 101",
+      "description": "Structured lessons on parts of speech, sentence structure, and punctuation with practice exercises.",
+      "tags": [
+        "grammar",
+        "lessons",
+        "punctuation",
+        "sentences",
+        "writing",
+        "education"
+      ]
     },
     {
-      "domain": "languagetool.org",
+      "domain": "grammarbook.com",
       "category": "Grammar & Editing",
-      "title": "LanguageTool",
-      "description": "Multilingual grammar, style, and spell checker for over 30 languages.",
-      "tags": ["grammar", "spelling", "multilingual", "proofreading", "writing", "languages"]
+      "title": "GrammarBook.com",
+      "description": "English grammar rules, punctuation guides, and free quizzes for clear writing.",
+      "tags": [
+        "grammar",
+        "punctuation",
+        "quizzes",
+        "rules",
+        "writing",
+        "reference"
+      ]
+    },
+    {
+      "domain": "perfect-english-grammar.com",
+      "category": "Grammar & Editing",
+      "title": "Perfect English Grammar",
+      "description": "Grammar explanations and printable exercises covering tenses, modals, and sentence patterns.",
+      "tags": [
+        "grammar",
+        "exercises",
+        "tenses",
+        "ESL",
+        "writing",
+        "practice"
+      ]
+    },
+    {
+      "domain": "usingenglish.com",
+      "category": "Grammar & Editing",
+      "title": "UsingEnglish.com",
+      "description": "Reference articles, glossaries, and quizzes on English grammar and vocabulary for learners.",
+      "tags": [
+        "grammar",
+        "vocabulary",
+        "quizzes",
+        "ESL",
+        "reference",
+        "writing"
+      ]
     },
     {
       "domain": "wordcounter.net",
       "category": "Grammar & Editing",
       "title": "WordCounter",
       "description": "Online tool to count words, characters, sentences, and paragraphs in your text.",
-      "tags": ["word count", "characters", "writing", "text analysis", "sentences"]
+      "tags": [
+        "word count",
+        "characters",
+        "writing",
+        "text analysis",
+        "sentences"
+      ]
     },
     {
       "domain": "charactercounter.com",
       "category": "Grammar & Editing",
       "title": "Character Counter",
       "description": "Simple tool to count characters, words, and paragraphs with social media limits.",
-      "tags": ["character count", "word count", "text", "writing", "limits"]
-    },
-    {
-      "domain": "kdp.amazon.com",
-      "category": "Publishing",
-      "title": "Amazon Kindle Direct Publishing",
-      "description": "Self-publishing platform to publish eBooks and paperbacks on Amazon worldwide.",
-      "tags": ["self-publishing", "kindle", "ebooks", "paperback", "amazon", "author"]
-    },
-    {
-      "domain": "ingramspark.com",
-      "category": "Publishing",
-      "title": "IngramSpark",
-      "description": "Print-on-demand and distribution platform for independent authors and publishers.",
-      "tags": ["publishing", "print-on-demand", "distribution", "books", "independent", "author"]
-    },
-    {
-      "domain": "draft2digital.com",
-      "category": "Publishing",
-      "title": "Draft2Digital",
-      "description": "eBook distribution platform that publishes to major retailers and library systems.",
-      "tags": ["ebook", "distribution", "publishing", "retailers", "self-publishing", "author"]
-    },
-    {
-      "domain": "lulu.com",
-      "category": "Publishing",
-      "title": "Lulu",
-      "description": "Self-publishing and print-on-demand platform for books, calendars, and photo books.",
-      "tags": ["self-publishing", "print-on-demand", "books", "author", "printing"]
-    },
-    {
-      "domain": "bookbaby.com",
-      "category": "Publishing",
-      "title": "BookBaby",
-      "description": "Book publishing services including printing, distribution, and book design.",
-      "tags": ["publishing", "printing", "distribution", "design", "self-publishing", "author"]
-    },
-    {
-      "domain": "publishdrive.com",
-      "category": "Publishing",
-      "title": "PublishDrive",
-      "description": "Digital book distribution platform reaching hundreds of stores and libraries globally.",
-      "tags": ["distribution", "ebook", "publishing", "global", "libraries", "stores"]
-    },
-    {
-      "domain": "claude.ai",
-      "category": "AI Assistants",
-      "title": "Claude",
-      "description": "Anthropic's AI assistant for conversation, analysis, coding, and creative work.",
-      "tags": ["AI", "assistant", "chat", "Anthropic", "writing", "coding"]
-    },
-    {
-      "domain": "fingochat.com",
-      "category": "AI Assistants",
-      "title": "FingoChat",
-      "description": "AI chat assistant for questions, brainstorming, and everyday conversational help.",
-      "tags": ["AI", "assistant", "chat", "conversation"]
-    },
-    {
-      "domain": "trello.com",
-      "category": "Productivity",
-      "title": "Trello",
-      "description": "Visual project management tool using boards, lists, and cards to organize tasks.",
-      "tags": ["project management", "boards", "tasks", "organization", "kanban", "collaboration"]
-    },
-    {
-      "domain": "asana.com",
-      "category": "Productivity",
-      "title": "Asana",
-      "description": "Work management platform for teams to plan, organize, and track projects.",
-      "tags": ["project management", "tasks", "teams", "planning", "workflow", "collaboration"]
-    },
-    {
-      "domain": "monday.com",
-      "category": "Productivity",
-      "title": "Monday.com",
-      "description": "Work operating system for teams to manage projects, workflows, and everyday tasks.",
-      "tags": ["project management", "workflow", "teams", "tasks", "collaboration", "planning"]
-    },
-    {
-      "domain": "basecamp.com",
-      "category": "Productivity",
-      "title": "Basecamp",
-      "description": "All-in-one project management and team communication tool for businesses.",
-      "tags": ["project management", "communication", "teams", "business", "collaboration"]
-    },
-    {
-      "domain": "todoist.com",
-      "category": "Productivity",
-      "title": "Todoist",
-      "description": "Task management app to organize, plan, and collaborate on projects and to-do lists.",
-      "tags": ["tasks", "to-do list", "organization", "planning", "productivity", "reminders"]
-    },
-    {
-      "domain": "ticktick.com",
-      "category": "Productivity",
-      "title": "TickTick",
-      "description": "To-do list and task manager with calendar, habit tracking, and Pomodoro timer.",
-      "tags": ["tasks", "to-do list", "calendar", "habits", "pomodoro", "productivity"]
-    },
-    {
-      "domain": "clickup.com",
-      "category": "Productivity",
-      "title": "ClickUp",
-      "description": "All-in-one productivity platform for tasks, docs, goals, and project management.",
-      "tags": ["productivity", "project management", "tasks", "docs", "goals", "collaboration"]
-    },
-    {
-      "domain": "linear.app",
-      "category": "Productivity",
-      "title": "Linear",
-      "description": "Streamlined issue tracking and project management tool built for software teams.",
-      "tags": ["issue tracking", "project management", "software", "teams", "agile", "development"]
-    },
-    {
-      "domain": "airtable.com",
-      "category": "Productivity",
-      "title": "Airtable",
-      "description": "Flexible database and spreadsheet hybrid for organizing work and building apps.",
-      "tags": ["database", "spreadsheet", "organization", "apps", "collaboration", "workflow"]
-    },
-    {
-      "domain": "coda.io",
-      "category": "Productivity",
-      "title": "Coda",
-      "description": "All-in-one doc that combines documents, spreadsheets, and app-building tools.",
-      "tags": ["documents", "spreadsheets", "apps", "collaboration", "workflow", "productivity"]
-    },
-    {
-      "domain": "calendar.google.com",
-      "category": "Productivity",
-      "title": "Google Calendar",
-      "description": "Online calendar for scheduling events, meetings, and reminders.",
-      "tags": ["calendar", "scheduling", "events", "meetings", "reminders", "time management"]
-    },
-    {
-      "domain": "myaccount.google.com",
-      "category": "Productivity",
-      "title": "Google Account",
-      "description": "Manage your Google account settings, security, privacy, and personal information.",
-      "tags": ["google", "account", "settings", "security", "privacy", "profile"]
-    },
-    {
-      "domain": "zoom.us",
-      "category": "Productivity",
-      "title": "Zoom",
-      "description": "Video conferencing platform for meetings, webinars, and online collaboration.",
-      "tags": ["video", "meetings", "conferencing", "webinars", "collaboration", "communication"]
-    },
-    {
-      "domain": "calendly.com",
-      "category": "Productivity",
-      "title": "Calendly",
-      "description": "Scheduling automation tool for booking meetings without back-and-forth emails.",
-      "tags": ["scheduling", "meetings", "booking", "automation", "calendar", "appointments"]
-    },
-    {
-      "domain": "quickbooks.intuit.com",
-      "category": "Finance & Business",
-      "title": "QuickBooks",
-      "description": "Accounting software for small businesses to manage invoicing, expenses, and payroll.",
-      "tags": ["accounting", "invoicing", "expenses", "payroll", "small business", "bookkeeping"]
-    },
-    {
-      "domain": "intuit.com",
-      "category": "Finance & Business",
-      "title": "Intuit",
-      "description": "Financial technology company offering QuickBooks, TurboTax, and other business tools.",
-      "tags": ["finance", "accounting", "taxes", "business", "software", "payroll"]
-    },
-    {
-      "domain": "freshbooks.com",
-      "category": "Finance & Business",
-      "title": "FreshBooks",
-      "description": "Cloud accounting software for freelancers and small businesses with invoicing and time tracking.",
-      "tags": ["accounting", "invoicing", "freelance", "time tracking", "small business", "expenses"]
-    },
-    {
-      "domain": "wave.com",
-      "category": "Finance & Business",
-      "title": "Wave",
-      "description": "Free accounting and invoicing software for small businesses and entrepreneurs.",
-      "tags": ["accounting", "invoicing", "free", "small business", "bookkeeping", "finance"]
-    },
-    {
-      "domain": "paypal.com",
-      "category": "Finance & Business",
-      "title": "PayPal",
-      "description": "Online payment platform for sending, receiving, and managing money globally.",
-      "tags": ["payments", "money", "transactions", "online payments", "business", "invoicing"]
-    },
-    {
-      "domain": "stripe.com",
-      "category": "Finance & Business",
-      "title": "Stripe",
-      "description": "Payment processing platform for internet businesses and developers.",
-      "tags": ["payments", "processing", "developers", "business", "subscriptions", "e-commerce"]
-    },
-    {
-      "domain": "invoiceninja.com",
-      "category": "Finance & Business",
-      "title": "Invoice Ninja",
-      "description": "Free open-source invoicing, payments, and time tracking for freelancers and businesses.",
-      "tags": ["invoicing", "payments", "time tracking", "freelance", "open source", "business"]
-    },
-    {
-      "domain": "dropbox.com",
-      "category": "Cloud Storage",
-      "title": "Dropbox",
-      "description": "Cloud storage and file sync for backing up, sharing, and accessing files across devices.",
-      "tags": ["cloud storage", "files", "sync", "backup", "sharing", "collaboration"]
+      "tags": [
+        "character count",
+        "word count",
+        "text",
+        "writing",
+        "limits"
+      ]
     },
     {
       "domain": "pcloud.com",
       "category": "Cloud Storage",
       "title": "pCloud",
       "description": "Secure cloud storage with file sharing, backup, and encryption features.",
-      "tags": ["cloud storage", "files", "encryption", "backup", "sharing", "secure"]
+      "tags": [
+        "cloud storage",
+        "files",
+        "encryption",
+        "backup",
+        "sharing",
+        "secure"
+      ]
     },
     {
       "domain": "sync.com",
       "category": "Cloud Storage",
       "title": "Sync",
       "description": "Zero-knowledge encrypted cloud storage and secure file sharing.",
-      "tags": ["cloud storage", "encryption", "privacy", "backup", "files", "sharing", "secure"]
+      "tags": [
+        "cloud storage",
+        "encryption",
+        "privacy",
+        "backup",
+        "files",
+        "sharing",
+        "secure"
+      ]
     },
     {
       "domain": "photolog.cloud",
       "category": "Cloud Storage",
       "title": "Photolog",
       "description": "Cloud storage and organization for photos and media.",
-      "tags": ["cloud storage", "photos", "media", "backup", "organization"]
+      "tags": [
+        "cloud storage",
+        "photos",
+        "media",
+        "backup",
+        "organization"
+      ]
     },
     {
       "domain": "mediafire.com",
       "category": "Cloud Storage",
       "title": "MediaFire",
       "description": "Cloud storage and file hosting for sharing and backing up files.",
-      "tags": ["cloud storage", "file hosting", "sharing", "backup", "files"]
+      "tags": [
+        "cloud storage",
+        "file hosting",
+        "sharing",
+        "backup",
+        "files"
+      ]
     },
     {
       "domain": "apple.com",
       "category": "Cloud Storage",
       "title": "Apple",
       "description": "Apple's official website for products, services, and support.",
-      "tags": ["apple", "devices", "support", "icloud", "technology"]
-    },
-    {
-      "domain": "github.com",
-      "category": "Developer Tools",
-      "title": "GitHub",
-      "description": "Code hosting platform for version control, collaboration, and open-source development.",
-      "tags": ["git", "code", "repositories", "version control", "open source", "collaboration", "development"]
-    },
-    {
-      "domain": "gitlab.com",
-      "category": "Developer Tools",
-      "title": "GitLab",
-      "description": "DevOps platform with Git repository management, CI/CD pipelines, and project planning.",
-      "tags": ["git", "devops", "CI/CD", "repositories", "pipelines", "code", "development"]
-    },
-    {
-      "domain": "bitbucket.org",
-      "category": "Developer Tools",
-      "title": "Bitbucket",
-      "description": "Git code hosting and CI/CD service from Atlassian for teams and individuals.",
-      "tags": ["git", "code", "repositories", "CI/CD", "atlassian", "teams", "development"]
-    },
-    {
-      "domain": "vercel.com",
-      "category": "Developer Tools",
-      "title": "Vercel",
-      "description": "Frontend deployment platform optimized for Next.js and modern web frameworks.",
-      "tags": ["deployment", "hosting", "Next.js", "frontend", "serverless", "web", "development"]
-    },
-    {
-      "domain": "netlify.com",
-      "category": "Developer Tools",
-      "title": "Netlify",
-      "description": "Web development platform for deploying and hosting modern websites and apps.",
-      "tags": ["deployment", "hosting", "web", "static sites", "serverless", "development"]
-    },
-    {
-      "domain": "render.com",
-      "category": "Developer Tools",
-      "title": "Render",
-      "description": "Cloud hosting platform for web apps, APIs, databases, and static sites.",
-      "tags": ["hosting", "cloud", "deployment", "web apps", "APIs", "databases", "development"]
-    },
-    {
-      "domain": "railway.app",
-      "category": "Developer Tools",
-      "title": "Railway",
-      "description": "Infrastructure platform for deploying apps, databases, and services instantly.",
-      "tags": ["deployment", "infrastructure", "hosting", "databases", "apps", "development"]
-    },
-    {
-      "domain": "fly.io",
-      "category": "Developer Tools",
-      "title": "Fly.io",
-      "description": "Platform for running full-stack apps and databases close to users worldwide.",
-      "tags": ["deployment", "hosting", "edge", "full-stack", "databases", "global", "development"]
-    },
-    {
-      "domain": "heroku.com",
-      "category": "Developer Tools",
-      "title": "Heroku",
-      "description": "Cloud platform for building, deploying, and scaling web applications.",
-      "tags": ["cloud", "deployment", "hosting", "web apps", "scaling", "development"]
-    },
-    {
-      "domain": "stackoverflow.com",
-      "category": "Developer Tools",
-      "title": "Stack Overflow",
-      "description": "Question and answer community for programmers and software developers.",
-      "tags": ["programming", "Q&A", "debugging", "code", "help", "community", "development"]
-    },
-    {
-      "domain": "developer.mozilla.org",
-      "category": "Developer Tools",
-      "title": "MDN Web Docs",
-      "description": "Comprehensive documentation for web technologies including HTML, CSS, and JavaScript.",
-      "tags": ["documentation", "web", "HTML", "CSS", "JavaScript", "reference", "MDN"]
-    },
-    {
-      "domain": "nodejs.org",
-      "category": "Developer Tools",
-      "title": "Node.js",
-      "description": "JavaScript runtime documentation, downloads, and guides for server-side development.",
-      "tags": ["JavaScript", "runtime", "server", "backend", "documentation", "development"]
-    },
-    {
-      "domain": "react.dev",
-      "category": "Developer Tools",
-      "title": "React",
-      "description": "Official React documentation with tutorials, API reference, and best practices.",
-      "tags": ["React", "JavaScript", "UI", "frontend", "framework", "documentation", "components"]
-    },
-    {
-      "domain": "nextjs.org",
-      "category": "Developer Tools",
-      "title": "Next.js",
-      "description": "React framework documentation for building full-stack web applications.",
-      "tags": ["Next.js", "React", "framework", "full-stack", "SSR", "documentation", "web"]
-    },
-    {
-      "domain": "typescriptlang.org",
-      "category": "Developer Tools",
-      "title": "TypeScript",
-      "description": "Official TypeScript language documentation, playground, and learning resources.",
-      "tags": ["TypeScript", "JavaScript", "types", "documentation", "language", "development"]
-    },
-    {
-      "domain": "tailwindcss.com",
-      "category": "Developer Tools",
-      "title": "Tailwind CSS",
-      "description": "Utility-first CSS framework documentation with component examples and guides.",
-      "tags": ["CSS", "framework", "utility", "styling", "frontend", "documentation", "design"]
-    },
-    {
-      "domain": "python.org",
-      "category": "Developer Tools",
-      "title": "Python",
-      "description": "Official Python programming language website with documentation and downloads.",
-      "tags": ["Python", "programming", "language", "documentation", "downloads", "development"]
-    },
-    {
-      "domain": "rust-lang.org",
-      "category": "Developer Tools",
-      "title": "Rust",
-      "description": "Systems programming language documentation focused on safety, speed, and concurrency.",
-      "tags": ["Rust", "systems programming", "language", "documentation", "safety", "performance"]
-    },
-    {
-      "domain": "go.dev",
-      "category": "Developer Tools",
-      "title": "Go",
-      "description": "Official Go programming language site with documentation, tutorials, and packages.",
-      "tags": ["Go", "golang", "programming", "language", "documentation", "packages"]
-    },
-    {
-      "domain": "npmjs.com",
-      "category": "Developer Tools",
-      "title": "npm",
-      "description": "JavaScript package registry for discovering, sharing, and installing code packages.",
-      "tags": ["packages", "JavaScript", "registry", "dependencies", "modules", "development"]
-    },
-    {
-      "domain": "pypi.org",
-      "category": "Developer Tools",
-      "title": "PyPI",
-      "description": "Python Package Index for finding and installing Python libraries and tools.",
-      "tags": ["Python", "packages", "registry", "libraries", "pip", "development"]
-    },
-    {
-      "domain": "crates.io",
-      "category": "Developer Tools",
-      "title": "crates.io",
-      "description": "Rust package registry for discovering and publishing Rust libraries and tools.",
-      "tags": ["Rust", "packages", "registry", "libraries", "cargo", "development"]
-    },
-    {
-      "domain": "codepen.io",
-      "category": "Developer Tools",
-      "title": "CodePen",
-      "description": "Online code editor and playground for frontend HTML, CSS, and JavaScript experiments.",
-      "tags": ["code editor", "playground", "HTML", "CSS", "JavaScript", "frontend", "prototyping"]
-    },
-    {
-      "domain": "codesandbox.io",
-      "category": "Developer Tools",
-      "title": "CodeSandbox",
-      "description": "Online IDE for creating and sharing web application prototypes instantly.",
-      "tags": ["IDE", "code editor", "prototyping", "web apps", "sandbox", "development"]
-    },
-    {
-      "domain": "cursor.com",
-      "category": "Developer Tools",
-      "title": "Cursor",
-      "description": "AI-native code editor for building software with integrated assistants and agent workflows.",
-      "tags": ["IDE", "editor", "AI", "coding", "development", "VS Code"]
-    },
-    {
-      "domain": "replit.com",
-      "category": "Developer Tools",
-      "title": "Replit",
-      "description": "Browser-based IDE for coding, collaborating, and deploying in dozens of languages.",
-      "tags": ["IDE", "coding", "collaboration", "deployment", "languages", "browser", "development"]
-    },
-    {
-      "domain": "supabase.com",
-      "category": "Developer Tools",
-      "title": "Supabase",
-      "description": "Open-source Firebase alternative with Postgres database, auth, and real-time features.",
-      "tags": ["database", "Postgres", "auth", "backend", "open source", "real-time", "development"]
-    },
-    {
-      "domain": "prisma.io",
-      "category": "Developer Tools",
-      "title": "Prisma",
-      "description": "Next-generation ORM for Node.js and TypeScript with type-safe database access.",
-      "tags": ["ORM", "database", "TypeScript", "Node.js", "type-safe", "development"]
-    },
-    {
-      "domain": "planetscale.com",
-      "category": "Developer Tools",
-      "title": "PlanetScale",
-      "description": "Serverless MySQL database platform with branching and non-blocking schema changes.",
-      "tags": ["database", "MySQL", "serverless", "branching", "schema", "development"]
-    },
-    {
-      "domain": "neon.tech",
-      "category": "Developer Tools",
-      "title": "Neon",
-      "description": "Serverless Postgres database with branching, autoscaling, and generous free tier.",
-      "tags": ["database", "Postgres", "serverless", "branching", "autoscaling", "development"]
-    },
-    {
-      "domain": "digitalocean.com",
-      "category": "Developer Tools",
-      "title": "DigitalOcean",
-      "description": "Cloud infrastructure provider with virtual servers, databases, and app hosting.",
-      "tags": ["cloud", "hosting", "servers", "databases", "infrastructure", "VPS", "development"]
-    },
-    {
-      "domain": "docs.docker.com",
-      "category": "Developer Tools",
-      "title": "Docker Docs",
-      "description": "Official Docker documentation for containerization, images, and orchestration.",
-      "tags": ["Docker", "containers", "documentation", "images", "orchestration", "DevOps"]
-    },
-    {
-      "domain": "kubernetes.io",
-      "category": "Developer Tools",
-      "title": "Kubernetes",
-      "description": "Open-source container orchestration documentation and guides.",
-      "tags": ["Kubernetes", "containers", "orchestration", "DevOps", "documentation", "clusters"]
-    },
-    {
-      "domain": "hubspot.com",
-      "category": "SaaS & Business",
-      "title": "HubSpot",
-      "description": "CRM platform with marketing, sales, and customer service tools for growing businesses.",
-      "tags": ["CRM", "marketing", "sales", "customer service", "business", "automation"]
-    },
-    {
-      "domain": "salesforce.com",
-      "category": "SaaS & Business",
-      "title": "Salesforce",
-      "description": "Enterprise CRM platform for sales, marketing, and customer relationship management.",
-      "tags": ["CRM", "sales", "marketing", "enterprise", "business", "customer management"]
-    },
-    {
-      "domain": "zendesk.com",
-      "category": "SaaS & Business",
-      "title": "Zendesk",
-      "description": "Customer support platform with ticketing, live chat, and help desk solutions.",
-      "tags": ["support", "ticketing", "help desk", "customer service", "live chat", "business"]
-    },
-    {
-      "domain": "intercom.com",
-      "category": "SaaS & Business",
-      "title": "Intercom",
-      "description": "Customer messaging platform with live chat, bots, and product tours for businesses.",
-      "tags": ["messaging", "live chat", "bots", "customer support", "business", "engagement"]
-    },
-    {
-      "domain": "mailchimp.com",
-      "category": "SaaS & Business",
-      "title": "Mailchimp",
-      "description": "Email marketing and automation platform for newsletters, campaigns, and audience management.",
-      "tags": ["email marketing", "newsletters", "automation", "campaigns", "audience", "marketing"]
-    },
-    {
-      "domain": "convertkit.com",
-      "category": "SaaS & Business",
-      "title": "ConvertKit",
-      "description": "Email marketing platform designed for creators, bloggers, and online businesses.",
-      "tags": ["email marketing", "creators", "newsletters", "automation", "landing pages"]
-    },
-    {
-      "domain": "beehiiv.com",
-      "category": "SaaS & Business",
-      "title": "beehiiv",
-      "description": "Newsletter platform for building, growing, and monetizing email publications.",
-      "tags": ["newsletter", "email", "publishing", "monetization", "growth", "creators"]
-    },
-    {
-      "domain": "substack.com",
-      "category": "SaaS & Business",
-      "title": "Substack",
-      "description": "Publishing platform for independent writers to create and monetize newsletters.",
-      "tags": ["newsletter", "writing", "publishing", "monetization", "independent", "creators"]
-    },
-    {
-      "domain": "gumroad.com",
-      "category": "SaaS & Business",
-      "title": "Gumroad",
-      "description": "Platform for creators to sell digital products, courses, and memberships directly.",
-      "tags": ["e-commerce", "digital products", "creators", "selling", "courses", "memberships"]
-    },
-    {
-      "domain": "lemonsqueezy.com",
-      "category": "SaaS & Business",
-      "title": "Lemon Squeezy",
-      "description": "Payment and e-commerce platform for selling digital products and SaaS subscriptions.",
-      "tags": ["payments", "e-commerce", "digital products", "SaaS", "subscriptions", "selling"]
-    },
-    {
-      "domain": "typeform.com",
-      "category": "SaaS & Business",
-      "title": "Typeform",
-      "description": "Online form and survey builder with conversational, engaging user experiences.",
-      "tags": ["forms", "surveys", "quizzes", "data collection", "conversational", "engagement"]
-    },
-    {
-      "domain": "jotform.com",
-      "category": "SaaS & Business",
-      "title": "Jotform",
-      "description": "Easy-to-use online form builder for surveys, registrations, and data collection.",
-      "tags": ["forms", "surveys", "registrations", "data collection", "templates", "business"]
-    },
-    {
-      "domain": "surveymonkey.com",
-      "category": "SaaS & Business",
-      "title": "SurveyMonkey",
-      "description": "Survey platform for creating polls, quizzes, and feedback forms with analytics.",
-      "tags": ["surveys", "polls", "feedback", "analytics", "quizzes", "research"]
-    },
-    {
-      "domain": "zapier.com",
-      "category": "SaaS & Business",
-      "title": "Zapier",
-      "description": "Automation platform connecting thousands of apps with no-code workflows.",
-      "tags": ["automation", "integration", "workflows", "no-code", "apps", "connectors"]
-    },
-    {
-      "domain": "make.com",
-      "category": "SaaS & Business",
-      "title": "Make (Integromat)",
-      "description": "Visual automation platform for building complex workflows between apps and services.",
-      "tags": ["automation", "integration", "workflows", "visual", "apps", "no-code"]
-    },
-    {
-      "domain": "pipedream.com",
-      "category": "SaaS & Business",
-      "title": "Pipedream",
-      "description": "Developer-friendly automation platform for connecting APIs and building workflows.",
-      "tags": ["automation", "APIs", "workflows", "integration", "developer", "serverless"]
-    },
-    {
-      "domain": "namecheap.com",
-      "category": "SaaS & Business",
-      "title": "Namecheap",
-      "description": "Domain registrar and web hosting provider with affordable pricing.",
-      "tags": ["domains", "hosting", "registrar", "website", "SSL", "email"]
-    },
-    {
-      "domain": "godaddy.com",
-      "category": "SaaS & Business",
-      "title": "GoDaddy",
-      "description": "Domain registrar and web hosting platform with website builder tools.",
-      "tags": ["domains", "hosting", "registrar", "website builder", "email", "business"]
-    },
-    {
-      "domain": "porkbun.com",
-      "category": "SaaS & Business",
-      "title": "Porkbun",
-      "description": "Domain registrar offering affordable domain names with free WHOIS privacy.",
-      "tags": ["domains", "registrar", "WHOIS", "privacy", "affordable", "hosting"]
-    },
-    {
-      "domain": "wise.com",
-      "category": "SaaS & Business",
-      "title": "Wise",
-      "description": "International money transfer service with low fees and real exchange rates.",
-      "tags": ["money transfer", "international", "banking", "exchange rates", "payments", "finance"]
-    },
-    {
-      "domain": "mercury.com",
-      "category": "SaaS & Business",
-      "title": "Mercury",
-      "description": "Banking platform built for startups and growing businesses with modern financial tools.",
-      "tags": ["banking", "startups", "business", "finance", "accounts", "payments"]
+      "tags": [
+        "apple",
+        "devices",
+        "support",
+        "icloud",
+        "technology"
+      ]
     },
     {
       "domain": "pagecow.com",
       "category": "Other",
       "title": "PageCow",
-      "description": "Distraction-free web browser for work and study. No social media, no noise, just focus.",
-      "tags": ["browser", "distraction-free", "focus", "work", "study", "productivity", "PageCow"]
+      "description": "Distraction-free web browser for study. No AI, no social media, no news feeds, no entertainment—just focus.",
+      "tags": [
+        "browser",
+        "distraction-free",
+        "focus",
+        "study",
+        "productivity",
+        "PageCow"
+      ]
     },
     {
       "domain": "paintpi.com",
       "category": "Other",
       "title": "Paint Pi",
       "description": "Linux-based operating system and laptops designed for focused, distraction-free computing.",
-      "tags": ["Linux", "laptops", "operating system", "hardware", "Paint Pi", "focus", "computing"]
+      "tags": [
+        "Linux",
+        "laptops",
+        "operating system",
+        "hardware",
+        "Paint Pi",
+        "focus",
+        "computing"
+      ]
     },
     {
       "domain": "accountable2you.com",
       "category": "Other",
       "title": "Accountable2You",
       "description": "Accountability software that shares your computer activity with an accountability partner.",
-      "tags": ["accountability", "software", "tracking", "team", "individual", "partner"]
+      "tags": [
+        "accountability",
+        "software",
+        "tracking",
+        "team",
+        "individual",
+        "partner"
+      ]
     }
   ]
 }

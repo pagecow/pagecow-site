@@ -59,12 +59,16 @@ export default function Home() {
               Page<span className="text-brand">Cow</span>
             </h1>
           </div>
-          <p className="max-w-md text-base leading-7 text-zinc-500 dark:text-zinc-400 sm:text-lg">
-            A distraction-free browser for work and study.
+          <p className="max-w-md text-base leading-7 text-zinc-500 dark:text-zinc-400 sm:text-md">
+            A distraction-free browser for study.
             <span className="hidden sm:inline">
               <br />
             </span>{" "}
-            No social media. No news feeds. No noise. Just focus.
+            No social media, news, AI, entertainment. Just focus.
+            <span className="hidden sm:inline">
+              <br />
+            </span>{" "}
+            Oh, and ads are blocked too.
           </p>
         </div>
 
@@ -111,7 +115,7 @@ export default function Home() {
               Download the Desktop App
             </p>
             <div className="flex w-full flex-wrap justify-center gap-3">
-              <a
+              {/* <a
                 href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.3/PageCow-1.0.3-arm64.dmg"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -122,7 +126,7 @@ export default function Home() {
                   <path d="M14.67 1.576c.31-.584.462-1.204.462-1.576-.612.06-1.328.394-1.766.83-.397.396-.768 1.003-.768 1.612.668.05 1.352-.282 2.072-.866z" />
                 </svg>
                 macOS
-              </a>
+              </a> */}
               <a
                 href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.3/PageCow.Setup.1.0.3.exe"
                 target="_blank"
