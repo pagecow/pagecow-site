@@ -12,7 +12,7 @@
     "Other"
   ],
   "popularDomains": [
-    "mediafire.com",
+    "pcloud.com",
     "wikipedia.org",
     "britannica.com",
     "dictionary.com",
@@ -1747,19 +1747,6 @@
         "media",
         "backup",
         "organization"
-      ]
-    },
-    {
-      "domain": "mediafire.com",
-      "category": "Cloud Storage",
-      "title": "MediaFire",
-      "description": "Cloud storage and file hosting for sharing and backing up files.",
-      "tags": [
-        "cloud storage",
-        "file hosting",
-        "sharing",
-        "backup",
-        "files"
       ]
     },
     {
