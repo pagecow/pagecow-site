@@ -3,8 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  /* PageCow brand blue (matches logo wordmark) */
-  --brand: #0066ff;
+  /* PageCow brand blue — same sRGB as logo.svg gradient stops (#0A72FF → #0052CC) */
+  --brand: #0a72ff;
   --brand-hover: #0052cc;
 }
 
