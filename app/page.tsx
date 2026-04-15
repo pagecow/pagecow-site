@@ -116,7 +116,7 @@ export default function Home() {
             </p>
             <div className="flex w-full flex-wrap justify-center gap-3">
               {/* <a
-                href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.6/PageCow-1.0.6-arm64.dmg"
+                href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.8/PageCow-1.0.8-arm64.dmg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-w-36 items-center justify-center gap-2 rounded-full border border-zinc-300 px-6 py-2.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
@@ -128,18 +128,7 @@ export default function Home() {
                 macOS
               </a> */}
               <a
-                href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.6/PageCow.Setup.1.0.6.exe"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-w-36 items-center justify-center gap-2 rounded-full border border-zinc-300 px-6 py-2.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
-              >
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
-                </svg>
-                Windows
-              </a>
-              <a
-                href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.6/PageCow-1.0.6.AppImage"
+                href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.8/pagecow-browser_1.0.8_amd64.deb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-w-36 items-center justify-center gap-2 rounded-full border border-zinc-300 px-6 py-2.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
@@ -149,6 +138,17 @@ export default function Home() {
                   <path d="M12 10.2a6.6 6.6 0 1 0 0 13.2 6.6 6.6 0 0 0 0-13.2zm-1.2 3h2.4v2.4h-1.2v3.6h-1.2v-6z" />
                 </svg>
                 Linux
+              </a>
+              <a
+                href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.8/PageCow.Setup.1.0.8.exe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-w-36 items-center justify-center gap-2 rounded-full border border-zinc-300 px-6 py-2.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
+                </svg>
+                Windows
               </a>
             </div>
           </div>
