@@ -116,7 +116,7 @@ export default function Home() {
             </p>
             <div className="flex w-full flex-wrap justify-center gap-3">
               {/* <a
-                href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.12/PageCow-1.0.12-arm64.dmg"
+                href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.13/PageCow-1.0.13-arm64.dmg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-w-36 items-center justify-center gap-2 rounded-full border border-zinc-300 px-6 py-2.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
@@ -128,7 +128,7 @@ export default function Home() {
                 macOS
               </a> */}
               <a
-                href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.12/pagecow-browser_1.0.12_amd64.deb"
+                href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.13/pagecow-browser_1.0.13_amd64.deb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-w-36 items-center justify-center gap-2 rounded-full border border-zinc-300 px-6 py-2.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
@@ -140,7 +140,7 @@ export default function Home() {
                 Linux
               </a>
               <a
-                href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.12/PageCow.Setup.1.0.12.exe"
+                href="https://github.com/pagecow/pagecow-browser/releases/download/v1.0.13/PageCow.Setup.1.0.13.exe"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-w-36 items-center justify-center gap-2 rounded-full border border-zinc-300 px-6 py-2.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
