@@ -60,7 +60,7 @@ export default function Home() {
             </h1>
           </div>
           <p className="max-w-md text-base leading-7 text-zinc-500 dark:text-zinc-400 sm:text-md">
-            A distraction-free browser for study.
+            A distraction-free browser for work and study.
             <span className="hidden sm:inline">
               <br />
             </span>{" "}
