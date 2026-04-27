@@ -32,7 +32,9 @@
     "apple.com",
     "localhost",
     "127.0.0.1",
-    "0.0.0.0"
+    "0.0.0.0",
+    "stripe.com",
+    "paddle.com"
   ],
   "sites": [
     {
@@ -92,6 +94,21 @@
         "film",
         "writing",
         "pre-production"
+      ]
+    },
+    {
+      "domain": "literatureandlatte.com",
+      "category": "Writing & Documents",
+      "title": "Literature & Latte",
+      "description": "Official site for Literature & Latte, makers of Scrivener and Scapple writing software.",
+      "tags": [
+        "Scrivener",
+        "Scapple",
+        "writing",
+        "novel",
+        "manuscript",
+        "software",
+        "authors"
       ]
     },
     {
