@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { getWhitelist, type WhitelistSite } from "@/lib/whitelist";
 
-const FAVICON_URL = "https://www.google.com/s2/favicons?sz=64&domain=";
+const FAVICON_URL = "/api/favicon?domain=";
 
 function getStringHash(value: string) {
   let hash = 0;
@@ -379,7 +379,7 @@ export default function BrowsePage() {
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src={`${FAVICON_URL}${site.domain}`}
+                        src={`${FAVICON_URL}${encodeURIComponent(site.domain)}`}
                         alt=""
                         width={category === "Popular" ? 40 : 32}
                         height={category === "Popular" ? 40 : 32}
@@ -452,7 +452,7 @@ export default function BrowsePage() {
                         <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200/60 transition-all duration-200 group-hover:shadow-lg group-hover:ring-brand/30 group-hover:scale-105 dark:bg-zinc-800 dark:ring-zinc-700/60 dark:group-hover:ring-brand/30">
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
-                            src={`${FAVICON_URL}${site.domain}`}
+                            src={`${FAVICON_URL}${encodeURIComponent(site.domain)}`}
                             alt=""
                             width={32}
                             height={32}
