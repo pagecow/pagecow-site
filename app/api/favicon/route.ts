@@ -1,7 +1,10 @@
 import { getWhitelist } from "@/lib/whitelist";
 
 export const runtime = "nodejs";
-export const revalidate = 86400;
+// Always run the handler. We control caching via the response headers below;
+// letting Next.js cache the handler response (or the upstream fetches) bakes
+// in transient failures and broken redirects for an entire revalidate window.
+export const dynamic = "force-dynamic";
 
 // Successful icon responses are cached aggressively. Placeholders use a much
 // shorter TTL so a transient upstream blip (rate limit, DNS hiccup, etc.)
@@ -131,6 +134,9 @@ async function fetchWithTimeout(url: string, init: RequestInit = {}) {
     },
     signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
     redirect: "follow",
+    // Bypass Next.js's data cache. We don't want a transient upstream 404 or
+    // timeout to be remembered for an entire revalidate window.
+    cache: "no-store",
   });
 }
 
@@ -166,16 +172,28 @@ interface IconCandidate {
   href: string;
   size: number;
   rel: string;
+  type: string;
 }
 
 function scoreCandidate(c: IconCandidate): number {
+  // mask-icon is monochrome (Safari pinned tab) and not what we want.
+  if (c.rel.includes("mask-icon")) return -1000;
+
+  // SVG scales to any size, so it's almost always the best choice.
+  if (c.type.includes("svg") || /\.svg(?:\?|#|$)/i.test(c.href)) {
+    return 200;
+  }
+
   let score = 0;
-  // Prefer regular icons over apple-touch-icon (apple ones are usually huge).
-  if (c.rel.includes("apple-touch-icon")) score -= 20;
-  if (c.rel.includes("mask-icon")) score -= 1000;
-  // 64px is a nice midpoint for a 32-40px display target.
+  // apple-touch-icons are designed for iOS home screens (often full-bleed,
+  // no transparency). Prefer regular `rel="icon"` when both exist, but only
+  // by a small amount so we still pick apple-touch when it's the only choice.
+  if (c.rel.includes("apple-touch-icon")) score -= 5;
+
+  // Aim for ~64px (we render at 32-40px). Penalize distance from target;
+  // unknown-size icons get a moderate penalty so sized candidates win.
   const target = 64;
-  const dist = c.size === 0 ? 80 : Math.abs(c.size - target);
+  const dist = c.size === 0 ? 50 : Math.abs(c.size - target);
   score -= dist;
   return score;
 }
@@ -215,6 +233,9 @@ async function discoverIconsFromHtml(domain: string): Promise<string[]> {
         const hrefMatch = tag.match(/\bhref\s*=\s*["']([^"']+)["']/i);
         if (!hrefMatch) continue;
 
+        const typeMatch = tag.match(/\btype\s*=\s*["']([^"']+)["']/i);
+        const type = (typeMatch?.[1] ?? "").toLowerCase();
+
         const sizesMatch = tag.match(/\bsizes\s*=\s*["']([^"']+)["']/i);
         let size = 0;
         if (sizesMatch) {
@@ -223,7 +244,7 @@ async function discoverIconsFromHtml(domain: string): Promise<string[]> {
           if (!Number.isNaN(n)) size = n;
         }
 
-        candidates.push({ href: hrefMatch[1], size, rel });
+        candidates.push({ href: hrefMatch[1], size, rel, type });
       }
 
       if (candidates.length === 0) continue;
@@ -233,6 +254,7 @@ async function discoverIconsFromHtml(domain: string): Promise<string[]> {
       // any redirects), which is what new URL needs.
       const baseUrl = res.url || homeUrl;
       return candidates
+        .slice(0, 5) // cap fetch attempts so flaky sites don't stall the route
         .map((c) => {
           try {
             return new URL(c.href, baseUrl).toString();
@@ -267,19 +289,22 @@ async function fetchFavicon(domain: string): Promise<Response | null> {
     return res;
   };
 
-  // 1) Fast path: the conventional /favicon.ico.
+  // 1) Discover from the homepage's <link rel="icon"> tags. We do this first
+  //    because /favicon.ico is often a tiny legacy 16x16 ICO even when the
+  //    site publishes a much higher-quality icon (PNG/SVG) in its HTML head.
+  for (const url of await discoverIconsFromHtml(domain)) {
+    const res = await tryOnce(url);
+    if (res) return res;
+  }
+
+  // 2) Fall back to the conventional /favicon.ico for sites that don't
+  //    declare anything in HTML (or whose homepage we couldn't fetch).
   const directCandidates = [
     `https://${domain}/favicon.ico`,
     domain.startsWith("www.") ? null : `https://www.${domain}/favicon.ico`,
   ].filter(Boolean) as string[];
 
   for (const url of directCandidates) {
-    const res = await tryOnce(url);
-    if (res) return res;
-  }
-
-  // 2) Discover from the homepage's <link rel="icon"> tags.
-  for (const url of await discoverIconsFromHtml(domain)) {
     const res = await tryOnce(url);
     if (res) return res;
   }
