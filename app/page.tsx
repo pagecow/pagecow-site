@@ -3,13 +3,14 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { APP_VERSION } from "@/lib/app-version";
 
 export default function Home() {
   const router = useRouter();
   const [query, setQuery] = useState("");
   const [isElectron, setIsElectron] = useState(false);
 
-  const version = "1.0.15";
+  const version = APP_VERSION;
 
   useEffect(() => {
     setIsElectron(/Electron/i.test(navigator.userAgent));
@@ -142,7 +143,7 @@ export default function Home() {
                 Linux
               </a>
               <a
-                href={`https://github.com/pagecow/pagecow-browser/releases/download/v${version}/PageCow.Setup.${version}.exe`}
+                href={`https://github.com/pagecow/pagecow-browser/releases/download/v${version}/${encodeURIComponent(`PageCow Setup ${version}.exe`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-w-36 items-center justify-center gap-2 rounded-full border border-zinc-300 px-6 py-2.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"

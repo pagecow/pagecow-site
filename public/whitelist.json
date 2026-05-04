@@ -30,6 +30,7 @@
     "accounts.google.com",
     "accounts.youtube.com",
     "apple.com",
+    "github.com",
     "localhost",
     "127.0.0.1",
     "0.0.0.0",
@@ -1777,6 +1778,20 @@
         "support",
         "icloud",
         "technology"
+      ]
+    },
+    {
+      "domain": "github.com",
+      "category": "Other",
+      "title": "GitHub",
+      "description": "Code hosting and collaboration platform for version control, open source projects, and development workflows.",
+      "tags": [
+        "git",
+        "code",
+        "open source",
+        "version control",
+        "developers",
+        "collaboration"
       ]
     },
     {
