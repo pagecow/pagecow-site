@@ -31,6 +31,7 @@
     "accounts.youtube.com",
     "apple.com",
     "github.com",
+    "githubusercontent.com",
     "localhost",
     "127.0.0.1",
     "0.0.0.0",
@@ -1792,6 +1793,20 @@
         "version control",
         "developers",
         "collaboration"
+      ]
+    },
+    {
+      "domain": "githubusercontent.com",
+      "category": "Other",
+      "title": "GitHub user content",
+      "description": "CDN host for GitHub raw files, release assets, images, and other user-uploaded content served from github.com.",
+      "tags": [
+        "GitHub",
+        "CDN",
+        "raw files",
+        "assets",
+        "hosting",
+        "developers"
       ]
     },
     {
