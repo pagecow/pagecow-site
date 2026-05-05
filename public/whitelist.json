@@ -30,13 +30,16 @@
     "accounts.google.com",
     "accounts.youtube.com",
     "apple.com",
+    "checkout.paddle.com",
     "github.com",
     "githubusercontent.com",
     "localhost",
     "127.0.0.1",
     "0.0.0.0",
-    "stripe.com",
-    "paddle.com"
+    "paddle.com",
+    "paddleapi.com",
+    "scrivener.s3.amazonaws.com",
+    "stripe.com"
   ],
   "sites": [
     {
@@ -1807,6 +1810,46 @@
         "assets",
         "hosting",
         "developers"
+      ]
+    },
+    {
+      "domain": "checkout.paddle.com",
+      "category": "Other",
+      "title": "Paddle Checkout",
+      "description": "Hosted checkout pages for Paddle-powered software purchases and subscriptions.",
+      "tags": [
+        "Paddle",
+        "checkout",
+        "payments",
+        "subscriptions",
+        "commerce"
+      ]
+    },
+    {
+      "domain": "paddleapi.com",
+      "category": "Other",
+      "title": "Paddle API",
+      "description": "Paddle API and billing infrastructure used during checkout, licensing, and subscription management.",
+      "tags": [
+        "Paddle",
+        "API",
+        "payments",
+        "billing",
+        "subscriptions"
+      ]
+    },
+    {
+      "domain": "scrivener.s3.amazonaws.com",
+      "category": "Other",
+      "title": "Scrivener downloads (AWS S3)",
+      "description": "Amazon S3 bucket used to host Scrivener installer and update files from Literature & Latte.",
+      "tags": [
+        "Scrivener",
+        "Literature & Latte",
+        "AWS",
+        "S3",
+        "downloads",
+        "software"
       ]
     },
     {
