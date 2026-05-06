@@ -29,8 +29,12 @@
   "hiddenDomains": [
     "accounts.google.com",
     "accounts.youtube.com",
+    "api.pcloud.com",
     "apple.com",
     "checkout.paddle.com",
+    "e.pcloud.link",
+    "eapi.pcloud.com",
+    "filedn.com",
     "github.com",
     "githubusercontent.com",
     "localhost",
@@ -38,6 +42,8 @@
     "0.0.0.0",
     "paddle.com",
     "paddleapi.com",
+    "pcdn-www.pcloud.com",
+    "pcloud.link",
     "scrivener.s3.amazonaws.com",
     "stripe.com"
   ],
@@ -1741,6 +1747,80 @@
         "backup",
         "sharing",
         "secure"
+      ]
+    },
+    {
+      "domain": "api.pcloud.com",
+      "category": "Cloud Storage",
+      "title": "pCloud API",
+      "description": "pCloud API endpoints used by the web app and clients for account and file operations.",
+      "tags": [
+        "pCloud",
+        "API",
+        "cloud storage",
+        "files",
+        "sync"
+      ]
+    },
+    {
+      "domain": "eapi.pcloud.com",
+      "category": "Cloud Storage",
+      "title": "pCloud eAPI",
+      "description": "pCloud extended API host for client and integration traffic.",
+      "tags": [
+        "pCloud",
+        "API",
+        "cloud storage",
+        "files"
+      ]
+    },
+    {
+      "domain": "pcdn-www.pcloud.com",
+      "category": "Cloud Storage",
+      "title": "pCloud CDN (www)",
+      "description": "pCloud CDN and static asset host for the web application.",
+      "tags": [
+        "pCloud",
+        "CDN",
+        "cloud storage",
+        "assets"
+      ]
+    },
+    {
+      "domain": "pcloud.link",
+      "category": "Cloud Storage",
+      "title": "pCloud shared links",
+      "description": "Short link domain for public and shared pCloud downloads.",
+      "tags": [
+        "pCloud",
+        "sharing",
+        "links",
+        "cloud storage",
+        "files"
+      ]
+    },
+    {
+      "domain": "e.pcloud.link",
+      "category": "Cloud Storage",
+      "title": "pCloud link (edge)",
+      "description": "Edge endpoints for pCloud link resolution and file delivery.",
+      "tags": [
+        "pCloud",
+        "sharing",
+        "links",
+        "cloud storage"
+      ]
+    },
+    {
+      "domain": "filedn.com",
+      "category": "Cloud Storage",
+      "title": "pCloud file delivery",
+      "description": "Download and delivery host used for pCloud file transfers.",
+      "tags": [
+        "pCloud",
+        "downloads",
+        "cloud storage",
+        "files"
       ]
     },
     {
