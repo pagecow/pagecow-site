@@ -353,22 +353,6 @@
       ]
     },
     {
-      "domain": "pubmed.ncbi.nlm.nih.gov",
-      "category": "Research & Reference",
-      "title": "PubMed",
-      "description": "Free database of biomedical and life sciences literature from the National Library of Medicine.",
-      "tags": [
-        "medical",
-        "research",
-        "science",
-        "biology",
-        "health",
-        "academic",
-        "journals",
-        "papers"
-      ]
-    },
-    {
       "domain": "gutenberg.org",
       "category": "Research & Reference",
       "title": "Project Gutenberg",
