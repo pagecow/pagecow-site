@@ -1929,6 +1929,20 @@
         "individual",
         "partner"
       ]
+    },
+    {
+      "domain": "aifreepc.com",
+      "category": "Other",
+      "title": "AIFreePC",
+      "description": "Free AI tools and virtual computer environments.",
+      "tags": [
+        "AI",
+        "free",
+        "PC",
+        "tools",
+        "assistant",
+        "productivity"
+      ]
     }
   ]
 }
