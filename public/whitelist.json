@@ -23,8 +23,7 @@
     "dabblewriter.com",
     "gotquestions.org",
     "esv.org",
-    "blueletterbible.org",
-    "biblegateway.com"
+    "blueletterbible.org"
   ],
   "hiddenDomains": [
     "accounts.google.com",
@@ -379,21 +378,6 @@
         "research",
         "libraries",
         "academic"
-      ]
-    },
-    {
-      "domain": "loc.gov",
-      "category": "Research & Reference",
-      "title": "Library of Congress",
-      "description": "The largest library in the world with millions of books, recordings, and manuscripts.",
-      "tags": [
-        "library",
-        "government",
-        "history",
-        "research",
-        "archives",
-        "manuscripts",
-        "books"
       ]
     },
     {
