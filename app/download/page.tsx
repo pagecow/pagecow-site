@@ -10,8 +10,8 @@ function releaseAsset(fileName: string) {
 }
 
 export const metadata: Metadata = {
-  title: "Download PageCow",
-  description: `Download PageCow ${APP_VERSION} for macOS, Windows, or Linux.`,
+  title: "Download PageCOW",
+  description: `Download PageCOW ${APP_VERSION} for macOS, Windows, or Linux.`,
 };
 
 export default function DownloadPage() {
@@ -37,7 +37,7 @@ export default function DownloadPage() {
               className="h-12 w-12 sm:h-14 sm:w-14"
             />
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Download PageCow
+              Download PageCOW
             </h1>
           </div>
           <p className="text-sm text-zinc-500 dark:text-zinc-400">

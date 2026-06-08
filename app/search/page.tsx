@@ -20,7 +20,7 @@ export default async function SearchPage({
             <div className="flex items-center gap-1">
               <Image
                 src="/assets/images/logo.png"
-                alt="PageCow Logo"
+                alt="PageCOW Logo"
                 width={30}
                 height={30}
                 priority
@@ -29,7 +29,7 @@ export default async function SearchPage({
                 href="/"
                 className="text-2xl font-bold tracking-tight shrink-0"
               >
-                Page<span className="text-brand">Cow</span>
+                Page<span className="text-brand">COW</span>
               </Link>
             </div>
             <Link

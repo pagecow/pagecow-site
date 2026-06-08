@@ -192,13 +192,13 @@ export default function BrowsePage() {
           >
             <Image
               src="/assets/images/logo.png"
-              alt="PageCow Logo"
+              alt="PageCOW Logo"
               width={30}
               height={30}
               priority
               className="mr-1"
             />
-            Page<span className="text-brand">Cow</span>
+            Page<span className="text-brand">COW</span>
           </Link>
 
           <div className="relative min-w-0 flex-1 max-w-md">

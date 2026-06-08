@@ -52,14 +52,14 @@ export default function Home() {
           <div className="flex items-center gap-1">
             <Image
                 src="/assets/images/logo.png"
-                alt="PageCow Logo"
+                alt="PageCOW Logo"
                 width={76}
                 height={76}
                 priority
                 className="w-14 h-14 sm:w-20 sm:h-20"
             />
             <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
-              Page<span className="text-brand">Cow</span>
+              Page<span className="text-brand">COW</span>
             </h1>
           </div>
           <p className="max-w-md text-base leading-7 text-zinc-500 dark:text-zinc-400 sm:text-md">
@@ -161,14 +161,9 @@ export default function Home() {
       <footer className="pt-6 pb-8 text-center text-xs text-zinc-500 dark:text-zinc-400">
         <p>
           Want to add a website to our approved list? Submit a request here:{" "}
-          <a
-            href="mailto:support@pagecow.com"
-            className="hover:text-zinc-600 dark:hover:text-zinc-300"
-          >
-            support@pagecow.com
-          </a>
+          support@pagecow.com
         </p>
-        <p className="mt-6 text-zinc-400">Copyright © 2026 PageCow. All rights reserved.</p>
+        <p className="mt-6 text-zinc-400">Copyright © 2026 PageCOW. All rights reserved.</p>
       </footer>
     </div>
   );
