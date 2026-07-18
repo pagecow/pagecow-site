@@ -2030,6 +2030,21 @@
       ]
     },
     {
+      "domain": "khanacademy.org",
+      "category": "Homeschooling",
+      "title": "Khan Academy",
+      "description": "Free online lessons, practice exercises, and instructional videos across math, science, and more.",
+      "tags": [
+        "math",
+        "science",
+        "free",
+        "online lessons",
+        "practice",
+        "education",
+        "homeschool"
+      ]
+    },
+    {
       "domain": "brians.wsu.edu",
       "category": "Grammar & Editing",
       "title": "Common Errors in English Usage",
