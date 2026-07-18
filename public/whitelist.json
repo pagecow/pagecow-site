@@ -1580,6 +1580,456 @@
       ]
     },
     {
+      "domain": "memoriaacademy.com",
+      "category": "Homeschooling",
+      "title": "Memoria Academy",
+      "description": "Online academy from Memoria Press offering live and self-paced classical Christian classes.",
+      "tags": [
+        "classical",
+        "christian",
+        "online academy",
+        "curriculum",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "heritage-history.com",
+      "category": "Homeschooling",
+      "title": "Heritage History",
+      "description": "Classical history curriculum built around living books and historical narratives.",
+      "tags": [
+        "history",
+        "classical",
+        "living books",
+        "curriculum",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "heartofdakota.com",
+      "category": "Homeschooling",
+      "title": "Heart of Dakota",
+      "description": "Christ-centered, open-and-go homeschool curriculum with daily lesson plans.",
+      "tags": [
+        "christian",
+        "curriculum",
+        "lesson plans",
+        "homeschool",
+        "education",
+        "open-and-go"
+      ]
+    },
+    {
+      "domain": "welltrainedmind.com",
+      "category": "Homeschooling",
+      "title": "Well-Trained Mind",
+      "description": "Classical education resources, books, and curriculum from Susan Wise Bauer.",
+      "tags": [
+        "classical",
+        "curriculum",
+        "books",
+        "homeschool",
+        "education",
+        "resources"
+      ]
+    },
+    {
+      "domain": "wtmacademy.com",
+      "category": "Homeschooling",
+      "title": "WTM Academy",
+      "description": "Online classical academy from Well-Trained Mind Press offering live classes and instruction.",
+      "tags": [
+        "classical",
+        "online academy",
+        "curriculum",
+        "homeschool",
+        "education",
+        "live classes"
+      ]
+    },
+    {
+      "domain": "classicalacademicpress.com",
+      "category": "Homeschooling",
+      "title": "Classical Academic Press",
+      "description": "Classical education curriculum covering Latin, logic, rhetoric, Spanish, and more.",
+      "tags": [
+        "classical",
+        "latin",
+        "logic",
+        "rhetoric",
+        "curriculum",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "thepeacefulpress.com",
+      "category": "Homeschooling",
+      "title": "The Peaceful Press",
+      "description": "Charlotte Mason-inspired, family-centered curriculum and resources for a peaceful homeschool.",
+      "tags": [
+        "charlotte mason",
+        "family",
+        "curriculum",
+        "homeschool",
+        "education",
+        "peaceful"
+      ]
+    },
+    {
+      "domain": "beastacademy.com",
+      "category": "Homeschooling",
+      "title": "Beast Academy",
+      "description": "Advanced, problem-solving-focused math curriculum from Art of Problem Solving for ages 8-13.",
+      "tags": [
+        "math",
+        "problem solving",
+        "curriculum",
+        "homeschool",
+        "education",
+        "advanced"
+      ]
+    },
+    {
+      "domain": "shopchristianliberty.com",
+      "category": "Homeschooling",
+      "title": "Christian Liberty Press",
+      "description": "Reformed Christian curriculum and textbooks for homeschool families and schools.",
+      "tags": [
+        "christian",
+        "reformed",
+        "curriculum",
+        "textbooks",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "milestonebooks.com",
+      "category": "Homeschooling",
+      "title": "Milestone Books",
+      "description": "Distributor of Rod and Staff and other conservative Christian curriculum materials.",
+      "tags": [
+        "christian",
+        "curriculum",
+        "distributor",
+        "textbooks",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "rodstaff.com",
+      "category": "Homeschooling",
+      "title": "Rod and Staff",
+      "description": "Conservative Mennonite Christian curriculum publisher for grades 1-10.",
+      "tags": [
+        "christian",
+        "mennonite",
+        "curriculum",
+        "textbooks",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "singaporemath.com",
+      "category": "Homeschooling",
+      "title": "Singapore Math",
+      "description": "Math curriculum based on the Singapore math method emphasizing mastery and problem solving.",
+      "tags": [
+        "math",
+        "singapore",
+        "curriculum",
+        "mastery",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "alveary.org",
+      "category": "Homeschooling",
+      "title": "The Alveary",
+      "description": "Charlotte Mason curriculum and community from the Charlotte Mason Institute.",
+      "tags": [
+        "charlotte mason",
+        "curriculum",
+        "community",
+        "homeschool",
+        "education",
+        "institute"
+      ]
+    },
+    {
+      "domain": "allaboutlearningpress.com",
+      "category": "Homeschooling",
+      "title": "All About Learning Press",
+      "description": "Publisher of the All About Reading and All About Spelling mastery-based programs.",
+      "tags": [
+        "reading",
+        "spelling",
+        "phonics",
+        "curriculum",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "demmelearning.com",
+      "category": "Homeschooling",
+      "title": "Demme Learning",
+      "description": "Publisher of Math-U-See and Spelling You See, offering mastery-based learning tools.",
+      "tags": [
+        "math",
+        "spelling",
+        "curriculum",
+        "mastery",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "spellingyousee.com",
+      "category": "Homeschooling",
+      "title": "Spelling You See",
+      "description": "Mastery-based spelling program using visual memory and copywork.",
+      "tags": [
+        "spelling",
+        "curriculum",
+        "visual memory",
+        "copywork",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "analyticalgrammar.com",
+      "category": "Homeschooling",
+      "title": "Analytical Grammar",
+      "description": "Grammar curriculum for middle and high school students covering parts of speech and syntax.",
+      "tags": [
+        "grammar",
+        "curriculum",
+        "middle school",
+        "high school",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "writeshop.com",
+      "category": "Homeschooling",
+      "title": "WriteShop",
+      "description": "Incremental writing curriculum teaching composition skills from primary through high school.",
+      "tags": [
+        "writing",
+        "composition",
+        "curriculum",
+        "homeschool",
+        "education",
+        "incremental"
+      ]
+    },
+    {
+      "domain": "rightstartmath.com",
+      "category": "Homeschooling",
+      "title": "RightStart Mathematics",
+      "description": "Hands-on math curriculum using the AL abacus and a visual approach to understanding.",
+      "tags": [
+        "math",
+        "abacus",
+        "hands-on",
+        "curriculum",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "christianlight.org",
+      "category": "Homeschooling",
+      "title": "Christian Light Education",
+      "description": "Mennonite Christian curriculum publisher offering lightunit-based studies across subjects.",
+      "tags": [
+        "christian",
+        "mennonite",
+        "curriculum",
+        "lightunits",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "essentialsinwriting.com",
+      "category": "Homeschooling",
+      "title": "Essentials in Writing",
+      "description": "Video-based writing and grammar curriculum for grades 1-12.",
+      "tags": [
+        "writing",
+        "grammar",
+        "video",
+        "curriculum",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "cathyduffyreviews.com",
+      "category": "Homeschooling",
+      "title": "Cathy Duffy Reviews",
+      "description": "Comprehensive homeschool curriculum review site with detailed product recommendations.",
+      "tags": [
+        "reviews",
+        "curriculum",
+        "recommendations",
+        "homeschool",
+        "education",
+        "resources"
+      ]
+    },
+    {
+      "domain": "queenhomeschool.com",
+      "category": "Homeschooling",
+      "title": "Queen Homeschool Supplies",
+      "description": "Charlotte Mason-inspired Christian curriculum publisher for homeschool families.",
+      "tags": [
+        "charlotte mason",
+        "christian",
+        "curriculum",
+        "publisher",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "underthehome.org",
+      "category": "Homeschooling",
+      "title": "Under the Home",
+      "description": "Free online Charlotte Mason-style homeschool curriculum with lessons across multiple subjects.",
+      "tags": [
+        "charlotte mason",
+        "free",
+        "online",
+        "curriculum",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "plainandnotsoplain.com",
+      "category": "Homeschooling",
+      "title": "Plain and Not So Plain",
+      "description": "Free, no-frills homeschool curriculum and resources focused on foundational skills.",
+      "tags": [
+        "free",
+        "curriculum",
+        "resources",
+        "homeschool",
+        "education",
+        "foundational"
+      ]
+    },
+    {
+      "domain": "learnmathfastbooks.com",
+      "category": "Homeschooling",
+      "title": "Learn Math Fast",
+      "description": "Self-paced math curriculum that takes students from basic arithmetic through high school math.",
+      "tags": [
+        "math",
+        "self-paced",
+        "curriculum",
+        "homeschool",
+        "education",
+        "arithmetic"
+      ]
+    },
+    {
+      "domain": "denisonalgebra.com",
+      "category": "Homeschooling",
+      "title": "Denison Algebra",
+      "description": "Video-based algebra curriculum designed for homeschool students who struggle with math.",
+      "tags": [
+        "math",
+        "algebra",
+        "video",
+        "curriculum",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "derekowens.com",
+      "category": "Homeschooling",
+      "title": "Derek Owens",
+      "description": "Math and science courses for homeschoolers with video lectures, assignments, and grading.",
+      "tags": [
+        "math",
+        "science",
+        "video lectures",
+        "courses",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "thechildrenstradition.com",
+      "category": "Homeschooling",
+      "title": "The Children's Tradition",
+      "description": "Charlotte Mason-inspired living books and curriculum resources for homeschool families.",
+      "tags": [
+        "charlotte mason",
+        "living books",
+        "curriculum",
+        "resources",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "nicolethemathlady.com",
+      "category": "Homeschooling",
+      "title": "Nicole the Math Lady",
+      "description": "Video lessons and grading for Saxon Math designed for homeschool students.",
+      "tags": [
+        "math",
+        "saxon",
+        "video",
+        "grading",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "mrdmath.com",
+      "category": "Homeschooling",
+      "title": "Mr. D Math",
+      "description": "Online math and live classes for homeschoolers from middle school through high school.",
+      "tags": [
+        "math",
+        "online classes",
+        "live classes",
+        "curriculum",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
+      "domain": "diveintomath.com",
+      "category": "Homeschooling",
+      "title": "DIVE Into Math",
+      "description": "Digital interactive video education for Saxon Math, science, and other homeschool subjects.",
+      "tags": [
+        "math",
+        "saxon",
+        "science",
+        "video",
+        "curriculum",
+        "homeschool",
+        "education"
+      ]
+    },
+    {
       "domain": "brians.wsu.edu",
       "category": "Grammar & Editing",
       "title": "Common Errors in English Usage",
