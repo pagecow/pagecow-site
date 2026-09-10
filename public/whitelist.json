@@ -752,6 +752,62 @@
       ]
     },
     {
+      "domain": "instructure.com",
+      "category": "Study",
+      "title": "Instructure Canvas",
+      "description": "Learning management system used by schools and districts for courses, assignments, and grades.",
+      "tags": [
+        "school",
+        "lms",
+        "courses",
+        "assignments",
+        "grades",
+        "education"
+      ]
+    },
+    {
+      "domain": "vhlcentral.com",
+      "category": "Study",
+      "title": "VHL Central",
+      "description": "Vista Higher Learning portal for world language courses, practice activities, and assessments.",
+      "tags": [
+        "languages",
+        "spanish",
+        "french",
+        "courses",
+        "homework",
+        "school"
+      ]
+    },
+    {
+      "domain": "clever.com",
+      "category": "Study",
+      "title": "Clever",
+      "description": "Single sign-on portal that connects students to their school's learning applications.",
+      "tags": [
+        "school",
+        "portal",
+        "single sign-on",
+        "student",
+        "education",
+        "learning apps"
+      ]
+    },
+    {
+      "domain": "progresslearning.com",
+      "category": "Study",
+      "title": "Progress Learning",
+      "description": "Standards-aligned practice and assessment platform for elementary, middle, and high school students.",
+      "tags": [
+        "practice",
+        "assessment",
+        "assignments",
+        "school",
+        "test prep",
+        "education"
+      ]
+    },
+    {
       "domain": "mathisfun.com",
       "category": "Study",
       "title": "Math Is Fun",
