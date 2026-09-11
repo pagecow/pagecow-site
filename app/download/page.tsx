@@ -76,7 +76,7 @@ export default function DownloadPage() {
           </li>
           <li>
             <a
-              href={releaseAsset(`PageCow Setup ${APP_VERSION}.exe`)}
+              href={releaseAsset(`PageCow-Setup-${APP_VERSION}.exe`)}
               className="flex items-center justify-between rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm font-medium transition-colors hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:bg-zinc-800"
               rel="noopener noreferrer"
             >
