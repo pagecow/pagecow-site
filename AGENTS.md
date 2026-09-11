@@ -37,16 +37,41 @@ This Next.js site hosts the **master PageCow whitelist**, served live at `https:
 4. `git add public/whitelist.json && git commit && git push origin main` (Vercel deploys automatically).
 5. Verify the **live** file — this is what laptops actually fetch: `curl -s https://pagecow.com/whitelist.json` and confirm the new domains are present. If a customer is waiting: after the deploy, have them **reboot and wait ~5 minutes** (OS firewall refresh), then retry.
 
+## Download page — always the latest release
+
+`app/page.tsx` (home) and `app/download/page.tsx` must never hardcode a version.
+They read the newest GitHub release through `lib/latest-release.ts`
+(`getLatestRelease()` → `api.github.com/.../releases/latest`, ISR
+`revalidate = 600`) and `resolveDownloads()` renders **only the installers that
+actually exist in that release** — so the site follows every release with no
+manual bump, and a missing/renamed installer hides its button instead of
+linking to a 404.
+
+- The **asset-name contract** lives in `lib/latest-release.ts` and must match
+  `electron-builder.yml` + the browser repo's `.github/workflows/release.yml`
+  ("Verify release assets" step). Change one, change all three:
+  `PageCow-<v>-arm64.dmg`, `PageCow-<v>.dmg`, `PageCow-Setup-<v>.exe`,
+  `pagecow-browser_<v>_amd64.deb`, `PageCow-<v>.AppImage`.
+- `app/page.tsx` is a server component that renders `app/home-client.tsx`
+  (client) with the resolved links — keep new download UI on the server side of
+  that split.
+- History: `lib/app-version.ts` (a hardcoded `APP_VERSION`) was deleted in
+  Sept 2026 after it sat at 1.0.16 while 1.0.17 shipped, and after GitHub's
+  artifact step renamed the Windows installer (spaces → dots) so the old spaced
+  link 404'd. Do not reintroduce a version constant.
+- Verify after deploying: `curl -s https://pagecow.com/download` and
+  `curl -sIL` each release URL (all must return 200).
+
 ## Support lessons — login flows & blank pages (Sept 2026)
 
 Clever "Sign in with Microsoft" showed a **blank page** at `login.microsoftonline.com/{tenant}/saml2?SAMLRequest=...` (correct tab title, empty body) on a customer laptop, but worked in every test build. Root cause: the **OS firewall blocked the sign-in page's CDNs** (`aadcdn.msauth.net`, `aadcdn.msftauth.net`, `aadcdn.msauthimages.net`) — the page's HTML loaded but its JS/CSS never did.
 
 - **Fix (live)** — `hiddenDomains` now includes `msauth.net`, `msftauth.net`, `msauthimages.net` (parents), alongside the hop domains `login.microsoftonline.com`, `login.live.com`, `login.microsoft.com`, `account.live.com`, `account.microsoft.com`, `login.windows.net`, and `office.com` (bare `login.microsoftonline.com` 302s to `www.office.com/login`; without `office.com` that path is a silent blank page).
-- **Debugging recipe for "blank page / blocked" reports**: run the packaged browser — `gh release download v1.0.17 --repo pagecow/pagecow-browser`, mount the dmg, launch with `--remote-debugging-port=9222` — attach CDP to the `webview` target, use `Network.setBlockedURLs` to simulate the OS firewall blocking candidate domains, navigate to the real URL, inspect `document.body` + network events. This reproduced the customer's exact blank page. Driver scripts live in `tmp/scratch/` (gitignored).
+- **Debugging recipe for "blank page / blocked" reports**: run the packaged browser — `gh release download --repo pagecow/pagecow-browser` (latest tag; `--pattern "PageCow-*-arm64.dmg"`), mount the dmg, launch with `--remote-debugging-port=9222` — attach CDP to the `webview` target, use `Network.setBlockedURLs` to simulate the OS firewall blocking candidate domains, navigate to the real URL, inspect `document.body` + network events. This reproduced the customer's exact blank page. Driver scripts live in `tmp/scratch/` (gitignored). The browser also now writes `support.log` (blocked navigations, renderer crashes, failed loads) — ask customers for it when a page goes blank.
 - **Canvas**: `canvas.instructure.com`'s public school-search page is retired/503 (Canvas-side change — "Canvas Lite is coming soon"). District Canvas instances (e.g. `paulding.instructure.com`) work — tell customers to use the direct URL. Canvas's search directory lists **districts only**: "Paulding" works, "East Paulding High School" returns nothing.
 
 ## Related repos & assets
 
-- **Browser**: sibling folder `pagecow-browser` (Electron + React). Releases: `gh release list --repo pagecow/pagecow-browser` (macOS dmg / Linux deb + AppImage / Windows exe). Latest shipped: v1.0.17.
+- **Browser**: sibling folder `pagecow-browser` (Electron + React). Releases: `gh release list --repo pagecow/pagecow-browser` (macOS dmg arm64 + Intel / Linux deb + AppImage / Windows exe). Releases are cut with `npm run release -- patch "summary"` in that repo; macOS is signed and notarized in CI.
 - The **OS bootstrap scripts** (`create-pagecow-os.sh`, `prepare-pagecow-oem-image.sh`) are maintained separately and are **not in these repos**.
 - Keep scratch/debug artifacts in `tmp/scratch/` (gitignored; `tmp/` is in `.gitignore`).
