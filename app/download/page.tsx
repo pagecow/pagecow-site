@@ -66,6 +66,16 @@ export default function DownloadPage() {
           </li>
           <li>
             <a
+              href={releaseAsset(`PageCow-${APP_VERSION}.dmg`)}
+              className="flex items-center justify-between rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm font-medium transition-colors hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:bg-zinc-800"
+              rel="noopener noreferrer"
+            >
+              <span>macOS (Intel)</span>
+              <span className="text-zinc-400">.dmg</span>
+            </a>
+          </li>
+          <li>
+            <a
               href={releaseAsset(`PageCow Setup ${APP_VERSION}.exe`)}
               className="flex items-center justify-between rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm font-medium transition-colors hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:bg-zinc-800"
               rel="noopener noreferrer"
@@ -97,7 +107,7 @@ export default function DownloadPage() {
         </ul>
 
         <p className="max-w-lg text-xs text-zinc-400">
-          Files are hosted on GitHub. 
+          macOS builds are signed and notarized by Apple. Files are hosted on GitHub.
         </p>
       </main>
     </div>
