@@ -7,7 +7,7 @@
  *                                    custom UI.
  *   <NativeNotifyBell … />         — the drop-in bell + panel, same behavior
  *                                    and class names as the vanilla module
- *                                    (nativeNotifyBell.js), so it shares
+ *                                    (native-notify-bell.js), so it shares
  *                                    nativeNotifyBell.css.
  *
  * Next.js App Router: this file's "use client" directive makes it a client
@@ -29,7 +29,7 @@ function randomKey() {
 }
 
 /** A stable per-browser device id, persisted in localStorage. */
-export function getStableDeviceKey(storageKey) {
+export function getStableDeviceKey(storageKey = undefined) {
   const key = storageKey || DEFAULT_STORAGE_KEY;
   try {
     const existing = window.localStorage.getItem(key);
@@ -331,12 +331,16 @@ function BellIcon() {
  *
  * Import the styles once in your app: import "./nativeNotifyBell.css";
  */
+// Every optional prop has a default (`= undefined` where there is no real
+// default): in a TypeScript project TS infers this .jsx component's props
+// from the destructuring, and a prop without a default would be REQUIRED —
+// so a mount passing only appId/appToken would fail to type-check.
 export default function NativeNotifyBell({
   appId,
   appToken,
-  deviceId,
-  storageKey,
-  apiBase,
+  deviceId = undefined,
+  storageKey = undefined,
+  apiBase = undefined,
   take = 20,
   title = "Notifications",
   emptyText = "You are all caught up.",
@@ -344,12 +348,12 @@ export default function NativeNotifyBell({
   maxCount = 99,
   allowDelete = true,
   pollMs = 30000,
-  theme,
+  theme = undefined,
   position = "bottom-right",
-  onNotificationPress,
-  onNavigate,
-  onUnreadChange,
-  className,
+  onNotificationPress = undefined,
+  onNavigate = undefined,
+  onUnreadChange = undefined,
+  className = undefined,
 }) {
   const inbox = useNativeNotifyInbox({ appId, appToken, deviceId, storageKey, apiBase, take, pollMs });
   const [open, setOpen] = useState(false);
