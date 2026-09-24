@@ -1,0 +1,168 @@
+/**
+ * Native Notify — bell + inbox widget styles.
+ *
+ * One stylesheet for both entry points (the vanilla module and the React
+ * component use the same class names). Theme it with the CSS custom properties
+ * below — or pass a theme object and the widget sets them for you.
+ */
+
+.nn-bell {
+  --nn-accent: #2563eb;
+  --nn-surface: #ffffff;
+  --nn-card: #ffffff;
+  --nn-border: #e5e7eb;
+  --nn-title: #111827;
+  --nn-text: #1f2937;
+  --nn-muted: #6b7280;
+  --nn-dot: #ef4444;
+  --nn-badge-text: #ffffff;
+  --nn-delete: #9ca3af;
+  --nn-radius: 12px;
+  --nn-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
+  position: fixed;
+  z-index: 2147483000;
+  font-family: inherit;
+}
+
+.nn-bell--bottom-right { right: 20px; bottom: 20px; }
+.nn-bell--bottom-left { left: 20px; bottom: 20px; }
+.nn-bell--top-right { right: 20px; top: 20px; }
+.nn-bell--top-left { left: 20px; top: 20px; }
+
+.nn-bell__button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--nn-border);
+  border-radius: 999px;
+  background: var(--nn-surface);
+  color: var(--nn-text);
+  cursor: pointer;
+  box-shadow: var(--nn-shadow);
+}
+.nn-bell__button:hover { color: var(--nn-accent); }
+.nn-bell__button:focus-visible { outline: 2px solid var(--nn-accent); outline-offset: 2px; }
+.nn-bell__icon { width: 22px; height: 22px; }
+
+.nn-bell__badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--nn-dot);
+  color: var(--nn-badge-text);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+.nn-bell__badge--dot { min-width: 10px; height: 10px; padding: 0; }
+
+.nn-bell__panel {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  max-width: calc(100vw - 40px);
+  max-height: 480px;
+  overflow: hidden;
+  border: 1px solid var(--nn-border);
+  border-radius: var(--nn-radius);
+  background: var(--nn-card);
+  box-shadow: var(--nn-shadow);
+}
+.nn-bell--top-right .nn-bell__panel,
+.nn-bell--top-left .nn-bell__panel { bottom: auto; top: 60px; }
+.nn-bell--bottom-left .nn-bell__panel,
+.nn-bell--top-left .nn-bell__panel { right: auto; left: 0; }
+.nn-bell__panel:focus { outline: none; }
+
+.nn-bell__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--nn-border);
+}
+.nn-bell__title { flex: 1; font-size: 14px; font-weight: 700; color: var(--nn-title); }
+.nn-bell__mark-all,
+.nn-bell__close,
+.nn-bell__more {
+  border: 0;
+  background: transparent;
+  color: var(--nn-accent);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+.nn-bell__close { color: var(--nn-muted); font-size: 18px; line-height: 1; }
+.nn-bell__mark-all:hover,
+.nn-bell__close:hover,
+.nn-bell__more:hover { background: rgba(37, 99, 235, 0.08); }
+.nn-bell__mark-all:focus-visible,
+.nn-bell__close:focus-visible,
+.nn-bell__more:focus-visible,
+.nn-bell__item-main:focus-visible,
+.nn-bell__item-delete:focus-visible { outline: 2px solid var(--nn-accent); outline-offset: 1px; }
+
+.nn-bell__status { margin: 0; padding: 0 14px; font-size: 12px; color: var(--nn-muted); }
+.nn-bell__status:empty { display: none; }
+
+.nn-bell__list { list-style: none; margin: 0; padding: 0; overflow-y: auto; }
+.nn-bell__empty { padding: 24px 14px; text-align: center; font-size: 13px; color: var(--nn-muted); }
+
+.nn-bell__item { display: flex; align-items: stretch; border-top: 1px solid var(--nn-border); }
+.nn-bell__item-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 14px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+.nn-bell__item-main:hover { background: rgba(15, 23, 42, 0.04); }
+.nn-bell__item-title { font-size: 13px; font-weight: 600; color: var(--nn-title); }
+.nn-bell__item-body { font-size: 13px; color: var(--nn-text); }
+.nn-bell__item-meta { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--nn-muted); }
+.nn-bell__item-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--nn-dot); }
+.nn-bell__item--unread .nn-bell__item-title { color: var(--nn-accent); }
+.nn-bell__item-delete {
+  border: 0;
+  background: transparent;
+  color: var(--nn-delete);
+  font-size: 16px;
+  padding: 0 12px;
+  cursor: pointer;
+}
+.nn-bell__item-delete:hover { color: var(--nn-dot); }
+
+.nn-bell__more { margin: 8px 14px 12px; }
+
+@media (prefers-color-scheme: dark) {
+  .nn-bell {
+    --nn-surface: #111827;
+    --nn-card: #111827;
+    --nn-border: #374151;
+    --nn-title: #f9fafb;
+    --nn-text: #e5e7eb;
+    --nn-muted: #9ca3af;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nn-bell * { transition: none !important; animation: none !important; }
+}
