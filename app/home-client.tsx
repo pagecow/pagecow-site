@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import type { DownloadLink } from "@/lib/latest-release";
+import NativeNotifyBell from "@/native-notify/web/NativeNotifyBell";
+import "@/native-notify/web/nativeNotifyBell.css";
 
 const PlatformIcons: Record<string, React.ReactNode> = {
   "mac-arm64": (
@@ -50,7 +52,12 @@ export default function HomeClient({ downloads }: { downloads: DownloadLink[] })
 
   return (
     <div className="flex min-h-full flex-1 flex-col items-center px-4 pb-8 pt-5 sm:px-6 sm:pb-10">
-      <nav className="flex w-full max-w-5xl justify-end">
+      <nav className="flex w-full max-w-5xl items-center justify-end gap-3">
+        <NativeNotifyBell
+          appId={process.env.NEXT_PUBLIC_NN_APP_ID}
+          appToken={process.env.NEXT_PUBLIC_NN_APP_TOKEN}
+          title="Notifications"
+        />
         <a
           href="/browse"
           className="ml-auto inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
