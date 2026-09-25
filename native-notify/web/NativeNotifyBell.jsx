@@ -7,7 +7,7 @@
  *                                    custom UI.
  *   <NativeNotifyBell … />         — the drop-in bell + panel, same behavior
  *                                    and class names as the vanilla module
- *                                    (nativeNotifyBell.js), so it shares
+ *                                    (native-notify-bell.js), so it shares
  *                                    nativeNotifyBell.css.
  *
  * Next.js App Router: this file's "use client" directive makes it a client
@@ -21,6 +21,91 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
+// ---------------------------------------------------------------------------
+// Types (JSDoc — TypeScript reads these from this .jsx file, so a TypeScript
+// app gets real prop types: only appId/appToken are required, every other
+// prop is optional, and the headless hook's entries are typed).
+// ---------------------------------------------------------------------------
+
+/**
+ * One inbox entry, as GET /api/universal/inbox/:appId/:appToken returns it.
+ * @typedef {Object} NativeNotifyInboxEntry
+ * @property {number} entryId
+ * @property {number} appId
+ * @property {string} deviceId
+ * @property {string | null} subscriberId
+ * @property {string} environment
+ * @property {string} title
+ * @property {string} body
+ * @property {Record<string, any>} data  The send's pushData (deep link: data.url or data.deepLink).
+ * @property {string} audienceType
+ * @property {string} source
+ * @property {string} sentAt  ISO timestamp.
+ * @property {string | null} readAt
+ * @property {boolean} read
+ */
+
+/**
+ * Color / radius overrides — each key sets a CSS custom property.
+ * @typedef {Object} NativeNotifyBellTheme
+ * @property {string} [accent]
+ * @property {string} [background]
+ * @property {string} [card]
+ * @property {string} [border]
+ * @property {string} [title]
+ * @property {string} [text]
+ * @property {string} [mutedText]
+ * @property {string} [dot]
+ * @property {string} [badgeText]
+ * @property {string} [delete]
+ * @property {string} [radius]
+ */
+
+/**
+ * @typedef {Object} NativeNotifyInboxOptions
+ * @property {string | number | undefined} appId
+ * @property {string | undefined} appToken
+ * @property {string} [deviceId]  Defaults to a stable per-browser id (localStorage).
+ * @property {string} [storageKey]  localStorage key for that id (default "nn_web_device_id").
+ * @property {string} [apiBase]  Default "https://app.nativenotify.com".
+ * @property {number} [take]  Page size (default 20).
+ * @property {number} [pollMs]  Unread polling interval; 0 turns polling off (default 30000).
+ * @property {typeof fetch} [fetch]  Custom fetch (tests, proxies).
+ */
+
+/**
+ * @typedef {Object} NativeNotifyInbox
+ * @property {string | null} deviceId
+ * @property {NativeNotifyInboxEntry[]} entries
+ * @property {number} total
+ * @property {number} unreadCount
+ * @property {boolean} loading
+ * @property {string | null} error
+ * @property {() => Promise<void>} refresh
+ * @property {() => Promise<void>} refreshUnread
+ * @property {(entry: NativeNotifyInboxEntry) => Promise<void>} markRead
+ * @property {() => Promise<void>} markAllRead
+ * @property {(entry: NativeNotifyInboxEntry) => Promise<void>} remove
+ * @property {() => Promise<void>} clearInbox
+ * @property {() => Promise<void>} loadMore
+ */
+
+/**
+ * @typedef {NativeNotifyInboxOptions & {
+ *   title?: string,
+ *   emptyText?: string,
+ *   showCount?: boolean,
+ *   maxCount?: number,
+ *   allowDelete?: boolean,
+ *   theme?: NativeNotifyBellTheme,
+ *   position?: "bottom-right" | "bottom-left" | "top-right" | "top-left",
+ *   onNotificationPress?: (entry: NativeNotifyInboxEntry) => void,
+ *   onNavigate?: (url: string, entry: NativeNotifyInboxEntry) => void,
+ *   onUnreadChange?: (count: number) => void,
+ *   className?: string,
+ * }} NativeNotifyBellProps
+ */
+
 const DEFAULT_API_BASE = 'https://app.nativenotify.com';
 const DEFAULT_STORAGE_KEY = 'nn_web_device_id';
 
@@ -28,7 +113,11 @@ function randomKey() {
   return "nn-" + Math.random().toString(36).slice(2, 10) + "-" + Date.now().toString(36);
 }
 
-/** A stable per-browser device id, persisted in localStorage. */
+/**
+ * A stable per-browser device id, persisted in localStorage.
+ * @param {string} [storageKey]
+ * @returns {string}
+ */
 export function getStableDeviceKey(storageKey) {
   const key = storageKey || DEFAULT_STORAGE_KEY;
   try {
@@ -81,6 +170,9 @@ export function isSafeUrl(url) {
  * The headless hook: inbox data + actions for a custom UI. Mirrors the data
  * the API returns — read is per entry (server-side read_at), so opening the
  * panel does not mark anything read.
+ *
+ * @param {NativeNotifyInboxOptions} options
+ * @returns {NativeNotifyInbox}
  */
 export function useNativeNotifyInbox(options) {
   const {
@@ -94,12 +186,12 @@ export function useNativeNotifyInbox(options) {
     fetch: fetchOption,
   } = options || {};
 
-  const [deviceId, setDeviceId] = useState(deviceIdOption ? String(deviceIdOption) : null);
-  const [entries, setEntries] = useState([]);
+  const [deviceId, setDeviceId] = useState(/** @type {string | null} */ (deviceIdOption ? String(deviceIdOption) : null));
+  const [entries, setEntries] = useState(/** @type {NativeNotifyInboxEntry[]} */ ([]));
   const [total, setTotal] = useState(0);
   const [unreadCount, setUnreadCount] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(/** @type {string | null} */ (null));
   // Stable identity: a fresh wrapper on every render would re-create request,
   // every action callback and the polling effect (resetting its interval).
   const doFetch = useMemo(
@@ -263,6 +355,12 @@ export function useNativeNotifyInbox(options) {
     }
   }, [appId, appToken, deviceId, entries.length, request, take]);
 
+  // Fill the badge as soon as the device id is known — the poll below only
+  // fires after its first interval (and never with pollMs: 0).
+  useEffect(() => {
+    if (deviceId) refreshUnread();
+  }, [deviceId, refreshUnread]);
+
   // Keep the badge live: poll the unread count while the tab is visible.
   useEffect(() => {
     if (!deviceId || !pollMs || pollMs < 10000) return;
@@ -331,6 +429,7 @@ function BellIcon() {
  *
  * Import the styles once in your app: import "./nativeNotifyBell.css";
  */
+/** @param {NativeNotifyBellProps} props */
 export default function NativeNotifyBell({
   appId,
   appToken,
