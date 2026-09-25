@@ -355,6 +355,12 @@ export function useNativeNotifyInbox(options) {
     }
   }, [appId, appToken, deviceId, entries.length, request, take]);
 
+  // Fill the badge as soon as the device id is known — the poll below only
+  // fires after its first interval (and never with pollMs: 0).
+  useEffect(() => {
+    if (deviceId) refreshUnread();
+  }, [deviceId, refreshUnread]);
+
   // Keep the badge live: poll the unread count while the tab is visible.
   useEffect(() => {
     if (!deviceId || !pollMs || pollMs < 10000) return;
