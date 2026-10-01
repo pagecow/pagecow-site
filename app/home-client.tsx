@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import type { DownloadLink } from "@/lib/latest-release";
 import NativeNotifyBell from "@/native-notify/web/NativeNotifyBell";
+import NativeNotifyWebPushButton from "@/native-notify/web/NativeNotifyWebPush";
 import "@/native-notify/web/nativeNotifyBell.css";
 
 const PlatformIcons: Record<string, React.ReactNode> = {
@@ -53,6 +54,12 @@ export default function HomeClient({ downloads }: { downloads: DownloadLink[] })
   return (
     <div className="flex min-h-full flex-1 flex-col items-center px-4 pb-8 pt-5 sm:px-6 sm:pb-10">
       <nav className="flex w-full max-w-5xl items-center justify-end gap-3">
+        <NativeNotifyWebPushButton
+          appId={process.env.NEXT_PUBLIC_NN_APP_ID}
+          webKey={process.env.NEXT_PUBLIC_NN_WEB_KEY}
+          appToken={process.env.NEXT_PUBLIC_NN_APP_TOKEN}
+          className="[&>button]:rounded-full [&>button]:border [&>button]:border-zinc-300 [&>button]:bg-transparent [&>button]:px-4 [&>button]:py-2 [&>button]:text-sm [&>button]:font-medium [&>button]:transition-colors [&>button]:hover:bg-zinc-100 [&>button]:disabled:opacity-50 dark:[&>button]:border-zinc-700 dark:[&>button]:hover:bg-zinc-800"
+        />
         <NativeNotifyBell
           appId={process.env.NEXT_PUBLIC_NN_APP_ID}
           appToken={process.env.NEXT_PUBLIC_NN_APP_TOKEN}
