@@ -324,12 +324,34 @@ function BellIcon() {
 }
 
 /**
- * The drop-in bell + inbox panel. Props mirror the vanilla options:
- * appId, appToken, deviceId, apiBase, take, title, emptyText, showCount,
- * maxCount, allowDelete, pollMs, theme, position, onNotificationPress,
- * onNavigate, onUnreadChange, className.
+ * Props for <NativeNotifyBell />. Mirrors the vanilla options; only appId and
+ * appToken are required — every other prop has a sane default.
+ * @typedef {Object} NativeNotifyBellProps
+ * @property {string | number | null | undefined} appId Your Native Notify app id.
+ * @property {string | null | undefined} appToken Your Native Notify app token.
+ * @property {string | number | undefined} [deviceId] Pin a device id instead of the per-browser one.
+ * @property {string | undefined} [storageKey] localStorage key for the device id (default "nn_web_device_id").
+ * @property {string | undefined} [apiBase] Defaults to https://app.nativenotify.com.
+ * @property {number | undefined} [take] Page size (default 20).
+ * @property {string | undefined} [title] Panel title (default "Notifications").
+ * @property {string | undefined} [emptyText] Shown when the inbox is empty (default "You are all caught up.").
+ * @property {boolean | undefined} [showCount] Show the unread number in the badge (default true).
+ * @property {number | undefined} [maxCount] Cap the badge number (default 99).
+ * @property {boolean | undefined} [allowDelete] Show per-row delete buttons (default true).
+ * @property {number | undefined} [pollMs] Unread-count poll interval (default 30000).
+ * @property {Record<string, string> | undefined} [theme] CSS custom-property overrides.
+ * @property {string | undefined} [position] Panel position (default "bottom-right").
+ * @property {((entry: any) => void) | undefined} [onNotificationPress] Called when a row is activated.
+ * @property {((url: string, entry: any) => void) | undefined} [onNavigate] Override the deep-link navigation.
+ * @property {((unread: number) => void) | undefined} [onUnreadChange] Called with the unread count.
+ * @property {string | undefined} [className]
+ */
+
+/**
+ * The drop-in bell + inbox panel. Only appId and appToken are required.
  *
  * Import the styles once in your app: import "./nativeNotifyBell.css";
+ * @param {NativeNotifyBellProps} props
  */
 export default function NativeNotifyBell({
   appId,
