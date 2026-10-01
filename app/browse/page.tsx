@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { getWhitelist, type WhitelistSite } from "@/lib/whitelist";
+import NativeNotifyBell from "@/native-notify/web/NativeNotifyBell";
+import NativeNotifyWebPushButton from "@/native-notify/web/NativeNotifyWebPush";
+import "@/native-notify/web/nativeNotifyBell.css";
 
 const FAVICON_URL = "/api/favicon?domain=";
 
@@ -252,6 +255,18 @@ export default function BrowsePage() {
                 </svg>
               </button>
             )}
+          </div>
+
+          <div className="ml-auto flex shrink-0 items-center gap-2">
+            <NativeNotifyWebPushButton
+              appId={process.env.NEXT_PUBLIC_NN_APP_ID}
+              webKey={process.env.NEXT_PUBLIC_NN_WEB_KEY}
+            />
+            <NativeNotifyBell
+              className="nn-bell--inline"
+              appId={process.env.NEXT_PUBLIC_NN_APP_ID}
+              webKey={process.env.NEXT_PUBLIC_NN_WEB_KEY}
+            />
           </div>
         </div>
       </header>

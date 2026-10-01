@@ -14,8 +14,9 @@
  * component — import it from a server page and render it normally.
  *
  * Values come from your site's own configuration — never hardcode them here:
- *   NN_APP_ID / NN_APP_TOKEN   (NEXT_PUBLIC_NN_APP_ID / NEXT_PUBLIC_NN_APP_TOKEN
- *   in a Next.js app). See native-notify/web/README.md.
+ *   NN_APP_ID / NN_WEB_KEY   (NEXT_PUBLIC_NN_APP_ID / NEXT_PUBLIC_NN_WEB_KEY
+ *   in a Next.js app). NN_WEB_KEY is the PUBLISHABLE WEB KEY (dashboard ->
+ *   App keys) — safe in page source. See native-notify/web/README.md.
  */
 "use client";
 
@@ -85,7 +86,8 @@ export function isSafeUrl(url) {
 export function useNativeNotifyInbox(options) {
   const {
     appId,
-    appToken,
+    appToken: appTokenOption,
+    webKey: webKeyOption,
     deviceId: deviceIdOption,
     storageKey,
     apiBase,
@@ -93,6 +95,10 @@ export function useNativeNotifyInbox(options) {
     pollMs = 30000,
     fetch: fetchOption,
   } = options || {};
+
+  // Credential: prefer the PUBLISHABLE WEB KEY (safe in page source); the app
+  // token keeps working for sites that already embed one.
+  const appToken = webKeyOption || appTokenOption;
 
   const [deviceId, setDeviceId] = useState(deviceIdOption ? String(deviceIdOption) : null);
   const [entries, setEntries] = useState([]);
@@ -328,7 +334,8 @@ function BellIcon() {
  * appToken are required — every other prop has a sane default.
  * @typedef {Object} NativeNotifyBellProps
  * @property {string | number | null | undefined} appId Your Native Notify app id.
- * @property {string | null | undefined} appToken Your Native Notify app token.
+ * @property {string | null | undefined} [webKey] Your PUBLISHABLE WEB KEY (safe in page source) — preferred.
+ * @property {string | null | undefined} [appToken] Your Native Notify app token — kept working for existing sites.
  * @property {string | number | undefined} [deviceId] Pin a device id instead of the per-browser one.
  * @property {string | undefined} [storageKey] localStorage key for the device id (default "nn_web_device_id").
  * @property {string | undefined} [apiBase] Defaults to https://app.nativenotify.com.
@@ -355,6 +362,7 @@ function BellIcon() {
  */
 export default function NativeNotifyBell({
   appId,
+  webKey,
   appToken,
   deviceId,
   storageKey,
@@ -373,7 +381,7 @@ export default function NativeNotifyBell({
   onUnreadChange,
   className,
 }) {
-  const inbox = useNativeNotifyInbox({ appId, appToken, deviceId, storageKey, apiBase, take, pollMs });
+  const inbox = useNativeNotifyInbox({ appId, webKey, appToken, deviceId, storageKey, apiBase, take, pollMs });
   const [open, setOpen] = useState(false);
   const rootRef = useRef(null);
   const buttonRef = useRef(null);
