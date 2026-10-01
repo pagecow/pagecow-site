@@ -37,3 +37,67 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Native Notify bell + "Enable notifications" button, mounted inline in the page headers. */
+.nn-bell.nn-bell--inline {
+  position: relative;
+  display: inline-flex;
+}
+.nn-bell.nn-bell--inline .nn-bell__button {
+  width: 40px;
+  height: 40px;
+  box-shadow: none;
+}
+.nn-bell.nn-bell--inline .nn-bell__icon {
+  width: 20px;
+  height: 20px;
+}
+.nn-bell.nn-bell--inline .nn-bell__panel {
+  top: calc(100% + 8px);
+  bottom: auto;
+  right: 0;
+  left: auto;
+}
+
+.nn-web-push__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: 9999px;
+  border: 1px solid #d4d4d8;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.nn-web-push__button:hover {
+  background: rgba(15, 23, 42, 0.06);
+}
+.nn-web-push__button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.nn-web-push__error {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .nn-web-push__button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .nn-web-push__button {
+    border-color: #3f3f46;
+  }
+  .nn-web-push__button:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}

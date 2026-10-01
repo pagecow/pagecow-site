@@ -2,6 +2,9 @@ import Link from "next/link";
 import { searchWhitelist } from "@/lib/whitelist";
 import SearchForm from "./search-form";
 import Image from "next/image";
+import NativeNotifyBell from "@/native-notify/web/NativeNotifyBell";
+import NativeNotifyWebPushButton from "@/native-notify/web/NativeNotifyWebPush";
+import "@/native-notify/web/nativeNotifyBell.css";
 
 export default async function SearchPage({
   searchParams,
@@ -76,6 +79,17 @@ export default async function SearchPage({
             </svg>
             Browse Sites
           </Link>
+          <div className="flex shrink-0 items-center gap-2">
+            <NativeNotifyWebPushButton
+              appId={process.env.NEXT_PUBLIC_NN_APP_ID}
+              webKey={process.env.NEXT_PUBLIC_NN_WEB_KEY}
+            />
+            <NativeNotifyBell
+              className="nn-bell--inline"
+              appId={process.env.NEXT_PUBLIC_NN_APP_ID}
+              webKey={process.env.NEXT_PUBLIC_NN_WEB_KEY}
+            />
+          </div>
         </div>
       </header>
 
