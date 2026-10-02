@@ -79,6 +79,19 @@ export function isSafeUrl(url) {
 }
 
 /**
+ * A browser that has not registered yet: the web key can read only its own
+ * REGISTERED device's inbox, so the hook treats this state as an empty inbox
+ * — the raw API message ("register this browser with the web key first.") is
+ * developer copy, never something a visitor should read (2026-10-02).
+ * @param {unknown} err
+ * @returns {boolean}
+ */
+function isUnregisteredDeviceError(err) {
+  const code = err ? /** @type {any} */ (err).code : null;
+  return code === "web_key_scope";
+}
+
+/**
  * The headless hook: inbox data + actions for a custom UI. Mirrors the data
  * the API returns — read is per entry (server-side read_at), so opening the
  * panel does not mark anything read.
@@ -169,7 +182,15 @@ export function useNativeNotifyInbox(options) {
       setUnreadCount(Number(page && page.unread) || 0);
       setError(null);
     } catch (err) {
-      setError(err.message || "Could not load notifications.");
+      if (isUnregisteredDeviceError(err)) {
+        // Not registered yet → an empty inbox, not an error (2026-10-02).
+        setEntries([]);
+        setTotal(0);
+        setUnreadCount(0);
+        setError(null);
+      } else {
+        setError(err.message || "Could not load notifications.");
+      }
     } finally {
       setLoading(false);
     }
@@ -189,7 +210,12 @@ export function useNativeNotifyInbox(options) {
       setUnreadCount(Number(res && res.unread) || 0);
       setError(null);
     } catch (err) {
-      setError(err.message || "Could not load notifications.");
+      if (isUnregisteredDeviceError(err)) {
+        setUnreadCount(0);
+        setError(null);
+      } else {
+        setError(err.message || "Could not load notifications.");
+      }
     }
   }, [appId, appToken, deviceId, request]);
 
@@ -265,7 +291,8 @@ export function useNativeNotifyInbox(options) {
       setTotal(Number(page && page.total) || 0);
       setError(null);
     } catch (err) {
-      setError(err.message || "Could not load more notifications.");
+      if (isUnregisteredDeviceError(err)) setError(null);
+      else setError(err.message || "Could not load more notifications.");
     }
   }, [appId, appToken, deviceId, entries.length, request, take]);
 

@@ -29,6 +29,7 @@
 
 const DEFAULT_API_BASE = 'https://app.nativenotify.com';
 const DEFAULT_STORAGE_KEY = 'nn_web_device_id';
+const DEFAULT_OPTOUT_KEY = 'nn_web_push_optout';
 const DEFAULT_SERVICE_WORKER = '/native-notify-sw.js';
 
 /**
@@ -47,6 +48,7 @@ const DEFAULT_SERVICE_WORKER = '/native-notify-sw.js';
  * @property {string | null | undefined} [subscriberId] Your own user id, to reach this person later by id.
  * @property {string | undefined} [serviceWorkerPath] Where the worker is served (default "/native-notify-sw.js").
  * @property {string | undefined} [storageKey] localStorage key for the per-browser id (default "nn_web_device_id").
+ * @property {string | undefined} [optOutKey] localStorage key remembering the visitor turned notifications off (default "nn_web_push_optout").
  * @property {string | undefined} [apiBase] Defaults to https://app.nativenotify.com.
  * @property {typeof fetch | undefined} [fetch] Custom fetch (tests, proxies).
  */
@@ -57,7 +59,7 @@ const DEFAULT_SERVICE_WORKER = '/native-notify-sw.js';
  * What enabling / disabling returns.
  * @typedef {Object} NativeNotifyWebPushResult
  * @property {boolean} ok
- * @property {"enabled" | "disabled" | "unsupported" | "denied" | "dismissed" | "failed"} status
+ * @property {"enabled" | "disabled" | "skipped" | "unsupported" | "denied" | "dismissed" | "failed"} status
  * @property {string | null} deviceId
  * @property {string | null} [message] Why it failed (plain English).
  */
@@ -93,6 +95,26 @@ export function getWebDeviceId(storageKey) {
   } catch (err) {
     if (!nnGlobal.__nnFallbackDeviceKey) nnGlobal.__nnFallbackDeviceKey = randomKey();
     return nnGlobal.__nnFallbackDeviceKey;
+  }
+}
+
+/**
+ * The visitor's explicit "Turn off notifications" choice (localStorage): the
+ * browser keeps its granted permission after turning off, so the silent
+ * re-register must respect it. Omit `set` to read; pass true/false to write.
+ * @param {string} [optOutKey]
+ * @param {boolean} [set]
+ * @returns {boolean}
+ */
+function optOut(optOutKey, set) {
+  const key = optOutKey || DEFAULT_OPTOUT_KEY;
+  try {
+    if (set === true) window.localStorage.setItem(key, '1');
+    else if (set === false) window.localStorage.removeItem(key);
+    return window.localStorage.getItem(key) === '1';
+  } catch (err) {
+    /* storage can be unavailable — best effort */
+    return false;
   }
 }
 
@@ -200,6 +222,8 @@ export async function enableNativeNotifyWebPush(options) {
   }
   try {
     const { apiBase, appId, appToken, doFetch } = settings(opts);
+    // The visitor asked for notifications: forget any earlier opt-out.
+    optOut(opts.optOutKey, false);
     const permission = await Notification.requestPermission();
     if (permission !== 'granted') {
       return {
@@ -260,6 +284,24 @@ export async function enableNativeNotifyWebPush(options) {
 }
 
 /**
+ * Keep this browser registered WITHOUT a prompt or a click — call it on page
+ * load. A granted browser can lose its subscription (site data cleared,
+ * subscription expired) and the dialog is gone for good there, so waiting
+ * for a click strands it. Nothing shows when permission is already granted;
+ * un-granted browsers are left alone and an opt-out is respected.
+ * @param {NativeNotifyWebPushOptions} options
+ * @returns {Promise<NativeNotifyWebPushResult>}
+ */
+export async function ensureNativeNotifyWebPush(options) {
+  const opts = options || /** @type {any} */ ({});
+  const state = await getWebPushState(opts);
+  if (!state.supported || state.permission !== 'granted' || optOut(opts.optOutKey)) {
+    return { ok: false, status: 'skipped', deviceId: state.supported ? getWebDeviceId(opts.storageKey) : null };
+  }
+  return enableNativeNotifyWebPush(opts);
+}
+
+/**
  * Turn web push off for this browser (unsubscribe + deregister the device).
  * @param {NativeNotifyWebPushOptions} options
  * @returns {Promise<NativeNotifyWebPushResult>}
@@ -268,6 +310,8 @@ export async function disableNativeNotifyWebPush(options) {
   const opts = options || /** @type {any} */ ({});
   if (!isWebPushSupported()) return { ok: false, status: 'unsupported', deviceId: null };
   const deviceId = getWebDeviceId(opts.storageKey);
+  // The visitor's choice — the silent re-register must respect it.
+  optOut(opts.optOutKey, true);
   try {
     const { apiBase, appId, appToken, doFetch } = settings(opts);
     const registration = await navigator.serviceWorker.getRegistration(opts.serviceWorkerPath || DEFAULT_SERVICE_WORKER);

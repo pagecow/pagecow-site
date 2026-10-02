@@ -22,6 +22,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   disableNativeNotifyWebPush,
   enableNativeNotifyWebPush,
+  ensureNativeNotifyWebPush,
   getWebPushState,
   isWebPushSupported,
 } from "./native-notify-web-push.js";
@@ -83,6 +84,24 @@ export function useNativeNotifyWebPush(options) {
     setSupported(isWebPushSupported());
     refresh();
   }, [refresh]);
+
+  const silentTried = useRef(false);
+  // Silent re-register (2026-10-02): a granted browser that lost its
+  // subscription can never come back through the prompt — re-register it
+  // quietly (opt-outs and un-granted browsers are left alone; a click
+  // retries visibly if this fails).
+  useEffect(() => {
+    if (!supported || permission !== "granted" || subscribed || silentTried.current) return;
+    silentTried.current = true;
+    let cancelled = false;
+    (async () => {
+      const result = await ensureNativeNotifyWebPush({ appId, webKey, appToken, subscriberId, serviceWorkerPath, apiBase });
+      if (!cancelled && result.ok) await refresh();
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [apiBase, appId, webKey, appToken, refresh, serviceWorkerPath, subscriberId, supported, permission, subscribed]);
 
   const enable = useCallback(async () => {
     setBusy(true);
@@ -238,21 +257,8 @@ export function NativeNotifyWebPushPrompt({
     setHidden(true);
   }
 
-  // A browser can already have notification permission GRANTED while having no
-  // live subscription — after the visitor clears the site's data (Chrome keeps
-  // the permission but drops the subscription), or when a subscription expires.
-  // The permission dialog is gone for good in that state, so the once-only
-  // prompt below would hide itself and this browser would stay unregistered
-  // forever. Re-register silently instead: with permission already granted,
-  // enable() shows no dialog and needs no user gesture.
-  const repaired = useRef(false);
-  useEffect(() => {
-    if (repaired.current) return;
-    if (!checked || !push.supported || push.subscribed) return;
-    if (push.permission !== "granted" || push.busy) return;
-    repaired.current = true;
-    push.enable();
-  }, [checked, push.supported, push.subscribed, push.permission, push.busy, push.enable]);
+  // (A granted-but-unsubscribed browser is re-registered silently by
+  // useNativeNotifyWebPush on mount — see ensureNativeNotifyWebPush.)
 
   if (!checked || hidden) return null;
   if (!push.supported || push.subscribed || push.permission !== "default") return null;
