@@ -43,6 +43,13 @@ body {
 .nn-bell.nn-bell--inline {
   position: relative;
   display: inline-flex;
+  /* Neutralize the .nn-bell--bottom-right offsets (right/bottom: 20px): on a
+     relatively-positioned element they still shift it 20px up and 20px left,
+     which floats the bell above the row it sits in. */
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
 }
 .nn-bell.nn-bell--inline .nn-bell__button {
   width: 40px;
