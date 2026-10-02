@@ -643,8 +643,26 @@ export function createNativeNotifyBell(options) {
     }
   }
 
+  /**
+   * A browser that has not registered yet: the web key can read only its own
+   * REGISTERED device's inbox, so this state is an EMPTY inbox for the
+   * visitor — never the raw API message ("register this browser with the web
+   * key first."), which is developer copy (2026-10-02).
+   * @param {unknown} err
+   * @returns {boolean}
+   */
+  function isUnregisteredDevice(err) {
+    const code = err ? /** @type {any} */ (err).code : null;
+    return code === 'web_key_scope';
+  }
+
   /** @param {unknown} err */
   function reportError(err) {
+    // Not registered yet → "You are all caught up.", not an error.
+    if (isUnregisteredDevice(err)) {
+      errorText = null;
+      return;
+    }
     errorText = err instanceof Error && err.message ? err.message : 'Could not load notifications.';
     if (typeof opts.onError === 'function') {
       try {
