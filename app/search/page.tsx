@@ -3,7 +3,6 @@ import { searchWhitelist } from "@/lib/whitelist";
 import SearchForm from "./search-form";
 import Image from "next/image";
 import NativeNotifyBell from "@/native-notify/web/NativeNotifyBell";
-import NativeNotifyWebPushButton from "@/native-notify/web/NativeNotifyWebPush";
 import { NN_APP_ID, NN_WEB_KEY } from "@/native-notify/web/nativeNotifyIds";
 import "@/native-notify/web/nativeNotifyBell.css";
 
@@ -60,6 +59,7 @@ export default async function SearchPage({
           <div className="flex-1">
             <SearchForm defaultValue={query} />
           </div>
+          <NativeNotifyBell className="nn-bell--inline" appId={NN_APP_ID} webKey={NN_WEB_KEY} />
           <Link
             href="/browse"
             className="hidden sm:inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
@@ -80,10 +80,6 @@ export default async function SearchPage({
             </svg>
             Browse Sites
           </Link>
-          <div className="flex shrink-0 items-center gap-2">
-            <NativeNotifyWebPushButton appId={NN_APP_ID} webKey={NN_WEB_KEY} />
-            <NativeNotifyBell className="nn-bell--inline" appId={NN_APP_ID} webKey={NN_WEB_KEY} />
-          </div>
         </div>
       </header>
 

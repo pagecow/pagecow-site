@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import type { DownloadLink } from "@/lib/latest-release";
 import NativeNotifyBell from "@/native-notify/web/NativeNotifyBell";
-import NativeNotifyWebPushButton from "@/native-notify/web/NativeNotifyWebPush";
 import { NN_APP_ID, NN_WEB_KEY } from "@/native-notify/web/nativeNotifyIds";
 import "@/native-notify/web/nativeNotifyBell.css";
 
@@ -55,7 +54,6 @@ export default function HomeClient({ downloads }: { downloads: DownloadLink[] })
   return (
     <div className="flex min-h-full flex-1 flex-col items-center px-4 pb-8 pt-5 sm:px-6 sm:pb-10">
       <nav className="flex w-full max-w-5xl items-center justify-end gap-3">
-        <NativeNotifyWebPushButton appId={NN_APP_ID} webKey={NN_WEB_KEY} />
         <NativeNotifyBell
           className="nn-bell--inline"
           appId={NN_APP_ID}
@@ -64,7 +62,7 @@ export default function HomeClient({ downloads }: { downloads: DownloadLink[] })
         />
         <a
           href="/browse"
-          className="ml-auto inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+          className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
         >
           <svg
             className="h-4 w-4"
