@@ -5,15 +5,12 @@
  * Native Notify — the web push service worker (added by Agent Notify).
  *
  * Served from the site ROOT (/native-notify-sw.js) so it covers the whole
- * site. It shows each push and opens its `data.url` when the notification is
- * clicked. It is named native-notify-sw.js on purpose: a site can have only
- * ONE service worker per scope — if yours already has one (a PWA / offline
- * worker), do not register this file; add the two listeners below to your
- * existing worker instead (see native-notify/web/README-web-push.md).
+ * site, and named that way on purpose: a site can have only ONE service
+ * worker per scope — if yours already has one (a PWA / offline worker), do
+ * not register this file; add its listeners to your existing worker instead
+ * (see native-notify/web/README-web-push.md).
  */
-// Apply a new version of this worker right away instead of waiting for every
-// tab to close — a stale worker keeps handling notification clicks until the
-// last tab does, so a fix in this file would otherwise sit in limbo.
+// Don't wait for every tab to close: a stale worker keeps handling clicks.
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', (event) => event.waitUntil(self.clients.claim()));
 
@@ -41,10 +38,8 @@ self.addEventListener('notificationclick', (event) => {
   const url = new URL(data.url || '/', self.location.origin).href;
   event.waitUntil(
     clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windows) => {
-      // Focus a tab already on the destination; open a new one otherwise.
-      // Never navigate() a listed window: a tab this worker does not
-      // control cannot be navigated, the promise rejects, and the click
-      // would look dead.
+      // Focus a tab already on the destination; never navigate() one — an
+      // uncontrolled tab cannot be navigated and the click would look dead.
       const open = windows.find((client) => client.url === url);
       return open ? open.focus().catch(() => clients.openWindow(url)) : clients.openWindow(url);
     })
