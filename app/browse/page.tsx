@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { getWhitelist, type WhitelistSite } from "@/lib/whitelist";
 import NativeNotifyBell from "@/native-notify/web/NativeNotifyBell";
-import NativeNotifyWebPushButton from "@/native-notify/web/NativeNotifyWebPush";
 import { NN_APP_ID, NN_WEB_KEY } from "@/native-notify/web/nativeNotifyIds";
 import "@/native-notify/web/nativeNotifyBell.css";
 
@@ -259,7 +258,6 @@ export default function BrowsePage() {
           </div>
 
           <div className="ml-auto flex shrink-0 items-center gap-2">
-            <NativeNotifyWebPushButton appId={NN_APP_ID} webKey={NN_WEB_KEY} />
             <NativeNotifyBell className="nn-bell--inline" appId={NN_APP_ID} webKey={NN_WEB_KEY} />
           </div>
         </div>

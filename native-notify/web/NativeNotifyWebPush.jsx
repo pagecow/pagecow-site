@@ -167,3 +167,100 @@ export default function NativeNotifyWebPushButton({
     </span>
   );
 }
+
+/**
+ * Props for <NativeNotifyWebPushPrompt />. Only appId and a credential are
+ * required (prefer webKey) — every other prop has a default.
+ * @typedef {Object} NativeNotifyWebPushPromptPropsBase
+ * @property {string | number | null | undefined} appId Your Native Notify app id.
+ * @property {string | null | undefined} [webKey] Your PUBLISHABLE WEB KEY — safe in page source.
+ * @property {string | null | undefined} [appToken] Kept working for existing sites; not for page source.
+ * @property {string | null | undefined} [subscriberId]
+ * @property {string | undefined} [serviceWorkerPath]
+ * @property {string | undefined} [apiBase]
+ * @property {string | undefined} [title] Default "Turn on notifications?".
+ * @property {string | undefined} [message] The body copy next to the buttons.
+ * @property {string | undefined} [allowLabel] Default "Turn on notifications".
+ * @property {string | undefined} [denyLabel] Default "Not now".
+ * @property {string | undefined} [storageKey] Where the once-only answer is remembered (default "nn_push_prompt").
+ * @property {string | undefined} [className]
+ */
+
+/** @typedef {NativeNotifyWebPushPromptPropsBase & NativeNotifyWebCredential} NativeNotifyWebPushPromptProps */
+
+/**
+ * A one-time, first-visit prompt: on the visitor's very first page view it asks
+ * (once) whether they want notifications, then remembers the answer so it never
+ * asks again. It renders nothing when web push is unsupported, the visitor has
+ * already answered, or the browser permission is already granted or denied.
+ *
+ * Browsers only show the real permission dialog after a user gesture, so the
+ * visitor's click on "Turn on notifications" is what opens it.
+ * @param {NativeNotifyWebPushPromptProps} props
+ */
+export function NativeNotifyWebPushPrompt({
+  appId,
+  webKey,
+  appToken,
+  subscriberId,
+  serviceWorkerPath,
+  apiBase,
+  title = "Turn on notifications?",
+  message = "Get a heads-up when new sites are approved and PageCOW news lands. You can turn this off anytime.",
+  allowLabel = "Turn on notifications",
+  denyLabel = "Not now",
+  storageKey = "nn_push_prompt",
+  className,
+}) {
+  const push = useNativeNotifyWebPush({ appId, webKey, appToken, subscriberId, serviceWorkerPath, apiBase });
+  const [checked, setChecked] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  // Has this visitor already answered? (client-side only)
+  useEffect(() => {
+    let answered = null;
+    try {
+      answered = window.localStorage.getItem(storageKey);
+    } catch (err) {
+      answered = null;
+    }
+    setHidden(Boolean(answered));
+    setChecked(true);
+  }, [storageKey]);
+
+  /** @param {string} answer */
+  function remember(answer) {
+    try {
+      window.localStorage.setItem(storageKey, answer);
+    } catch (err) {
+      // Private mode / storage disabled: still hide the prompt for this visit.
+    }
+    setHidden(true);
+  }
+
+  if (!checked || hidden) return null;
+  if (!push.supported || push.subscribed || push.permission !== "default") return null;
+
+  return (
+    <div className={["nn-push-prompt", className || ""].filter(Boolean).join(" ")} role="dialog" aria-label={title}>
+      <span className="nn-push-prompt__title">{title}</span>
+      <span className="nn-push-prompt__text">{message}</span>
+      <span className="nn-push-prompt__actions">
+        <button type="button" className="nn-push-prompt__later" onClick={() => remember("off")}>
+          {denyLabel}
+        </button>
+        <button
+          type="button"
+          className="nn-push-prompt__allow"
+          disabled={push.busy}
+          onClick={async () => {
+            await push.enable();
+            remember("on");
+          }}
+        >
+          {allowLabel}
+        </button>
+      </span>
+    </div>
+  );
+}
