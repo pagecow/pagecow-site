@@ -18,7 +18,7 @@
  */
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   disableNativeNotifyWebPush,
   enableNativeNotifyWebPush,
@@ -237,6 +237,22 @@ export function NativeNotifyWebPushPrompt({
     }
     setHidden(true);
   }
+
+  // A browser can already have notification permission GRANTED while having no
+  // live subscription — after the visitor clears the site's data (Chrome keeps
+  // the permission but drops the subscription), or when a subscription expires.
+  // The permission dialog is gone for good in that state, so the once-only
+  // prompt below would hide itself and this browser would stay unregistered
+  // forever. Re-register silently instead: with permission already granted,
+  // enable() shows no dialog and needs no user gesture.
+  const repaired = useRef(false);
+  useEffect(() => {
+    if (repaired.current) return;
+    if (!checked || !push.supported || push.subscribed) return;
+    if (push.permission !== "granted" || push.busy) return;
+    repaired.current = true;
+    push.enable();
+  }, [checked, push.supported, push.subscribed, push.permission, push.busy, push.enable]);
 
   if (!checked || hidden) return null;
   if (!push.supported || push.subscribed || push.permission !== "default") return null;
