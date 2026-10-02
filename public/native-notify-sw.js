@@ -30,13 +30,17 @@ self.addEventListener('push', (event) => {
 
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-  const url = (event.notification.data && event.notification.data.url) || '/';
+  const data = event.notification.data || {};
+  // Deep links come from the push's data: send {"url": "/offers"}.
+  const url = new URL(data.url || '/', self.location.origin).href;
   event.waitUntil(
-    clients.matchAll({ type: 'window', includeUncontrolled: true }).then((list) => {
-      for (const client of list) {
-        if ('focus' in client) return client.focus().then(() => client.navigate(url));
-      }
-      return clients.openWindow(url);
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windows) => {
+      // Focus a tab already on the destination; open a new one otherwise.
+      // Never navigate() a listed window: a tab this worker does not
+      // control cannot be navigated, the promise rejects, and the click
+      // would look dead.
+      const open = windows.find((client) => client.url === url);
+      return open ? open.focus() : clients.openWindow(url);
     })
   );
 });
