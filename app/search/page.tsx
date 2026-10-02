@@ -4,6 +4,7 @@ import SearchForm from "./search-form";
 import Image from "next/image";
 import NativeNotifyBell from "@/native-notify/web/NativeNotifyBell";
 import NativeNotifyWebPushButton from "@/native-notify/web/NativeNotifyWebPush";
+import { NN_APP_ID, NN_WEB_KEY } from "@/native-notify/web/nativeNotifyIds";
 import "@/native-notify/web/nativeNotifyBell.css";
 
 export default async function SearchPage({
@@ -80,15 +81,8 @@ export default async function SearchPage({
             Browse Sites
           </Link>
           <div className="flex shrink-0 items-center gap-2">
-            <NativeNotifyWebPushButton
-              appId={process.env.NEXT_PUBLIC_NN_APP_ID}
-              webKey={process.env.NEXT_PUBLIC_NN_WEB_KEY}
-            />
-            <NativeNotifyBell
-              className="nn-bell--inline"
-              appId={process.env.NEXT_PUBLIC_NN_APP_ID}
-              webKey={process.env.NEXT_PUBLIC_NN_WEB_KEY}
-            />
+            <NativeNotifyWebPushButton appId={NN_APP_ID} webKey={NN_WEB_KEY} />
+            <NativeNotifyBell className="nn-bell--inline" appId={NN_APP_ID} webKey={NN_WEB_KEY} />
           </div>
         </div>
       </header>
