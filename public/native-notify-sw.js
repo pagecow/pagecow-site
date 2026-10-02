@@ -11,6 +11,12 @@
  * worker), do not register this file; add the two listeners below to your
  * existing worker instead (see native-notify/web/README-web-push.md).
  */
+// Apply a new version of this worker right away instead of waiting for every
+// tab to close — a stale worker keeps handling notification clicks until the
+// last tab does, so a fix in this file would otherwise sit in limbo.
+self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('activate', (event) => event.waitUntil(self.clients.claim()));
+
 self.addEventListener('push', (event) => {
   let payload = {};
   try {
@@ -40,7 +46,7 @@ self.addEventListener('notificationclick', (event) => {
       // control cannot be navigated, the promise rejects, and the click
       // would look dead.
       const open = windows.find((client) => client.url === url);
-      return open ? open.focus() : clients.openWindow(url);
+      return open ? open.focus().catch(() => clients.openWindow(url)) : clients.openWindow(url);
     })
   );
 });
