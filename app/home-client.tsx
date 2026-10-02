@@ -6,6 +6,7 @@ import Image from "next/image";
 import type { DownloadLink } from "@/lib/latest-release";
 import NativeNotifyBell from "@/native-notify/web/NativeNotifyBell";
 import NativeNotifyWebPushButton from "@/native-notify/web/NativeNotifyWebPush";
+import { NN_APP_ID, NN_WEB_KEY } from "@/native-notify/web/nativeNotifyIds";
 import "@/native-notify/web/nativeNotifyBell.css";
 
 const PlatformIcons: Record<string, React.ReactNode> = {
@@ -54,14 +55,11 @@ export default function HomeClient({ downloads }: { downloads: DownloadLink[] })
   return (
     <div className="flex min-h-full flex-1 flex-col items-center px-4 pb-8 pt-5 sm:px-6 sm:pb-10">
       <nav className="flex w-full max-w-5xl items-center justify-end gap-3">
-        <NativeNotifyWebPushButton
-          appId={process.env.NEXT_PUBLIC_NN_APP_ID}
-          webKey={process.env.NEXT_PUBLIC_NN_WEB_KEY}
-        />
+        <NativeNotifyWebPushButton appId={NN_APP_ID} webKey={NN_WEB_KEY} />
         <NativeNotifyBell
           className="nn-bell--inline"
-          appId={process.env.NEXT_PUBLIC_NN_APP_ID}
-          webKey={process.env.NEXT_PUBLIC_NN_WEB_KEY}
+          appId={NN_APP_ID}
+          webKey={NN_WEB_KEY}
           title="Notifications"
         />
         <a
