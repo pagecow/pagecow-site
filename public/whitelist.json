@@ -31,13 +31,26 @@
     "accounts.youtube.com",
     "api.pcloud.com",
     "apple.com",
+    "canvas-user-content.com",
     "canvaslms.com",
     "checkout.paddle.com",
+    "cloudflare.com",
+    "dashjs.org",
     "e.pcloud.link",
     "eapi.pcloud.com",
     "filedn.com",
+    "freehomeschool.app",
     "github.com",
     "githubusercontent.com",
+    "goodandbeautiful.app",
+    "gstatic.com",
+    "instructuremedia.com",
+    "jsdelivr.net",
+    "jwpcdn.com",
+    "jwplatform.com",
+    "jwplayer.com",
+    "jwpltx.com",
+    "jwpsrv.com",
     "account.live.com",
     "account.microsoft.com",
     "login.live.com",
@@ -57,7 +70,13 @@
     "pcdn-www.pcloud.com",
     "pcloud.link",
     "scrivener.s3.amazonaws.com",
-    "stripe.com"
+    "shopify.com",
+    "shopifycdn.com",
+    "stripe.com",
+    "thegoodandthebeautiful.com",
+    "unpkg.com",
+    "vimeo.com",
+    "vimeocdn.com"
   ],
   "sites": [
     {
@@ -1635,17 +1654,18 @@
       ]
     },
     {
-      "domain": "thegoodandthebeautiful.com",
+      "domain": "goodandbeautiful.com",
       "category": "Homeschooling",
       "title": "The Good and the Beautiful",
-      "description": "Homeschool curriculum emphasizing wholesome content across language arts, math, and history.",
+      "description": "Homeschool curriculum with online courses, math and language arts video lessons, science and history, and free printable resources.",
       "tags": [
         "curriculum",
         "homeschool",
         "language arts",
         "math",
+        "science",
         "history",
-        "wholesome"
+        "video lessons"
       ]
     },
     {
