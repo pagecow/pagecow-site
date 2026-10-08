@@ -7,7 +7,7 @@
  *                                    custom UI.
  *   <NativeNotifyBell … />         — the drop-in bell + panel, same behavior
  *                                    and class names as the vanilla module
- *                                    (nativeNotifyBell.js), so it shares
+ *                                    (native-notify-bell.js), so it shares
  *                                    nativeNotifyBell.css.
  *
  * Next.js App Router: this file's "use client" directive makes it a client

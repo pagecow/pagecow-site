@@ -11,7 +11,7 @@ modified.
 
 ## What is in this PR
 
-- `native-notify/web/nativeNotifyBell.js` — plain-JS ES module (no dependencies, no build step).
+- `native-notify/web/native-notify-bell.js` — plain-JS ES module (no dependencies, no build step).
 - `native-notify/web/NativeNotifyBell.jsx` — React / Next.js component + the `useNativeNotifyInbox` headless hook.
 - `native-notify/web/nativeNotifyBell.css` — styles and theming (one stylesheet for both entry points).
 - This guide.
@@ -84,7 +84,7 @@ const inbox = useNativeNotifyInbox({ appId, appToken, take: 20 });
 ```html
 <link rel="stylesheet" href="/native-notify/web/nativeNotifyBell.css" />
 <script type="module">
-  import { mountNativeNotifyBell } from "/native-notify/web/nativeNotifyBell.js";
+  import { mountNativeNotifyBell } from "/native-notify/web/native-notify-bell.js";
 
   mountNativeNotifyBell({
     appId: window.NN_CONFIG.appId,     // your config — never commit real values
