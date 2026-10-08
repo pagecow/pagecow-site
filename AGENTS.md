@@ -4,6 +4,21 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
+## 🔴 Golden rule — never whitelist a domain without the owner's approval
+
+**Never add a domain to `public/whitelist.json` on your own initiative.** Propose it in chat first, with the notes below, and wait for the owner's explicit OK. This product exists to keep **sexually explicit material** (and consumer AI services) unreachable — one broad platform domain defeats that.
+
+Every proposal must state three things in plain language:
+
+1. **Why it is needed** — concrete evidence (a captured request, a login hop, a `support.log` line). Never guess a domain.
+2. **The narrowest form that works** — prefer an exact host (`player.vimeo.com`) or an asset CDN (`vimeocdn.com`) over a platform parent (`vimeo.com`). A parent approves everything the platform hosts, in **both** enforcement layers.
+3. **Exposure assessment — answer both, explicitly:** can the user reach **sexually explicit material** through this domain, and can they reach **AI chat/tools** through it? Classify honestly:
+   - **Browsable platform** (search, catalog, user-generated content — e.g. `vimeo.com`, `youtube.com`, `shopify.com` with its arbitrary `*.myshopify.com` stores): explicit / AI content IS reachable → never add a parent like this; ask first and spell out the risk.
+   - **Embed / player host** (`player.vimeo.com`): plays only the specific videos an approved app embeds — no search, no catalog, no discovery (but state that someone who already knows an exact video ID could open its player page). Generally acceptable for video lessons.
+   - **Asset CDN with opaque URLs** (`vimeocdn.com`): serves files to already-approved pages; not browsable, nothing to search; low exposure — still ask.
+
+If the owner says no, it is no — do not re-propose the same domain in a different form. Record the decision in this file.
+
 ## PageCow whitelist — `public/whitelist.json`
 
 This Next.js site hosts the **master PageCow whitelist**, served live at `https://pagecow.com/whitelist.json`. That one file drives **two independent enforcement layers**:
@@ -18,11 +33,12 @@ This Next.js site hosts the **master PageCow whitelist**, served live at `https:
 - `categories`: display order for the browse/search UI.
 - `sites[]`: user-visible `{ domain, category, title, description, tags[] }` — appears in search/browse.
 - `popularDomains[]`: approved + shown in the popular row.
-- `hiddenDomains[]`: **approved for browsing and the firewall but hidden from the catalog** — use this for login/auth infrastructure (SSO hops, auth CDNs).
+- `hiddenDomains[]`: **approved for browsing and the firewall but hidden from the catalog** — use this for login/auth infrastructure (SSO hops, auth CDNs) and for the narrow player/asset slices an approved site needs (e.g. `player.vimeo.com`, `vimeocdn.com`) — never for a browsable platform parent that exposes explicit material or AI (golden rule above).
 - Entries are **bare hostnames** (no `https://`, no paths, no `www.`). Parent domains cover subdomains in both layers.
 
 ## Whitelist change workflow
 
+0. **Get the owner's approval first** (golden rule above) — say why, the narrowest form, and the explicit-material / AI exposure.
 1. Edit `public/whitelist.json`.
 2. Validate JSON + simulate the browser's subdomain matching for every host the change is meant to cover:
    ```bash
@@ -72,7 +88,7 @@ Clever "Sign in with Microsoft" showed a **blank page** at `login.microsoftonlin
 - **Canvas**: `canvas.instructure.com`'s public school-search page is retired/503 (Canvas-side change — "Canvas Lite is coming soon"). District Canvas instances (e.g. `paulding.instructure.com`) work — tell customers to use the direct URL. Canvas's search directory lists **districts only**: "Paulding" works, "East Paulding High School" returns nothing.
 - **Curriculum sites with video lessons (Sept 11)** — "logged in but no videos" is a blocked third-party **player CDN**; "can't reach the site/login" is a blocked **auth helper domain**. Map each vendor's stack before adding:
   - **JW Player** powers Demme Learning / Math-U-See (Digital Toolbox at `digital.demmelearning.com`) and Memoria Press streaming (plus MPOA Moodle). Add the full JW set: `jwplayer.com`, `jwpcdn.com`, `jwplatform.com`, `jwpsrv.com`, `jwpltx.com`.
-  - **The Good and the Beautiful**: check for the **wrong domain** first — the list only had the brand-name redirect alias `thegoodandthebeautiful.com` (301 → real site) while the real `goodandbeautiful.com` was never approved, so the site was blocked outright. Course videos are **Vimeo** (`vimeo.com`, `vimeocdn.com`); the Flutter courses app needs `gstatic.com`, `jsdelivr.net`, `unpkg.com`, `dashjs.org` plus app/API hosts `freehomeschool.app` and `goodandbeautiful.app`; the Shopify store needs `shopify.com` and `shopifycdn.com`.
+  - **The Good and the Beautiful**: check for the **wrong domain** first — the list only had the brand-name redirect alias `thegoodandthebeautiful.com` (301 → real site) while the real `goodandbeautiful.com` was never approved, so the site was blocked outright. Course videos are **Vimeo**, but only the embed-only slice is approved (owner decision, Sept 11): `player.vimeo.com` + `vimeocdn.com`; `vimeo.com` itself **stays blocked** (browsable platform — explicit material reachable). The Flutter courses app needs `gstatic.com`, `jsdelivr.net`, `unpkg.com`, `dashjs.org` plus app/API hosts `freehomeschool.app` and `goodandbeautiful.app`. The Shopify domains (`shopify.com`, `shopifycdn.com`) were also **removed by owner decision** (arbitrary third-party stores) — the shop sections of the site may show missing images/fonts; that is accepted.
   - **Apologia**: site + login sit behind a **Cloudflare challenge / Turnstile** — if `challenges.cloudflare.com` is blocked the page hangs on "Just a moment..." and the login form never becomes usable; add `cloudflare.com` (also covers `cdnjs.cloudflare.com`). Classes and course videos are on **Canvas** (`apologia.instructure.com`, covered by `instructure.com`); Canvas serves course media/files from `instructuremedia.com` and `canvas-user-content.com` (separate registrable domains — add both).
   - **Method**: real Chrome + CDP host capture (`tmp/scratch/capture_hosts.js`, `tmp/scratch/cdp_eval.js` — dump every hostname a flow loads, plus page title/text to detect bot walls). Headless Chrome gets stuck on Cloudflare's "Just a moment..."; use a non-headless window for bot-protected sites.
   - Deliberately left blocked (cosmetic/marketing/ads): Adobe Typekit fonts, Font Awesome kits, UserWay widget, Klaviyo, Yotpo, Affirm, analytics/ads, and YouTube embeds.
